@@ -84,6 +84,38 @@ body {
     background-color: #e7e7e7; /* Light grey background on hover for dropdown items */
 }
 
+/* Main content styling */
+main {
+    min-height: calc(100vh - 2.5rem); /* Adjusts the height, assuming footer is 2.5rem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter-container {
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Adjust the timing (5s) to control the speed of the typing */
+.typewriter-container h1 {
+    animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Creates the caret effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
 /* Footer Styling */
 footer {
     background-color: #303030; /* Dark grey background for footer */
