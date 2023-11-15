@@ -22,7 +22,8 @@ body {
 }
 
 .logo img {
-    max-height: 50px; /* Adjust as per your logo's dimensions */
+    height: 1.5rem; /* Adjust the height to match the POLYNATH text */
+    width: 1.5rem; /* Keep the width same as height for a square logo */
 }
 
 .logo span {
@@ -52,7 +53,7 @@ body {
 
 /* Highlighting menu items on hover */
 .navigation a:hover,
-.nav-item:hover a { /* Added for nav-item background change */
+.nav-item:hover > a { /* Ensure direct child only */
     color: #0056b3; /* A shade of blue for highlighting items on hover */
     background-color: #f0f0f0; /* A very light grey background on hover for subtle effect */
 }
@@ -62,18 +63,18 @@ body {
     display: none;
     position: absolute;
     background-color: #ffffff; /* White background for dropdown */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Adds a shadow to the dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: #333; /* Same dark grey for dropdown links */
+    color: #333;
     padding: 12px 16px;
     text-decoration: none;
-    display: block; /* Makes each link fill the dropdown */
+    display: block;
 }
 
-/* Show the dropdown when hovering */
 .nav-item:hover .dropdown-content {
     display: block;
 }
