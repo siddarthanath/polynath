@@ -1,1 +1,3 @@
-console.log("Welcome to my GitHub Page!");
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('PolyNath website loaded!');
+});
