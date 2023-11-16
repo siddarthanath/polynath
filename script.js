@@ -16,6 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
     });
+    window.addEventListener('scroll', () => {
+        const teamSection = document.querySelector('.team-section');
+        const teamImage = document.querySelector('#team-image');
+        const teamText = document.querySelector('.team-section .right');
+        
+        const sectionPos = teamSection.getBoundingClientRect().top;
+        const screenPos = window.innerHeight / 1.3;
+
+        if (sectionPos < screenPos) {
+            teamImage.style.opacity = '1';
+            teamText.style.opacity = '1';
+        }
+    });
 });
 
 function animateHeaders() {

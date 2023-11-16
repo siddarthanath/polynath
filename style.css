@@ -115,10 +115,6 @@ body {
 }
 
 /* Header with Full-Height Image */
-/* Header with Full-Height Image */
-/* ... other styles ... */
-
-/* Header with Full-Height Image */
 .header-image {
     background-image: url('images/background1.jpg');
     height: 100vh;
@@ -134,7 +130,6 @@ body {
 }
 /* General styles for the header text */
 .header-text {
-    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,6 +176,61 @@ body {
         transform: translateY(0);
     }
 }
+
+
+.team-section {
+    padding: 50px 0;
+    background-color: #f5f5f5; /* Adjust to match your design */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start; /* Adjust if you want vertical centering */
+    justify-content: space-between;
+}
+
+.column {
+    flex-basis: 50%;
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 1s ease-in-out;
+}
+
+.column.left img {
+    width: 100%;
+    max-width: 400px; /* Adjust based on your image size */
+    height: auto;
+    border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+.column.right {
+    padding-left: 20px; /* Adjust spacing as needed */
+}
+
+/* Fade in effect when the page loads */
+@media (prefers-reduced-motion: no-preference) {
+    .column {
+        animation: fadeInEffect 1s ease-in-out forwards;
+    }
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeInEffect {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Set the font family for the header-text and the rest of the text */
+.header-text h1, .column.right {
+    font-family: 'Open Sans', sans-serif;
+}
+
 
 /* Button Styling */
 .header-btn {
