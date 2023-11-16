@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start the header text animation sequence
     animateHeaders();
+    // Scroll to next section when arrow is clicked
+    document.querySelector('.scroll-down-arrow a').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
+    });
 });
 
 function animateHeaders() {

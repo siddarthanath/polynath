@@ -134,6 +134,7 @@ body {
 }
 /* General styles for the header text */
 .header-text {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;

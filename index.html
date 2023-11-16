@@ -19,20 +19,24 @@
             <div class="navbar-item">
                 <a href="#about" class="nav-link">ABOUT</a>
                 <div class="dropdown-content">
-                    <a href="#">Mission</a>
-                    <a href="#">Team</a>
+                    <a href="#mission">MISSION</a>
+                    <a href="#team">TEAM</a>
                 </div>
             </div>
-            <a href="#subjects" class="nav-link">SUBJECTS</a>
+            <div class="navbar-item">
+                <a href="#subjects" class="nav-link">SUBJECTS</a>
+                <div class="dropdown-content">
+                    <a href="#mathematics">MATHEMATICS</a>
+                    <a href="#computerscience">COMPUTER SCIENCE</a>
+                    <a href="#physics">PHYSICS</a>
+                </div>
+            </div>
             <div class="navbar-item">
                 <a href="#playground" class="nav-link">PLAYGROUND</a>
-                <div class="dropdown-content">
-                    <a href="#">PDF-AI</a>
-                    <a href="#">DATA-AI</a>
-                </div>
             </div>
             <a href="#tutoring" class="nav-link">TUTORING</a>
             <a href="#blog" class="nav-link">BLOG</a>
+            <a href="#faq" class="nav-link">FAQ</a>
         </div>
         <!-- Menu icon for small screens -->
         <a href="javascript:void(0)" class="navbar-icon" onclick="toggleMenu()">
@@ -49,6 +53,7 @@
     <a href="#playground" onclick="toggleMenu()">PLAYGROUND</a>
     <a href="#tutoring" onclick="toggleMenu()">TUTORING</a>
     <a href="#blog" onclick="toggleMenu()">BLOG</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -58,7 +63,19 @@
         <h1 id="education-text" class="hidden"></h1> <!-- Initially empty for typewriter -->
     </div>
     <div id="particles-js"></div> 
+    <div class="scroll-down-arrow">
+        <a href="#next-section">&#x2193;</a> <!-- Downwards arrow Unicode character -->
+    </div>    
 </header>
+
+<div id="next-section" class="next-container">
+    <div class="learn-box">
+        <div class="learn-text">Learn</div>
+        <div class="description-box">Description text here...</div>
+    </div>
+    <!-- Repeat for other text boxes as needed -->
+</div>
+
 
 
 <!-- Footer -->
