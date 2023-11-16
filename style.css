@@ -330,13 +330,11 @@ body {
 
 /* Footer Styling */
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     background-color: #303030;
     color: #d1d1d1;
     text-align: center;
     padding: 1rem 0;
+    width: 100%;
 }
 
 footer p {
