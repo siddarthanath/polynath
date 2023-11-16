@@ -112,40 +112,55 @@ body {
 }
 
 /* Header with Full-Height Image */
+/* Header with Full-Height Image */
+/* ... other styles ... */
+
+/* Header with Full-Height Image */
 .header-image {
     background-image: url('images/background1.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
     overflow: hidden;
 }
 
-/* Header text styles for animation */
-.header-text {
-    width: 100%; /* Ensure the text container spans the full width */
-    text-align: center; /* Center text horizontally */
-    z-index: 1; /* Above the particle effect */
-}
-
-.header-text h1 {
+/* Styles for the welcome text */
+#welcome-text {
     font-size: 3em;
-    margin: 0;
     color: #fff;
     opacity: 0; /* Start fully transparent */
     animation: fadeInSlideUp 1s ease forwards;
 }
 
-/* Apply only to the second heading initially */
+/* Styles for the education text */
 #education-text {
-    visibility: hidden; /* Initially hidden, changed by JavaScript */
-    opacity: 0; /* Initially transparent */
-    transition: visibility 0s, opacity 0.5s linear; /* Transition for fading in */
+    font-size: 3em;
+    color: #fff;
+    visibility: hidden; /* Initially hidden, will be made visible by JavaScript */
+    opacity: 0; /* Initially transparent, will be animated by JavaScript */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; /* Keep the text in a single line */
+}
+
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Keyframes for fadeInSlideUp animation */

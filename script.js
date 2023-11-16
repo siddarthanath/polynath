@@ -22,10 +22,11 @@ function animateHeaders() {
     // Fade in the welcome text
     welcomeTextElement.style.opacity = 1;
 
-    // After the welcome text has faded in, start the typewriter effect for the education text
+    // Start the typewriter effect for the education text after a delay
     setTimeout(() => {
-        welcomeTextElement.style.display = 'none'; // Hide the welcome text
-        educationTextElement.style.visibility = 'visible'; // Make education text visible for typewriter effect
+        educationTextElement.textContent = ''; // Clear existing text
+        educationTextElement.style.visibility = 'visible'; // Make the text visible for typewriter effect
+        educationTextElement.style.opacity = 1; // Set opacity to 1 for the typewriter effect
 
         function typeWriter() {
             if (i < educationText.length) {
@@ -35,8 +36,7 @@ function animateHeaders() {
             }
         }
 
-        // Start the typewriter effect
-        typeWriter();
+        typeWriter(); // Start the typewriter effect
     }, 2000); // Time delay before starting the typewriter effect
 }
 
