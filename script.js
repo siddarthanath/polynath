@@ -32,7 +32,7 @@ function animateHeaders() {
             if (i < educationText.length) {
                 educationTextElement.textContent += educationText.charAt(i);
                 i++;
-                setTimeout(typeWriter, 250); // Adjust for typing speed
+                setTimeout(typeWriter, 50); // Adjust for typing speed
             }
         }
 
