@@ -1,14 +1,29 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('PolyNath website loaded!');
+
+    // Typewriter effect initialization
+    initTypeWriter();
+
+    // Set the "Learn" tab as active on page load
+    openTab('learn');
+
+    // Event listener for sidebar toggle
+    document.querySelector('.navbar-icon').addEventListener('click', toggleSidebar);
+    document.querySelector('.closebtn').addEventListener('click', toggleSidebar);
+
+    // Close sidebar when a link is clicked
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', toggleSidebar);
+    });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Other code...
-
-    // Typewriter effect
+// Typewriter effect
+function initTypeWriter() {
     var text = "Education for Everyone";
     var i = 0;
     var dynamicText = document.getElementById('dynamic-text');
+    if (!dynamicText) return; // Stop if element is not found
 
     function typeWriter() {
         if (i < text.length) {
@@ -19,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     typeWriter(); // Start the effect
-});
+}
 
+// Tab control
 function openTab(tabName) {
     var i, tabcontent, tabheaders;
 
@@ -41,7 +57,12 @@ function openTab(tabName) {
     document.getElementById(tabName + "-tab").className += " active";
 }
 
-// Set the "Learn" tab as active on page load
-document.addEventListener('DOMContentLoaded', function() {
-    openTab('learn'); // Default to showing the 'Learn' tab content
-});
+// Sidebar toggle
+function toggleSidebar() {
+    var sidebar = document.getElementById("mySidebar");
+    if (sidebar.style.display === 'block') {
+        sidebar.style.display = 'none';
+    } else {
+        sidebar.style.display = 'block';
+    }
+}

@@ -1,62 +1,50 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Light grey background */
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Header Styling */
-.header-container {
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: #fff; /* White background for the header */
 }
 
-.logo-and-search {
+.navbar-logo img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.navbar-right {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 1.5rem; /* Adjust the height to match the POLYNATH text */
-    width: 1.5rem; /* Keep the width same as height for a square logo */
-}
-
-.logo span {
-    margin-left: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333; /* Dark grey color for the POLYNATH text */
-}
-
-/* Navigation Styling */
-.navigation ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navigation li {
-    padding: 0 1rem;
+.navbar-item {
     position: relative; /* For dropdown positioning */
 }
 
-.navigation a {
+.navbar-icon {
+    display: none;
+}
+
+.nav-link {
     text-decoration: none;
-    color: #333; /* Dark grey for text, ensures readability */
+    color: #333;
+    padding: 0 1rem;
     transition: color 0.3s ease;
 }
 
@@ -64,7 +52,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff; /* White background for dropdown */
+    background-color: #ffffff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -77,106 +65,122 @@ body {
     display: block;
 }
 
-.nav-item:hover .dropdown-content {
+.navbar-item:hover .dropdown-content {
     display: block;
 }
 
-/* Highlighting menu items on hover */
-.navigation a:hover,
-.nav-item:hover > a { /* Ensure direct child only */
-    color: #0056b3; /* A shade of blue for highlighting items on hover */
-    background-color: #f0f0f0; /* A very light grey background on hover for subtle effect */
+.nav-link:hover,
+.navbar-item:hover > .nav-link {
+    color: #0056b3;
+    background-color: #f0f0f0;
 }
 
-/* Main content styling */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column; /* Stacks children elements vertically */
-    justify-content: center;
-    align-items: center;
+/* Sidebar for Small Screens */
+.sidebar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    z-index: 1000;
 }
 
-.typewriter-container {
-    border-right: 2px solid;
-    white-space: nowrap;
-    overflow: hidden;
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+.sidebar a:hover {
+    color: #0056b3;
 }
 
-/* Adjust the timing (5s) to control the speed of the typing */
-.typewriter-container h1 {
-    animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
-    font-size: 2em;
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Header with Full-Height Image */
+.header-image {
+    background-image: url('path-to-your-header-image.jpg'); /* Add your image path */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: left;
+    padding: 48px;
+}
+
+.header-text h1 {
     margin: 0;
+    font-size: 3em;
 }
 
-/* Creates the caret effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black }
+.header-text p {
+    font-size: 1.2em;
 }
 
-/* Tab section styling */
-.tab-section {
-    display: flex;
-    flex-direction: row; /* Aligns tabs and content side by side */
-    margin-top: 20px; /* Space from the main content */
-}
-
-.tabs {
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px; /* Space between tabs and content */
-}
-
-.tab-header {
-    background-color: #f0f0f0; /* Default background */
-    margin-bottom: 10px; /* Space between tabs */
-    padding: 10px;
-    border-radius: 25px; /* Curved corners */
-    cursor: pointer;
+.header-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
 }
 
-.tab-header:hover {
-    background-color: #007bff; /* Hover color */
-    color: white;
+.header-btn:hover {
+    background-color: #0056b3;
 }
 
-.tab-header.active {
-    background-color: #007bff; /* Active color */
-    color: white;
+/* About Section */
+.about-section {
+    padding: 128px 16px;
+    text-align: center;
 }
 
-.tab-content {
-    border: 1px solid #ddd;
-    border-radius: 15px; /* Curved corners for content box */
-    padding: 20px;
-    width: 70%; /* Adjust as needed */
-    display: block;
-}
-
-/* Hide inactive tab content */
-.tab-content:not(.active) {
-    display: none;
+.about-section h3 {
+    margin-top: 0;
 }
 
 /* Footer Styling */
 footer {
-    background-color: #303030; /* Dark grey background for footer */
-    color: #d1d1d1; /* Light grey text color for footer */
+    background-color: #303030;
+    color: #d1d1d1;
     text-align: center;
     padding: 1rem 0;
     width: 100%;
-    flex-shrink: 0; /* Prevents the footer from shrinking */
 }
 
 footer p {
     margin: 0;
     line-height: 2.5rem;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+    .navbar-icon {
+        display: block;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .sidebar {
+        display: block; /* Show sidebar on small screens */
+    }
 }

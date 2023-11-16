@@ -7,82 +7,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="PolyNath Logo">
-                <span>POLYNATH</span>
+
+<!-- Navbar (sit on top) -->
+<div class="navbar">
+    <div class="navbar-container" id="myNavbar">
+        <a href="#home" class="navbar-logo">
+            <img src="images/logo.png" alt="PolyNath Logo" style="height:24px;"> POLYNATH
+        </a>
+        <!-- Right-sided navbar links -->
+        <div class="navbar-right">
+            <div class="navbar-item">
+                <a href="#about" class="nav-link">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="#">Mission</a>
+                    <a href="#">Team</a>
+                </div>
             </div>
-            <!-- Navigation Form -->
-            <nav class="navigation">
-                <ul>
-                    <li class="nav-item">
-                        <a href="#">About</a>
-                        <div class="dropdown-content">
-                            <a href="#">Team</a>
-                            <a href="#">Mission</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Subjects</a>
-                        <div class="dropdown-content">
-                            <a href="#">Mathematics</a>
-                            <a href="#">Computer Science</a>
-                            <a href="#">Physics</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Playground</a>
-                        <div class="dropdown-content">
-                            <a href="#">PDF-AI</a>
-                            <a href="#">DATA-AI</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Tutoring</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Blog</a>
-                    </li>
-                </ul>
-            </nav>
+            <a href="#subjects" class="nav-link">SUBJECTS</a>
+            <div class="navbar-item">
+                <a href="#playground" class="nav-link">PLAYGROUND</a>
+                <div class="dropdown-content">
+                    <a href="#">PDF-AI</a>
+                    <a href="#">DATA-AI</a>
+                </div>
+            </div>
+            <a href="#tutoring" class="nav-link">TUTORING</a>
+            <a href="#blog" class="nav-link">BLOG</a>
         </div>
-    </header>
-    
-    <!-- TypeWriter -->
-    <main>
-        <div class="typewriter-container">
-            <h1 id="dynamic-text"></h1>
-        </div>
-    </main>    
+        <!-- Menu icon for small screens -->
+        <a href="javascript:void(0)" class="navbar-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
 
-     <!-- Main content would go here -->
-    <section class="tab-section">
-        <div class="tabs">
-            <div class="tab-header" id="learn-tab" onclick="openTab('learn')">Learn</div>
-            <div class="tab-header" id="teach-tab" onclick="openTab('teach')">Teach</div>
-            <div class="tab-header" id="grow-tab" onclick="openTab('grow')">Grow</div>
-        </div>
-        <div class="tab-content" id="learn-content">
-            <!-- Content for Learn -->
-            <p>This is where you'll find resources to learn new skills.</p>
-        </div>
-        <div class="tab-content" id="teach-content" style="display:none;">
-            <!-- Content for Teach -->
-            <p>Share your knowledge and experience by teaching others.</p>
-        </div>
-        <div class="tab-content" id="grow-content" style="display:none;">
-            <!-- Content for Grow -->
-            <p>Expand your horizons and grow both personally and professionally.</p>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 &middot; PolyNath &middot; All rights reserved.</p>
-    </footer>
+<!-- Sidebar for small screens -->
+<nav class="sidebar" id="mySidebar" style="display:none;">
+    <a href="javascript:void(0)" onclick="toggleMenu()" class="closebtn">&times;</a>
+    <a href="#about" onclick="toggleMenu()">ABOUT</a>
+    <a href="#subjects" onclick="toggleMenu()">SUBJECTS</a>
+    <a href="#playground" onclick="toggleMenu()">PLAYGROUND</a>
+    <a href="#tutoring" onclick="toggleMenu()">TUTORING</a>
+    <a href="#blog" onclick="toggleMenu()">BLOG</a>
+</nav>
 
-    <script src="script.js"></script>
+<!-- Header with full-height image -->
+<header class="header-image" id="home">
+    <div class="header-text">
+        <h1>Welcome to PolyNath</h1>
+        <p>Empowering education for everyone.</p>
+        <a href="#about" class="header-btn">Learn more about us</a>
+    </div> 
+</header>
+
+<!-- About Section -->
+<div class="about-section" id="about">
+    <h3>ABOUT POLYNATH</h3>
+    <p>Our mission and values</p>
+    <!-- Content for About -->
+    <div class="about-content">
+        <!-- Add content here -->
+    </div>
+</div>
+
+<!-- Other sections like Subjects, Playground, etc. can be added here -->
+
+<!-- Footer -->
+<footer class="footer">  
+    <p>&copy; 2024 &middot; PolyNath &middot; All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
