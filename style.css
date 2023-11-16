@@ -141,12 +141,6 @@ body {
     color: #fff; /* White text color */
 }
 
-.header-text p {
-    font-size: 1.2em;
-    color: #fff; /* White text color */
-    /* No need for 'visibility' property, it will be controlled by JavaScript */
-}
-
 /* Keyframes for fadeInSlideUp animation */
 @keyframes fadeInSlideUp {
     from {
