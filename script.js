@@ -1,15 +1,13 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     console.log('PolyNath website loaded!');
 
-    // Event listener for sidebar toggle
+    // Event listeners for sidebar toggle
     document.querySelector('.navbar-icon').addEventListener('click', toggleSidebar);
     document.querySelector('.closebtn').addEventListener('click', toggleSidebar);
 
     // Close sidebar when a link is clicked
     const sidebarLinks = document.querySelectorAll('.sidebar a');
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', toggleSidebar);
-    });
+    sidebarLinks.forEach(link => link.addEventListener('click', toggleSidebar));
 
     // Start the header text animation sequence
     animateHeaders();
@@ -21,12 +19,11 @@ function animateHeaders() {
     var educationText = "Education for Everyone";
     var i = 0;
 
-    // First, float in the welcome text
+    // Fade in the welcome text
     welcomeTextElement.style.opacity = 1;
 
     // Then, after a delay, start the typewriter effect for the education text
     setTimeout(() => {
-        educationTextElement.classList.remove('hidden');
         educationTextElement.textContent = ''; // Clear the text
 
         function typeWriter() {
@@ -39,6 +36,7 @@ function animateHeaders() {
 
         // Start the typewriter effect
         typeWriter();
+        educationTextElement.style.opacity = 1; // Make sure the text is visible
     }, 2000); // Time before starting the typewriter effect
 }
 
