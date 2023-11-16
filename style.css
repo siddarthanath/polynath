@@ -236,10 +236,11 @@ body {
     }
 }
 
-.scroll-down-arrow a {
-    text-decoration: none;
-    color: #ffffff; /* Change arrow color to white */
-    /* ... existing styles ... */
+.scroll-down-arrow i {
+    font-size: 3em; /* Size of the arrow */
+    color: #fff; /* Arrow color */
+    animation: bounce 2s infinite;
+    cursor: pointer;
 }
 
 .services-section {
