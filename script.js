@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('PolyNath website loaded!');
 
-    // Set the "Learn" tab as active on page load
-    openTab('learn');
-
     // Event listener for sidebar toggle
     document.querySelector('.navbar-icon').addEventListener('click', toggleSidebar);
     document.querySelector('.closebtn').addEventListener('click', toggleSidebar);
@@ -22,7 +19,7 @@ function swapTextTypewriterEffect() {
     var headerText = document.querySelector('.header-text h1');
     var paragraphText = document.querySelector('.header-text p');
     var welcomeText = "Welcome to PolyNath";
-    var educationText = "Empowering education for everyone.";
+    var educationText = "Education for Everyone";
     var i = 0;
 
     headerText.textContent = welcomeText;
