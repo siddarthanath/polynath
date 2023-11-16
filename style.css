@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@700&display=swap');
 
 /* General Styles */
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f5f5f5;
@@ -9,6 +10,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden; /* Prevents horizontal scroll */
+    display: flex; /* New: Sets up Flexbox in the body */
+    flex-direction: column; /* New: Arranges flex items into a column */
+    min-height: 100vh; /* New: Makes sure the body is at least the height of the viewport */
 }
 
 /* Navbar Styles */
@@ -178,7 +182,7 @@ body {
 }
 
 
-.team-section {
+.about-section {
     padding: 50px 0;
     background-color: #f5f5f5; /* Adjust to match your design */
 }
@@ -328,7 +332,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* Footer Styling */
+/* New: Wrapper for the main content to allow for the sticky footer */
+.main-content {
+    flex-grow: 1; /* New: Allows the content to expand to fill available space */
+}
+
 footer {
     background-color: #303030;
     color: #d1d1d1;
@@ -336,6 +344,7 @@ footer {
     padding: 1rem 0;
     width: 100%;
 }
+
 
 footer p {
     margin: 0;
