@@ -118,10 +118,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     position: relative; /* Needed for absolute positioning of children */
     overflow: hidden; /* Prevents content overflow */
 }
@@ -132,13 +128,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fadeInSlideUp 1s ease forwards;
+    z-index: 1; /* Make sure text appears above particles */
 }
 
 .header-text h1 {
     font-size: 3em;
     margin: 0;
     color: #fff; /* White text color */
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s ease forwards;
 }
 
 /* Keyframes for fadeInSlideUp animation */
@@ -152,7 +151,6 @@ body {
         transform: translate(-50%, -50%) translateY(0);
     }
 }
-
 
 /* Button Styling */
 .header-btn {
@@ -168,6 +166,16 @@ body {
 
 .header-btn:hover {
     background-color: #0056b3;
+}
+
+/* Particles.js container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* This ensures that the particles are behind the text */
 }
 
 /* About Section */

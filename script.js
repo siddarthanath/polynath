@@ -12,40 +12,37 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Start the header text animation sequence
-    swapTextTypewriterEffect();
+    animateHeaders();
 });
 
-function swapTextTypewriterEffect() {
-    var headerText = document.querySelector('.header-text h1');
-    var paragraphText = document.querySelector('.header-text p');
-    var welcomeText = "Welcome to PolyNath";
+function animateHeaders() {
+    var welcomeTextElement = document.getElementById('welcome-text');
+    var educationTextElement = document.getElementById('education-text');
     var educationText = "Education for Everyone";
     var i = 0;
 
-    headerText.textContent = welcomeText;
-    paragraphText.textContent = '';
+    // First, float in the welcome text
+    welcomeTextElement.style.opacity = 1;
 
-    // Start the typewriter effect after the welcome message has been displayed for a while
+    // Then, after a delay, start the typewriter effect for the education text
     setTimeout(() => {
-        // Clear the welcome message and start the typewriter effect
-        headerText.textContent = '';
+        educationTextElement.classList.remove('hidden');
+        educationTextElement.textContent = ''; // Clear the text
 
         function typeWriter() {
             if (i < educationText.length) {
-                paragraphText.innerHTML += educationText.charAt(i);
+                educationTextElement.textContent += educationText.charAt(i);
                 i++;
                 setTimeout(typeWriter, 150); // Adjust for typing speed
             }
         }
 
         // Start the typewriter effect
-        paragraphText.style.opacity = 1; // Make sure the paragraph is visible
         typeWriter();
-    }, 4000); // Time before starting the typewriter effect
+    }, 2000); // Time before starting the typewriter effect
 }
 
-
-// Tab control
+// Tab control function
 function openTab(tabName) {
     var i, tabcontent, tabheaders;
 
@@ -66,7 +63,7 @@ function openTab(tabName) {
     document.getElementById(tabName + "-tab").className += " active";
 }
 
-// Sidebar toggle
+// Sidebar toggle function
 function toggleSidebar() {
     var sidebar = document.getElementById("mySidebar");
     if (sidebar.style.display === 'block') {
