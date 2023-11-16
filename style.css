@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 /* Navbar Styles */
@@ -112,25 +113,54 @@ body {
 
 /* Header with Full-Height Image */
 .header-image {
-    background-image: url('path-to-your-header-image.jpg'); /* Add your image path */
+    background-image: url('images/background1.jpg'); /* Add your image path */
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
-    text-align: left;
-    padding: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of children */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+/* Fade in and slide up animation for header text */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state of header text for animation */
+.header-text {
+    opacity: 0; /* Start fully transparent */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Align center */
+    animation: fadeInSlideUp 1s ease forwards; /* Animation will run and set the final state */
 }
 
 .header-text h1 {
-    margin: 0;
     font-size: 3em;
+    margin: 0;
+    color: #fff; /* Adjust as needed */
 }
 
 .header-text p {
     font-size: 1.2em;
+    color: #fff; /* Adjust as needed */
+    visibility: hidden; /* Initially hide the paragraph */
 }
 
+/* Button Styling */
 .header-btn {
     display: inline-block;
     padding: 10px 20px;

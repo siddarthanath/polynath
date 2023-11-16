@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('PolyNath website loaded!');
 
-    // Typewriter effect initialization
-    initTypeWriter();
-
     // Set the "Learn" tab as active on page load
     openTab('learn');
 
@@ -16,24 +13,51 @@ document.addEventListener('DOMContentLoaded', (event) => {
     sidebarLinks.forEach(link => {
         link.addEventListener('click', toggleSidebar);
     });
+
+    // Start the header text animation sequence
+    swapTextTypewriterEffect();
 });
 
-// Typewriter effect
-function initTypeWriter() {
-    var text = "Education for Everyone";
+// Function to swap the header text with a typewriter effect
+function swapTextTypewriterEffect() {
+    var headerText = document.querySelector('.header-text h1');
+    var paragraphText = document.querySelector('.header-text p');
+    var welcomeText = "Welcome to PolyNath";
+    var educationText = "Empowering education for everyone.";
     var i = 0;
-    var dynamicText = document.getElementById('dynamic-text');
-    if (!dynamicText) return; // Stop if element is not found
 
-    function typeWriter() {
-        if (i < text.length) {
-            dynamicText.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 150); // Adjust for typing speed
-        }
-    }
+    // Start by showing the welcome message
+    headerText.textContent = welcomeText;
+    paragraphText.textContent = '';
 
-    typeWriter(); // Start the effect
+    // Wait a few seconds, then start the transition
+    setTimeout(() => {
+        // Fade out the welcome message
+        headerText.style.opacity = 0;
+        paragraphText.style.opacity = 0;
+
+        setTimeout(() => {
+            // Change the text
+            headerText.textContent = '';
+            paragraphText.textContent = educationText;
+
+            // Typewriter effect for the new message
+            function typeWriter() {
+                if (i < educationText.length) {
+                    paragraphText.innerHTML += educationText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 150); // Adjust for typing speed
+                }
+            }
+
+            // Start the typewriter effect
+            typeWriter();
+
+            // Fade in the new message
+            paragraphText.style.opacity = 1;
+
+        }, 2000); // Time to wait before starting the transition
+    }, 2000); // Time to display the welcome message before fading out
 }
 
 // Tab control
