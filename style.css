@@ -118,31 +118,30 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center text horizontally */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Header text styles for animation */
 .header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the text block */
-    z-index: 1; /* Make sure text appears above particles */
+    width: 100%; /* Ensure the text container spans the full width */
+    text-align: center; /* Center text horizontally */
+    z-index: 1; /* Above the particle effect */
 }
 
 .header-text h1 {
     font-size: 3em;
     margin: 0;
-    color: #fff; /* White text color */
-    animation: fadeInSlideUp 1s ease forwards;
+    color: #fff;
     opacity: 0; /* Start fully transparent */
+    animation: fadeInSlideUp 1s ease forwards;
 }
 
-/* Apply initially to the second heading */
+/* Apply only to the second heading initially */
 #education-text {
     visibility: hidden; /* Initially hidden, changed by JavaScript */
     opacity: 0; /* Initially transparent */
