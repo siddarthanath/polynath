@@ -237,7 +237,7 @@ body {
 }
 
 .scroll-down-arrow i {
-    font-size: 3em; /* Size of the arrow */
+    font-size: 1em; /* Size of the arrow */
     color: #fff; /* Arrow color */
     animation: bounce 2s infinite;
     cursor: pointer;
