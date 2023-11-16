@@ -130,17 +130,28 @@ body {
     overflow: hidden;
 }
 
+/* General styles for the header text */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
 /* Styles for the welcome text */
 #welcome-text {
     font-size: 3em;
     color: #fff;
     opacity: 0; /* Start fully transparent */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     white-space: nowrap; /* Ensure the text stays in a single line */
     animation: fadeInSlideUp 1s ease forwards;
+    margin: 0; /* Remove any default margins */
 }
 
 /* Styles for the education text */
@@ -148,12 +159,8 @@ body {
     font-size: 3em;
     color: #fff;
     visibility: hidden; /* Initially hidden, will be made visible by JavaScript */
-    opacity: 0; /* Initially transparent, will be animated by JavaScript */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     white-space: nowrap; /* Keep the text in a single line */
+    margin: 0; /* Remove any default margins */
 }
 
 /* Keyframes for fadeInSlideUp animation */
