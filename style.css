@@ -129,7 +129,6 @@ body {
     text-align: center;
     overflow: hidden;
 }
-
 /* General styles for the header text */
 .header-text {
     display: flex;
@@ -152,6 +151,8 @@ body {
     white-space: nowrap; /* Ensure the text stays in a single line */
     animation: fadeInSlideUp 1s ease forwards;
     margin: 0; /* Remove any default margins */
+    position: absolute;
+    width: 100%; /* Ensure it spans the width of the container */
 }
 
 /* Styles for the education text */
@@ -161,6 +162,8 @@ body {
     visibility: hidden; /* Initially hidden, will be made visible by JavaScript */
     white-space: nowrap; /* Keep the text in a single line */
     margin: 0; /* Remove any default margins */
+    position: absolute;
+    width: 100%; /* Ensure it spans the width of the container */
 }
 
 /* Keyframes for fadeInSlideUp animation */

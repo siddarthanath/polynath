@@ -24,21 +24,26 @@ function animateHeaders() {
 
     // Start the typewriter effect for the education text after a delay
     setTimeout(() => {
-        educationTextElement.textContent = ''; // Clear existing text
+        // Hide the welcome text
+        welcomeTextElement.style.opacity = 0; // Fade out
+        welcomeTextElement.style.visibility = 'hidden'; // Then hide
+
+        // Start typewriting the education text
         educationTextElement.style.visibility = 'visible'; // Make the text visible for typewriter effect
-        educationTextElement.style.opacity = 1; // Set opacity to 1 for the typewriter effect
+        educationTextElement.style.opacity = 1; // Ensure the text is fully visible
 
         function typeWriter() {
             if (i < educationText.length) {
                 educationTextElement.textContent += educationText.charAt(i);
                 i++;
-                setTimeout(typeWriter, 50); // Adjust for typing speed
+                setTimeout(typeWriter, 75); // Adjust for typing speed
             }
         }
 
         typeWriter(); // Start the typewriter effect
     }, 2000); // Time delay before starting the typewriter effect
 }
+
 
 // Tab control function
 function openTab(tabName) {
