@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
     });
     window.addEventListener('scroll', () => {
-        const teamSection = document.querySelector('.team-section');
-        const teamImage = document.querySelector('#team-image');
-        const teamText = document.querySelector('.team-section .right');
+        const aboutSection = document.querySelector('.about-section');
+        const aboutImage = document.querySelector('#about-image');
+        const aboutText = document.querySelector('.about-section .right');
         
-        const sectionPos = teamSection.getBoundingClientRect().top;
+        const sectionPos = aboutSection.getBoundingClientRect().top;
         const screenPos = window.innerHeight / 1.3;
 
         if (sectionPos < screenPos) {
-            teamImage.style.opacity = '1';
-            teamText.style.opacity = '1';
+            aboutImage.style.opacity = '1';
+            aboutText.style.opacity = '1';
         }
     });
 });
