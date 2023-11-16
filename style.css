@@ -208,14 +208,73 @@ body {
     z-index: 0; /* This ensures that the particles are behind the text */
 }
 
-/* About Section */
-.about-section {
-    padding: 128px 16px;
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.scroll-down-arrow a {
+    text-decoration: none;
+    color: #fff; /* Adjust color as needed */
+    animation: bounce 2s infinite; /* Bouncing animation for the arrow */
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.scroll-down-arrow a {
+    text-decoration: none;
+    color: #ffffff; /* Change arrow color to white */
+    /* ... existing styles ... */
+}
+
+.services-section {
+    background-color: #fff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
     text-align: center;
 }
 
-.about-section h3 {
-    margin-top: 0;
+.service-box {
+    width: 30%; /* Adjust width as needed */
+    margin: 0 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light grey background for each box */
+}
+
+.curved-title {
+    background-color: #d9534f; /* Adjust the color as needed */
+    color: #fff;
+    padding: 10px 20px;
+    margin: -30px auto 10px; /* Pull the title up to sit on top of the box */
+    border-radius: 50px; /* Create the pill shape */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    font-size: 1.5em; /* Adjust as needed */
+    display: inline-block; /* Allows for auto margins to work */
+}
+
+.description-box {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 20px;
 }
 
 /* Footer Styling */
