@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     swapTextTypewriterEffect();
 });
 
-// Function to swap the header text with a typewriter effect
 function swapTextTypewriterEffect() {
     var headerText = document.querySelector('.header-text h1');
     var paragraphText = document.querySelector('.header-text p');
@@ -26,39 +25,28 @@ function swapTextTypewriterEffect() {
     var educationText = "Empowering education for everyone.";
     var i = 0;
 
-    // Start by showing the welcome message
     headerText.textContent = welcomeText;
     paragraphText.textContent = '';
 
-    // Wait a few seconds, then start the transition
+    // Start the typewriter effect after the welcome message has been displayed for a while
     setTimeout(() => {
-        // Fade out the welcome message
-        headerText.style.opacity = 0;
-        paragraphText.style.opacity = 0;
+        // Clear the welcome message and start the typewriter effect
+        headerText.textContent = '';
 
-        setTimeout(() => {
-            // Change the text
-            headerText.textContent = '';
-            paragraphText.textContent = educationText;
-
-            // Typewriter effect for the new message
-            function typeWriter() {
-                if (i < educationText.length) {
-                    paragraphText.innerHTML += educationText.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 150); // Adjust for typing speed
-                }
+        function typeWriter() {
+            if (i < educationText.length) {
+                paragraphText.innerHTML += educationText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 150); // Adjust for typing speed
             }
+        }
 
-            // Start the typewriter effect
-            typeWriter();
-
-            // Fade in the new message
-            paragraphText.style.opacity = 1;
-
-        }, 2000); // Time to wait before starting the transition
-    }, 2000); // Time to display the welcome message before fading out
+        // Start the typewriter effect
+        paragraphText.style.opacity = 1; // Make sure the paragraph is visible
+        typeWriter();
+    }, 4000); // Time before starting the typewriter effect
 }
+
 
 // Tab control
 function openTab(tabName) {
