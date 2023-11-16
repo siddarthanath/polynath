@@ -206,14 +206,13 @@ body {
 }
 
 .column.left img {
-    width: 100%;
-    max-width: 400px; /* Adjust based on your image size */
+    max-width: 100%; /* Adjust based on your image size */
     height: auto;
     border-radius: 10px; /* Optional: if you want rounded corners */
 }
 
 .column.right {
-    padding-left: 20px; /* Adjust spacing as needed */
+    padding-left: 10px; /* Adjust spacing as needed */
 }
 
 /* Fade in effect when the page loads */
