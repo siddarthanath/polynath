@@ -116,6 +116,50 @@ main {
     50% { border-color: black }
 }
 
+/* Tab section styling */
+.tab-section {
+    display: flex;
+    margin-top: 20px; /* Space from the main content */
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px; /* Space between tabs and content */
+}
+
+.tab-header {
+    background-color: #f0f0f0; /* Default background */
+    margin-bottom: 10px; /* Space between tabs */
+    padding: 10px;
+    border-radius: 25px; /* Curved corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-header:hover {
+    background-color: #007bff; /* Hover color */
+    color: white;
+}
+
+.tab-header.active {
+    background-color: #007bff; /* Active color */
+    color: white;
+}
+
+.tab-content {
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Curved corners for content box */
+    padding: 20px;
+    width: 70%; /* Adjust as needed */
+    display: block;
+}
+
+/* Hide inactive tab content */
+.tab-content:not(.active) {
+    display: none;
+}
+
 /* Footer Styling */
 footer {
     background-color: #303030; /* Dark grey background for footer */
