@@ -113,40 +113,39 @@ body {
 
 /* Header with Full-Height Image */
 .header-image {
-    background-image: url('images/background1.jpg'); /* Add your image path */
+    background-image: url('images/background1.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; /* Needed for absolute positioning of children */
-    overflow: hidden; 
-    position: relative;
+    position: relative; 
     display: flex;
     justify-content: center;
-    align-items: center;/* Prevents content overflow */
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Header text styles for animation */
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text block */
+    z-index: 1; /* Make sure text appears above particles */
 }
 
 .header-text h1 {
     font-size: 3em;
     margin: 0;
     color: #fff; /* White text color */
-    opacity: 0; /* Start fully transparent */
-    transform: translateY(20px);
     animation: fadeInSlideUp 1s ease forwards;
+    opacity: 0; /* Start fully transparent */
 }
 
-.header-text h1 {
-    font-size: 3em;
-    margin: 0;
-    color: #fff;
-    opacity: 0; /* Initially transparent */
-    transition: opacity 1s ease;
-}
-
-/* Apply only to the second heading initially */
+/* Apply initially to the second heading */
 #education-text {
     visibility: hidden; /* Initially hidden, changed by JavaScript */
-    opacity: 0; /* Initially transparent, not required but can be used for a fade-in effect */
+    opacity: 0; /* Initially transparent */
     transition: visibility 0s, opacity 0.5s linear; /* Transition for fading in */
 }
 
