@@ -32,28 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function animateHeaders() {
-    var staticTextElement = document.getElementById('static-text');
-    var animatedTextElement = document.getElementById('animated-text');
     var welcomeTextElement = document.getElementById('welcome-text');
-    var words = ["Learn", "Grow", "Help"];
     var welcomeText = "Welcome to PolyNath";
     var i = 0;
-    var j = 0;
 
     function animateWords() {
-        if (j < words.length) {
-            animatedTextElement.textContent = words[j];
-            j++;
-            setTimeout(animateWords, 2000); // Time delay between words
-        } else {
-            // Once all words have been displayed, start the typewriter effect
-            staticTextElement.style.opacity = 0; // Fade out the static text
-            setTimeout(() => {
-                welcomeTextElement.style.visibility = 'visible';
-                welcomeTextElement.style.opacity = 1; // Fade in the welcome text
-                typeWriter();
-            }, 500); // Short delay before starting typewriter
-        }
+        // Once all words have been displayed, start the typewriter effect
+        staticTextElement.style.opacity = 0; // Fade out the static text
+        setTimeout(() => {
+            welcomeTextElement.style.visibility = 'visible';
+            welcomeTextElement.style.opacity = 1; // Fade in the welcome text
+            typeWriter();
+        }, 500); // Short delay before starting typewriter
+        
     }
 
     function typeWriter() {
