@@ -336,13 +336,26 @@ body {
     flex-grow: 1; /* New: Allows the content to expand to fill available space */
 }
 
-.update-section {
-    max-height: 300px; /* Adjust as needed */
-    overflow-y: auto; /* Enables vertical scrolling */
+/* Update section */
+
+.updates-container {
     background-color: #f8f9fa; /* Light background color */
     border: 1px solid #e1e4e8; /* Light border */
     margin-top: 50px; /* Space from the previous section */
     padding: 20px;
+    text-align: center;
+}
+
+.updates-container h1 {
+    font-size: 2.5em; /* Large font size for the heading */
+    color: #24292e; /* Dark text color */
+    margin-bottom: 20px;
+}
+
+.scrollable-updates {
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    text-align: left;
 }
 
 .update {
@@ -357,13 +370,13 @@ body {
 
 .update-date {
     font-weight: normal;
-    color: #586069; /* Gray color for date */
+    color: #FF0000; /* Gray color for date */
 }
 
 .update p {
-    text-align: left;
-    color: #24292e; /* Dark text color */
+    color: #000000; /* Dark text color */
 }
+
 
 
 footer {
