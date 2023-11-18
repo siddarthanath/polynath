@@ -147,29 +147,11 @@ body {
     text-align: center;
 }
 
-#static-text {
-    font-size: 3em;
-    color: #fff;
-    white-space: nowrap; /* Keep the text in a single line */
-    margin: 0; /* Remove any default margins */
-    position: absolute;
-    width: 100%; /* Ensure it spans the width of the container */
-}
-
-.animated-text {
-    font-size: 3em;
-    color: #ffdd00; /* Bright yellow */
-    text-shadow: 0 0 10px rgba(255, 221, 0, 0.7); /* Yellow glow */
-    font-weight: bold;
-}
-
-
 #welcome-text {
     font-size: 3em;
     color: #fff;
     opacity: 0; /* Start fully transparent */
     white-space: nowrap; /* Ensure the text stays in a single line */
-    animation: fadeInSlideUp 1s ease forwards;
     margin: 0; /* Remove any default margins */
     position: absolute;
     width: 100%; /* Ensure it spans the width of the container */
@@ -355,7 +337,34 @@ body {
     flex-grow: 1; /* New: Allows the content to expand to fill available space */
 }
 
+.update-section {
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    background-color: #f8f9fa; /* Light background color */
+    border: 1px solid #e1e4e8; /* Light border */
+    margin-top: 50px; /* Space from the previous section */
+    padding: 20px;
+}
 
+.update {
+    border-bottom: 1px solid #e1e4e8; /* Border between updates */
+    padding: 10px 0;
+}
+
+.update h3 {
+    font-size: 1.2em;
+    color: #0366d6; /* Blue color for version number */
+}
+
+.update-date {
+    font-weight: normal;
+    color: #586069; /* Gray color for date */
+}
+
+.update p {
+    text-align: left;
+    color: #24292e; /* Dark text color */
+}
 
 
 footer {
