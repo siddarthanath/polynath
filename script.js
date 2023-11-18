@@ -33,26 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function animateHeaders() {
     var welcomeTextElement = document.getElementById('welcome-text');
-    var welcomeText = "Welcome to PolyNath";
-    var i = 0;
-
-    // Start the typewriter effect for the welcome text
-    function typeWriter() {
-        if (i < welcomeText.length) {
-            welcomeTextElement.textContent += welcomeText.charAt(i);
-            i++;
-            setTimeout(typeWriter, 75); // Adjust for typing speed
-        }
-    }
-
-    // Ensure the welcome text element is visible and ready for typewriting effect
+    // Fade in the welcome text
     welcomeTextElement.style.opacity = 1;
-    welcomeTextElement.style.visibility = 'visible';
-
-    // Start the typewriter effect
-    typeWriter(); 
+// Time delay before starting the typewriter effect
 }
-
 
 
 // Tab control function

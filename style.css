@@ -156,9 +156,7 @@ body {
     margin: 0; /* Remove any default margins */
     position: absolute;
     width: 100%; /* Ensure it spans the width of the container */
-    visibility: hidden; /* Initially hidden, will be made visible by JavaScript */
 }
-
 
 /* Keyframes for fadeInSlideUp animation */
 @keyframes fadeInSlideUp {
