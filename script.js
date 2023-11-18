@@ -32,35 +32,42 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function animateHeaders() {
+    var staticTextElement = document.getElementById('static-text');
+    var animatedTextElement = document.getElementById('animated-text');
     var welcomeTextElement = document.getElementById('welcome-text');
-    var educationTextElement = document.getElementById('education-text');
-    var educationText = "Education for Everyone";
+    var words = ["Learn", "Grow", "Help"];
+    var welcomeText = "Welcome to PolyNath";
     var i = 0;
+    var j = 0;
 
-    // Fade in the welcome text
-    welcomeTextElement.style.opacity = 1;
-
-    // Start the typewriter effect for the education text after a delay
-    setTimeout(() => {
-        // Hide the welcome text
-        welcomeTextElement.style.opacity = 0; // Fade out
-        welcomeTextElement.style.visibility = 'hidden'; // Then hide
-
-        // Start typewriting the education text
-        educationTextElement.style.visibility = 'visible'; // Make the text visible for typewriter effect
-        educationTextElement.style.opacity = 1; // Ensure the text is fully visible
-
-        function typeWriter() {
-            if (i < educationText.length) {
-                educationTextElement.textContent += educationText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 75); // Adjust for typing speed
-            }
+    function animateWords() {
+        if (j < words.length) {
+            animatedTextElement.textContent = words[j];
+            j++;
+            setTimeout(animateWords, 2000); // Time delay between words
+        } else {
+            // Once all words have been displayed, start the typewriter effect
+            staticTextElement.style.opacity = 0; // Fade out the static text
+            setTimeout(() => {
+                welcomeTextElement.style.visibility = 'visible';
+                welcomeTextElement.style.opacity = 1; // Fade in the welcome text
+                typeWriter();
+            }, 500); // Short delay before starting typewriter
         }
+    }
 
-        typeWriter(); // Start the typewriter effect
-    }, 2000); // Time delay before starting the typewriter effect
+    function typeWriter() {
+        if (i < welcomeText.length) {
+            welcomeTextElement.textContent += welcomeText.charAt(i);
+            i++;
+            setTimeout(typeWriter, 75); // Adjust for typing speed
+        }
+    }
+
+    // Start the word animation
+    animateWords();
 }
+
 
 
 // Tab control function
