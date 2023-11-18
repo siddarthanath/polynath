@@ -36,17 +36,7 @@ function animateHeaders() {
     var welcomeText = "Welcome to PolyNath";
     var i = 0;
 
-    function animateWords() {
-        // Once all words have been displayed, start the typewriter effect
-        staticTextElement.style.opacity = 0; // Fade out the static text
-        setTimeout(() => {
-            welcomeTextElement.style.visibility = 'visible';
-            welcomeTextElement.style.opacity = 1; // Fade in the welcome text
-            typeWriter();
-        }, 500); // Short delay before starting typewriter
-        
-    }
-
+    // Start the typewriter effect for the welcome text
     function typeWriter() {
         if (i < welcomeText.length) {
             welcomeTextElement.textContent += welcomeText.charAt(i);
@@ -55,8 +45,12 @@ function animateHeaders() {
         }
     }
 
-    // Start the word animation
-    animateWords();
+    // Ensure the welcome text element is visible and ready for typewriting effect
+    welcomeTextElement.style.opacity = 1;
+    welcomeTextElement.style.visibility = 'visible';
+
+    // Start the typewriter effect
+    typeWriter(); 
 }
 
 
