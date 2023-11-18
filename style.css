@@ -193,7 +193,7 @@ body {
 /* Styles for paragraph text within the about section */
 .about-section p {/* This line is optional since it's already inherited from the body */
     font-weight: 400; /* Normal font weight; adjust as needed */
-    color: #333; /* Dark grey color; adjust as needed */
+    color: #000000; /* Dark text color */
 }
 
 
@@ -339,7 +339,7 @@ body {
 /* Update section */
 
 .updates-container {
-    background-color: #f8f9fa; /* Light background color */
+    background-color: #fff;; /* Light background color */
     border: 1px solid #e1e4e8; /* Light border */
     margin-top: 50px; /* Space from the previous section */
     padding: 20px;
@@ -348,12 +348,12 @@ body {
 
 .updates-container h1 {
     font-size: 2.5em; /* Large font size for the heading */
-    color: #24292e; /* Dark text color */
+    color: #000000; /* Dark text color */
     margin-bottom: 20px;
 }
 
 .scrollable-updates {
-    max-height: 300px; /* Adjust as needed */
+    max-height: 50px; /* Adjust as needed */
     overflow-y: auto; /* Enables vertical scrolling */
     text-align: left;
 }
@@ -374,6 +374,7 @@ body {
 }
 
 .update p {
+    font-weight: 400; /* Normal font weight; adjust as needed */
     color: #000000; /* Dark text color */
 }
 
