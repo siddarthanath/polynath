@@ -23,7 +23,6 @@ body {
     width: 100%;
     background-color: #fff;
     z-index: 1000;
-    padding-bottom: 20px;
 }
 
 .navbar-container {
@@ -180,7 +179,39 @@ body {
     z-index: 0; /* This ensures that the particles are behind the text */
 }
 
-/* Update section */
+/* Main text */
+.three-column-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px; /* This adds padding on the left and right sides */
+  }
+  
+  .column {
+    flex: 1; /* Each column will take equal space */
+    padding: 0 10px; /* This adds some space between the columns */
+  }
+
+.title-box, .content-box {
+background-color: #f1f1f1; /* Light grey background */
+border-radius: 15px; /* Curved corners */
+padding: 10px;
+margin-bottom: -10px; /* Overlap the content box with the title box */
+}
+
+.title-box {
+font-weight: bold;
+text-align: center;
+padding-bottom: 20px;
+}
+
+.content-box {
+/* To ensure the text box connects with the title box, we allow overlap with negative margin */
+margin-top: -10px;
+border-radius: 0 0 15px 15px;
+padding-top: 30px; /* Only bottom corners are curved */
+}
+
+
 
 
 /* Footer */

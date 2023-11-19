@@ -297,7 +297,7 @@ body {
 
 .left-column, .right-column {
     flex: 1; /* Each column takes up an equal amount of space */
-    padding: 15px; /* Padding inside each column */
+    padding: 30px; /* Padding inside each column */
 }
 
 .right-column {
