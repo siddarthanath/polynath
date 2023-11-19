@@ -132,6 +132,7 @@ body {
     align-items: center;
     text-align: center;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 /* General styles for the header text */
 .header-text {
