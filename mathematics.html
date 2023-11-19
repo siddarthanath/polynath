@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags, title, link to CSS, etc. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyNath - Education for Everyone</title>
     <link rel="stylesheet" href="mathematics.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-    <!-- Other head elements -->
 </head>
 <body>
-
-    <!-- Navbar (sit on top) -->
+<!-- Navbar (sit on top) -->
 <div class="navbar">
     <div class="navbar-container" id="myNavbar">
         <a href="index.html" class="navbar-logo">
@@ -44,24 +41,37 @@
     </div>
 </div>
 
-<!-- Include the same navbar here -->
+<!-- Sidebar for small screens -->
+<nav class="sidebar" id="mySidebar" style="display:none;">
+    <a href="javascript:void(0)" onclick="toggleMenu()" class="closebtn">&times;</a>
+    <a href="about.html" onclick="toggleMenu()">ABOUT</a>
+    <a href="#subjects" onclick="toggleMenu()">SUBJECTS</a>
+    <a href="#playground" onclick="toggleMenu()">PLAYGROUND</a>
+    <a href="#tutoring" onclick="toggleMenu()">TUTORING</a>
+    <a href="#media" onclick="toggleMenu()">MEDIA</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
+</nav>
+
 <div class="main-content">
-    <!-- Header with full-height image -->
-    <header class="header-image" id="home">
-        <div class="header-text">
-            <h1 id="welcome-text">MATHEMATICS</h1>
-        </div>
-        <div id="particles-js"></div> 
-    </header>
+<!-- Header with full-height image -->
+<header class="header-image" id="home">
+    <div class="header-text">
+        <h1 id="welcome-text">MATHEMATICS</h1>
+    </div>
+    <div id="particles-js"></div> 
+    <div class="scroll-down-arrow">
+        <a href="#next-section"><i class="fas fa-chevron-circle-down"></i></a>
+    </div>    
+</header>
+
+<!-- Footer -->
+<footer class="footer">  
+    <p>&copy; 2024 &middot; PolyNath &middot; All rights reserved.</p>
+</footer>
 </div>
-    
-    <!-- Footer -->
-    <footer class="footer">  
-        <p>&copy; 2024 &middot; PolyNath &middot; All rights reserved.</p>
-    </footer>
-</div>
+
 <script src="particles.js"></script>
 <script src="particles.app.js"></script>
-
+<script src="index.js"></script>
 </body>
 </html>
