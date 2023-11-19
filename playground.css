@@ -150,9 +150,9 @@ body {
 #welcome-text {
     font-size: 3em;
     color: #fff;
-    opacity: 0; /* Start fully transparent */
     white-space: nowrap; /* Ensure the text stays in a single line */
     margin: 0; /* Remove any default margins */
+    animation: fadeInSlideUp 1s ease forwards;
     position: absolute;
     width: 100%; /* Ensure it spans the width of the container */
 }
@@ -195,6 +195,7 @@ body {
 .mathematics-intro-container h2 {
     color: #333; /* Dark color for the heading */
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .mathematics-intro-container p {
