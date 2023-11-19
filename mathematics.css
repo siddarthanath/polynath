@@ -122,31 +122,30 @@ body {
 
 /* Header with Full-Height Image */
 .header-image {
-    background-image: url('images/background1.jpg');
-    height: 50vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    /* ... other styles ... */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: center; /* This will vertically center the .header-text within .header-image */
+    justify-content: center; /* This will horizontally center the .header-text */
+    background-position: top center;
     overflow: hidden;
+    /* ... other styles ... */
 }
 
 .header-text {
+    /* Remove any positioning styles like top, left, right, bottom, and position: absolute */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
+    z-index: 2; /* Make sure it's above the particles */
 }
+
+#welcome-text {
+    /* ... other styles ... */
+    opacity: 1; /* Set opacity to 1 to make it visible */
+    /* Remove any positioning styles like top, left, right, bottom, and position: absolute */
+}
+
 
 #welcome-text {
     font-size: 3em;
@@ -154,7 +153,6 @@ body {
     opacity: 0; /* Start fully transparent */
     white-space: nowrap; /* Ensure the text stays in a single line */
     margin: 0; /* Remove any default margins */
-    position: absolute;
     width: 100%; /* Ensure it spans the width of the container */
 }
 
