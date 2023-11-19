@@ -191,7 +191,7 @@ body {
     padding: 0 10px; /* This adds some space between the columns */
   }
 
-  
+
 .title-box {
     background-color: #d9534f; /* Reddish background */
     border: 2px solid gold; /* Gold border */
@@ -218,8 +218,13 @@ body {
   }
   
   .dropdown-content {
-    display: none;
-    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Adjust timing as needed */
+  }
+  
+  .dropdown-content.expanded {
+    max-height: 500px; /* Adjust this value based on the content's size */
   }
   
   .dropdown-item {
@@ -229,7 +234,6 @@ body {
     margin-bottom: 5px;
   }
   
-
 
 /* Footer */
 

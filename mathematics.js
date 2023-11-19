@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Sidebar toggle function
 function toggleDropdown(id) {
     var element = document.getElementById(id);
-    if (element.style.display === "block") {
-      element.style.display = "none";
+    if (element.classList.contains('expanded')) {
+      element.classList.remove('expanded');
     } else {
-      element.style.display = "block";
+      element.classList.add('expanded');
     }
-  }
+  }  
   
