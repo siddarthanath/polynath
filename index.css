@@ -170,64 +170,6 @@ body {
     }
 }
 
-/* Make sure the navbar height is accounted for */
-.about-section {
-    padding-top: 70px; /* Adjust this value to at least the height of your navbar */
-    padding-bottom: 50px;
-    background-color: #f5f5f5;
-}
-
-.column.left img {
-    max-width: 100%; /* Ensures the image is responsive and doesn't overflow */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Removes bottom space under the image */
-    margin-top: 20px; /* Give some space on the top to not be cut off by the navbar */
-}
-
-/* Ensure the text in the right column doesn't get cut off */
-.column.right {
-    padding: 20px;
-    overflow: hidden; /* Prevents text from overflowing */
-}
-
-/* Styles for paragraph text within the about section */
-.about-section p {/* This line is optional since it's already inherited from the body */
-    font-weight: 400; /* Normal font weight; adjust as needed */
-    color: #000000; /* Dark text color */
-}
-
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.row {
-    display: flex;
-    align-items: flex-start; /* Adjust if you want vertical centering */
-    justify-content: space-between;
-}
-
-.column {
-    flex-basis: 50%;
-    opacity: 0; /* Start fully transparent */
-    transition: opacity 1s ease-in-out;
-}
-
-/* Fade in effect when the page loads */
-@media (prefers-reduced-motion: no-preference) {
-    .column {
-        animation: fadeInEffect 1s ease-in-out forwards;
-    }
-}
-
-/* Keyframes for the fade-in animation */
-@keyframes fadeInEffect {
-    to {
-        opacity: 1;
-    }
-}
 
 /* Set the font family for the header-text and the rest of the text */
 .header-text h1, .column.right {
@@ -394,6 +336,56 @@ body {
 }
 
 
+/* First container section */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Adjust as needed */
+    margin: auto;
+    padding: 20px;
+}
+
+.glow-heading {
+    font-size: 2.5em;
+    color: #fff; /* Adjust color as needed */
+    text-shadow: 0 0 10px #9ecaed, 0 0 20px #9ecaed, 0 0 30px #9ecaed, 0 0 40px #0fa, 0 0 70px #0fa, 0 0 80px #0fa, 0 0 100px #0fa;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.text-side {
+    width: 50%; /* Adjust as needed */
+    padding-right: 20px; /* Provides space between text and image */
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 50%; /* Adjust as needed */
+    padding-right: 10px; /* Provides space between the columns */
+}
+
+.image-side {
+    width: 50%; /* Adjust as needed */
+    padding-left: 20px; /* Provides space between text and image */
+}
+
+.image-side img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
 
 footer {
     background-color: #303030;
