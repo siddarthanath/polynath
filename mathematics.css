@@ -122,30 +122,31 @@ body {
 
 /* Header with Full-Height Image */
 .header-image {
-    /* ... other styles ... */
+    background-image: url('images/background1.jpg');
+    height: 50vh; /* Adjust this value as needed */
+    background-position: top center; /* Aligns the background image to the top */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     display: flex;
-    align-items: center; /* This will vertically center the .header-text within .header-image */
-    justify-content: center; /* This will horizontally center the .header-text */
-    background-position: top center;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
     overflow: hidden;
-    /* ... other styles ... */
 }
 
 .header-text {
-    /* Remove any positioning styles like top, left, right, bottom, and position: absolute */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Make sure it's above the particles */
+    position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
 }
-
-#welcome-text {
-    /* ... other styles ... */
-    opacity: 1; /* Set opacity to 1 to make it visible */
-    /* Remove any positioning styles like top, left, right, bottom, and position: absolute */
-}
-
 
 #welcome-text {
     font-size: 3em;
