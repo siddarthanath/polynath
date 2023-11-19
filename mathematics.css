@@ -123,7 +123,7 @@ body {
 /* Header with Full-Height Image */
 .header-image {
     background-image: url('images/background1.jpg');
-    height: 100vh;
+    height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,6 +146,16 @@ body {
     right: 0;
     bottom: 0;
     text-align: center;
+}
+
+#welcome-text {
+    font-size: 3em;
+    color: #fff;
+    opacity: 0; /* Start fully transparent */
+    white-space: nowrap; /* Ensure the text stays in a single line */
+    margin: 0; /* Remove any default margins */
+    position: absolute;
+    width: 100%; /* Ensure it spans the width of the container */
 }
 
 /* Fade in effect when the page loads */
