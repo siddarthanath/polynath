@@ -179,6 +179,28 @@ body {
     z-index: 0; /* This ensures that the particles are behind the text */
 }
 
+
+/* Intro Content */
+
+.mathematics-intro-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Adjust as per your layout */
+    background-color: #f5f5f5; /* Light background for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+}
+
+.mathematics-intro-container h2 {
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 15px;
+}
+
+.mathematics-intro-container p {
+    color: #000; /* Slightly lighter color for the text */
+    line-height: 1.6; /* For better readability */
+}
+
 /* Main text */
 .three-column-container {
     display: flex;
@@ -205,7 +227,7 @@ body {
   }  
 
 .content-box {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     border-radius: 0 0 15px 15px;
     padding: 10px;
     margin-top: -10px;
