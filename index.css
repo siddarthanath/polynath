@@ -287,28 +287,30 @@ body {
 
 
 /* First container section */
+
 .container {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Flex layout for side-by-side columns */
+    padding: 0 20px; /* Equal padding on both sides of the container */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Distributes space between columns */
 }
 
 .left-column, .right-column {
-    width: 50%; /* Adjust the width as needed */
+    flex: 1; /* Each column takes up an equal amount of space */
+    padding: 15px; /* Padding inside each column */
 }
 
-.left-column h1 {
-    /* Style for your title */
+.right-column {
+    display: flex;
+    justify-content: center; /* Center the image in the right column */
+    align-items: center;
 }
 
-.left-column p {
-    /* Style for your text */
+img {
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto; /* Keeps the image aspect ratio */
 }
 
-.right-column img {
-    max-width: 100%; /* Make the image responsive */
-    height: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adjust the shadow as needed */
-}
 
 /* Footer */
 
