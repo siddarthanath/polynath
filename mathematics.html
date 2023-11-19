@@ -10,6 +10,40 @@
     <!-- Other head elements -->
 </head>
 <body>
+
+    <!-- Navbar (sit on top) -->
+<div class="navbar">
+    <div class="navbar-container" id="myNavbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="images/logo.png" alt="PolyNath Logo" style="width: 50px; height:50px;">
+        </a>        
+        <!-- Right-sided navbar links -->
+        <div class="navbar-right">
+            <div class="navbar-item">
+                <a href="about.html" class="nav-link">ABOUT</a>
+            </div>
+            <div class="navbar-item">
+                <a href="#subjects" class="nav-link">SUBJECTS</a>
+                <div class="dropdown-content">
+                    <a href="mathematics.html">MATHEMATICS</a>
+                    <a href="#computerscience">COMPUTER SCIENCE</a>
+                    <a href="#physics">PHYSICS</a>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <a href="#playground" class="nav-link">PLAYGROUND</a>
+            </div>
+            <a href="#tutoring" class="nav-link">TUTORING</a>
+            <a href="#media" class="nav-link">MEDIA</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+        </div>
+        <!-- Menu icon for small screens -->
+        <a href="javascript:void(0)" class="navbar-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
 <!-- Include the same navbar here -->
 <div class="main-content">
     <!-- Header with full-height image -->
@@ -26,6 +60,8 @@
         <p>&copy; 2024 &middot; PolyNath &middot; All rights reserved.</p>
     </footer>
 </div>
+<script src="particles.js"></script>
+<script src="particles.app.js"></script>
 
 </body>
 </html>
