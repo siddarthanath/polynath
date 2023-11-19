@@ -296,39 +296,54 @@ body {
     cursor: pointer;
 }
 
-.services-section {
-    background-color: #fff;
+
+/* Frontpage overview */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 50px 0;
+}
+
+.title-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Positions the children on each end */
+    padding: 0 10%; /* You might need to adjust this depending on your layout */
+    box-sizing: border-box;
+}
+
+.left-title, .right-title {
+    font-size: 2em;
+    color: #000;
+    margin: 0;
+    flex-basis: 49%; /* Splits the width evenly between the two titles */
+}
+
+.feature-section {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    text-align: center;
+    width: 100%;
+    margin-top: 20px; /* Space between titles and feature boxes */
 }
 
-.service-box {
-    width: 30%; /* Adjust width as needed */
-    margin: 0 15px;
+.feature-box {
+    width: 45%; /* Adjust based on your design */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #f9f9f9; /* Light grey background for each box */
+    background-color: #fff; /* or any color */
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Gives a subtle shadow */
 }
 
-.curved-title {
-    background-color: #d9534f; /* Adjust the color as needed */
-    color: #fff;
-    padding: 10px 20px;
-    margin: -30px auto 10px; /* Pull the title up to sit on top of the box */
-    border-radius: 50px; /* Create the pill shape */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-    font-size: 1.5em; /* Adjust as needed */
-    display: inline-block; /* Allows for auto margins to work */
+.icon-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .description-box {
-    color: #666;
-    font-size: 1em;
-    margin-bottom: 20px;
+    text-align: left;
 }
 
 /* New: Wrapper for the main content to allow for the sticky footer */
