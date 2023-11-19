@@ -139,7 +139,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: bottom;
+    position: center;
     top: 0;
     left: 0;
     right: 0;
@@ -150,7 +150,6 @@ body {
 #welcome-text {
     font-size: 3em;
     color: #fff;
-    opacity: 0; /* Start fully transparent */
     white-space: nowrap; /* Ensure the text stays in a single line */
     margin: 0; /* Remove any default margins */
     width: 100%; /* Ensure it spans the width of the container */
