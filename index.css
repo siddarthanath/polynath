@@ -238,56 +238,6 @@ body {
     cursor: pointer;
 }
 
-
-/* Frontpage overview */
-.content-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.title-section {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Positions the children on each end */
-    padding: 0 10%; /* You might need to adjust this depending on your layout */
-    box-sizing: border-box;
-}
-
-.left-title, .right-title {
-    font-size: 2em;
-    color: #000;
-    margin: 0;
-    flex-basis: 49%; /* Splits the width evenly between the two titles */
-}
-
-.feature-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 20px; /* Space between titles and feature boxes */
-}
-
-.feature-box {
-    width: 45%; /* Adjust based on your design */
-    padding: 20px;
-    background-color: #fff; /* or any color */
-    margin: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Gives a subtle shadow */
-}
-
-.icon-title {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.description-box {
-    text-align: left;
-}
-
 /* New: Wrapper for the main content to allow for the sticky footer */
 .main-content {
     flex-grow: 1; /* New: Allows the content to expand to fill available space */
@@ -337,67 +287,26 @@ body {
 
 
 /* First container section */
-
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    max-width: 1200px; /* Adjust as needed */
-    margin: auto;
-    padding: 20px;
+    justify-content: space-between;
 }
 
-.black-text {
-    color: black; /* Sets the color of "A Place to" to black */
+.left-column, .right-column {
+    width: 50%; /* Adjust the width as needed */
 }
 
-.gold-text {
-    color: gold; /* Sets the color of "Learn..." to gold */
-    text-shadow: 2px 2px 4px #000000; /* Shadow effect */
+.left-column h1 {
+    /* Style for your title */
 }
 
-.header h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    text-align: left;
+.left-column p {
+    /* Style for your text */
 }
 
-.description {
-    text-align: center;
-    margin-bottom: 1em; /* Additional margin for spacing below the description */
-}
-
-.columns {
-    display: flex;
-    justify-content: space-between; /* This will create space between the two columns */
-    margin-bottom: 2em; /* Space before the next content section */
-}
-
-.column {
-    width: 50%;
-    padding: 0 15px;
-    /* You may want to align the items to start so the logo and title align nicely */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.logo {
-    /* Adjust the width and height as needed */
-    width: 50px; /* Example size, adjust as needed */
-    height: auto; /* Keeps the aspect ratio of the image */
-    margin-bottom: 10px; /* Space between the logo and the heading */
-}
-
-.image-side {
-    width: 50%; /* Adjust as needed */
-    padding-left: 20px; /* Provides space between text and image */
-}
-
-.image-side img {
-    max-width: 100%;
+.right-column img {
+    max-width: 100%; /* Make the image responsive */
     height: auto;
-    transform: rotate(+20deg); /* Adjust the angle as needed */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adjust the shadow as needed */
 }
 
