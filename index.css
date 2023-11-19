@@ -347,12 +347,6 @@ body {
     padding: 20px;
 }
 
-.glow-heading {
-    font-size: 2.5em;
-    color: #fff; /* Adjust color as needed */
-    text-shadow: 0 0 10px #9ecaed, 0 0 20px #9ecaed, 0 0 30px #9ecaed, 0 0 40px #0fa, 0 0 70px #0fa, 0 0 80px #0fa, 0 0 100px #0fa;
-}
-
 .content {
     display: flex;
     justify-content: space-between;
@@ -365,14 +359,22 @@ body {
     padding-right: 20px; /* Provides space between text and image */
 }
 
-.column-container {
-    display: flex;
-    justify-content: space-between;
+.header h1 {
+    font-size: 3em;
+    text-align: left; /* Large font size for the heading */
 }
 
-.column {
-    width: 50%; /* Adjust as needed */
-    padding-right: 10px; /* Provides space between the columns */
+.black-text {
+    color: black; /* Sets the color of "A Place to" to black */
+}
+
+.gold-text {
+    color: gold; /* Sets the color of "Learn..." to gold */
+    text-shadow: 2px 2px 4px #000000; /* Shadow effect */
+}
+
+.guidebooks, .generative-ai {
+    margin-bottom: 1em; /* Spacing between the sections */
 }
 
 .image-side {
@@ -383,6 +385,8 @@ body {
 .image-side img {
     max-width: 100%;
     height: auto;
+    transform: rotate(-10deg); /* Adjust the angle as needed */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adjust the shadow as needed */
 }
 
 /* Footer */
