@@ -183,7 +183,7 @@ body {
 .three-column-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px; /* This adds padding on the left and right sides */
+    padding: 0 75px; /* This adds padding on the left and right sides */
   }
   
   .column {
@@ -224,7 +224,7 @@ body {
   }
   
   .dropdown-content.expanded {
-    max-height: 500px; /* Adjust this value based on the content's size */
+    max-height: 1000px; /* Adjust this value based on the content's size */
   }
   
   .dropdown-item {
