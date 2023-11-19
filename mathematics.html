@@ -63,19 +63,29 @@
 
 <!-- About Section Content -->
 <div class="three-column-container">
+    <!-- ... other columns ... -->
     <div class="column">
-        <div class="title-box">Pre-University</div>
-        <div class="content-box">GCSE and A-Levels</div>
+      <div class="title-box">Pre-University</div>
+      <div class="content-box">
+        <div class="dropdown">
+          <div class="dropdown-title" onclick="toggleDropdown('gcse-dropdown')">GCSE</div>
+          <div class="dropdown-content" id="gcse-dropdown">
+            <div class="dropdown-item">Revision</div>
+            <div class="dropdown-item">Papers</div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdown-title" onclick="toggleDropdown('alevel-dropdown')">A-Levels</div>
+          <div class="dropdown-content" id="alevel-dropdown">
+            <div class="dropdown-item">Revision</div>
+            <div class="dropdown-item">Papers</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="column">
-        <div class="title-box">University</div>
-        <div class="content-box">Pure, Statistics and Mechanics</div>
-    </div>
-    <div class="column">
-        <div class="title-box">Post-University</div>
-        <div class="content-box">Quantitative Finance</div>
-    </div>
-</div>
+    <!-- ... other columns ... -->
+  </div>
+  
 
 <!-- Footer -->
 <footer class="footer">  
@@ -85,6 +95,6 @@
 
 <script src="particles.js"></script>
 <script src="particles.app.js"></script>
-<script src="index.js"></script>
+<script src="mathematics.js"></script>
 </body>
 </html>

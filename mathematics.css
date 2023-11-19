@@ -191,27 +191,44 @@ body {
     padding: 0 10px; /* This adds some space between the columns */
   }
 
-.title-box, .content-box {
-background-color: #f1f1f1; /* Light grey background */
-border-radius: 15px; /* Curved corners */
-padding: 10px;
-margin-bottom: -10px; /* Overlap the content box with the title box */
-}
-
+  
 .title-box {
-font-weight: bold;
-text-align: center;
-padding-bottom: 20px;
-}
+    background-color: #d9534f; /* Reddish background */
+    border: 2px solid gold; /* Gold border */
+    color: white; /* White text */
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: -10px; /* Overlap with the content box */
+    cursor: pointer; /* Indicates the box is clickable */
+  }  
 
 .content-box {
-/* To ensure the text box connects with the title box, we allow overlap with negative margin */
-margin-top: -10px;
-border-radius: 0 0 15px 15px;
-padding-top: 30px; /* Only bottom corners are curved */
-}
-
-
+    background-color: #f1f1f1;
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+    margin-top: -10px;
+  }
+  
+  .dropdown-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    padding-left: 15px;
+  }
+  
+  .dropdown-item {
+    background-color: white; /* White background for dropdown items */
+    border-radius: 10px; /* Rounded corners for dropdown items */
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
 
 
 /* Footer */
