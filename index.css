@@ -132,7 +132,6 @@ body {
     align-items: center;
     text-align: center;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 /* General styles for the header text */
 .header-text {
@@ -308,7 +307,7 @@ body {
 .right-column img {
     max-width: 100%; /* Make the image responsive */
     height: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adjust the shadow as needed */
+     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adjust the shadow as needed */
 }
 
 /* Footer */
