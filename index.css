@@ -276,10 +276,14 @@ h2 {
 }
 
 .slideshow-container {
+    display: flex;
+    justify-content: space-between; /* Aligns children with space between */
+    padding: 20px;
+    margin: 20px auto;
     max-width: 1000px;
-    position: relative;
-    margin: auto;
     background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   /* Next & previous buttons */
@@ -329,7 +333,13 @@ h2 {
     top: 0;
   }
   
-.mySlides {display: none}
+.mySlides {
+display: none;
+vertical-align: middle;
+text-align: center; /* Center the text */
+min-height: 200px; /* Adjust as necessary */
+}
+  
 img {vertical-align: middle;}
 
 @keyframes fade {
