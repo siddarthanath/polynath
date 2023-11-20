@@ -39,44 +39,24 @@ function animateHeaders() {
 // Time delay before starting the typewriter effect
 }
 
-
-// Tab control function
-function openTab(tabName) {
-    var i, tabcontent, tabheaders;
-
-    // Get all elements with class="tab-content" and hide them
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tab-header" and remove the "active" class
-    tabheaders = document.getElementsByClassName("tab-header");
-    for (i = 0; i < tabheaders.length; i++) {
-        tabheaders[i].className = tabheaders[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabName + "-content").style.display = "block";
-    document.getElementById(tabName + "-tab").className += " active";
-}
-
 function setupReviewSlider() {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.review-item');
-    const totalSlides = slides.length;
+    const reviewSlide = document.getElementById('reviewSlide');
+    const reviews = ["Great work.", "Good job."]; // Add more phrases as needed
+    let currentReviewIndex = 0;
 
-    function nextSlide() {
-        slides[currentSlide].style.display = 'none';
-        currentSlide = (currentSlide + 1) % totalSlides;
-        slides[currentSlide].style.display = 'block';
+    function showNextReview() {
+        reviewSlide.style.opacity = 0; // Hide the current text
+
+        // Change the text after a short delay
+        setTimeout(() => {
+            currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+            reviewSlide.innerHTML = `<span>${reviews[currentReviewIndex]}</span>`;
+            reviewSlide.style.opacity = 1; // Show the new text
+        }, 1000); // Delay of 1 second
     }
 
-    // Initialize first slide
-    slides[currentSlide].style.display = 'block';
-
-    // Change slide every 5 seconds
-    setInterval(nextSlide, 5000);
+    setInterval(showNextReview, 4000); // Change review every 4 seconds
+    showNextReview(); // Show the first review
 }
 
 
