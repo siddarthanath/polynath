@@ -293,7 +293,7 @@ h2 {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white; /* Change as needed */
+    color: #000000; /* Change as needed */
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -315,7 +315,7 @@ h2 {
 
 /* Hover effect for arrows */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: #ffffff;
 }
 
 /* Footer */

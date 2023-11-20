@@ -192,6 +192,10 @@ body {
     padding: 50px; /* Adjust the padding value as needed */
 }
 
+.text-column h2 {
+    text-align: center;
+}
+
 .image-column img {
     max-width: 100%;
     height: auto;
