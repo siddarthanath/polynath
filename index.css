@@ -243,10 +243,36 @@ body {
     flex-grow: 1; /* New: Allows the content to expand to fill available space */
 }
 
+/* First container section */
+
+.container {
+    background-color: #ffffff;
+    display: flex; /* Flex layout for side-by-side columns */
+    padding: 0 75px; /* Equal padding on both sides of the container */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Distributes space between columns */
+}
+
+.left-column, .right-column {
+    flex: 1; /* Each column takes up an equal amount of space */
+    padding: 20px; /* Padding inside each column */
+}
+
+.right-column {
+    display: flex;
+    justify-content: center; /* Center the image in the right column */
+    align-items: center;
+}
+
+img {
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto; /* Keeps the image aspect ratio */
+}
+
 /* Update section */
 
 .updates-container {
-    background-color: #fff;; /* Light background color */
+    background-color: #ffffff; /* Light background color */
     border: 1px solid #e1e4e8; /* Light border */
     margin-top: 50px; /* Space from the previous section */
     padding: 20px;
@@ -284,33 +310,6 @@ body {
     font-weight: 400; /* Normal font weight; adjust as needed */
     color: #000000; /* Dark text color */
 }
-
-
-/* First container section */
-
-.container {
-    display: flex; /* Flex layout for side-by-side columns */
-    padding: 0 75px; /* Equal padding on both sides of the container */
-    align-items: center; /* Aligns items vertically in the center */
-    justify-content: space-between; /* Distributes space between columns */
-}
-
-.left-column, .right-column {
-    flex: 1; /* Each column takes up an equal amount of space */
-    padding: 15px; /* Padding inside each column */
-}
-
-.right-column {
-    display: flex;
-    justify-content: center; /* Center the image in the right column */
-    align-items: center;
-}
-
-img {
-    max-width: 100%; /* Ensures the image doesn't overflow its container */
-    height: auto; /* Keeps the image aspect ratio */
-}
-
 
 /* Footer */
 
