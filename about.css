@@ -120,67 +120,82 @@ body {
 }
 
 /* Make sure the navbar height is accounted for */
-.about-section {
-    padding-top: 70px; /* Adjust this value to at least the height of your navbar */
-    padding-bottom: 50px;
-    background-color: #f5f5f5;
-}
-
-.column.left img {
-    max-width: 100%; /* Ensures the image is responsive and doesn't overflow */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Removes bottom space under the image */
-    margin-top: 20px; /* Give some space on the top to not be cut off by the navbar */
-}
-
-/* Ensure the text in the right column doesn't get cut off */
-.column.right {
-    padding: 20px;
-    overflow: hidden; /* Prevents text from overflowing */
-}
-
-/* Styles for paragraph text within the about section */
-.about-section p {/* This line is optional since it's already inherited from the body */
-    font-weight: 400; /* Normal font weight; adjust as needed */
-    color: #000000; /* Dark text color */
-}
-
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.row {
+.header-image {
+    background-image: url('images/background1.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     display: flex;
-    align-items: flex-start; /* Adjust if you want vertical centering */
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
-.column {
-    flex-basis: 50%;
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+#welcome-text {
+    font-size: 3em;
+    color: #fff;
     opacity: 0; /* Start fully transparent */
-    transition: opacity 1s ease-in-out;
+    white-space: nowrap; /* Ensure the text stays in a single line */
+    animation: fadeInSlideUp 1s ease forwards;
+    margin: 0; /* Remove any default margins */
+    position: absolute;
+    width: 100%; /* Ensure it spans the width of the container */
 }
 
-/* Fade in effect when the page loads */
-@media (prefers-reduced-motion: no-preference) {
-    .column {
-        animation: fadeInEffect 1s ease-in-out forwards;
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-}
-
-/* Keyframes for the fade-in animation */
-@keyframes fadeInEffect {
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 
-/* Update section */
+/* Main section */
 
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+.image-column {
+    flex: 1; /* Allows the image column to grow */
+}
+
+.text-column {
+    flex: 2; /* Allows the text column to grow and take up more space */
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-height: 600px) { /* Adjust the value based on your needs */
+    .container {
+        flex-direction: column;
+    }
+}
 
 /* Footer */
 
