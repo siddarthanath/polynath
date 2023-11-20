@@ -150,26 +150,26 @@ body {
 #welcome-text {
     font-size: 3em;
     color: #fff;
+    opacity: 0; /* Start fully transparent */
     white-space: nowrap; /* Ensure the text stays in a single line */
-    margin: 0; /* Remove any default margins */
     animation: fadeInSlideUp 1s ease forwards;
+    margin: 0; /* Remove any default margins */
     position: absolute;
     width: 100%; /* Ensure it spans the width of the container */
 }
 
-/* Fade in effect when the page loads */
-@media (prefers-reduced-motion: no-preference) {
-    .column {
-        animation: fadeInEffect 1s ease-in-out forwards;
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Keyframes for the fade-in animation */
-@keyframes fadeInEffect {
-    to {
-        opacity: 1;
-    }
-}
 
 #particles-js {
     position: absolute;
