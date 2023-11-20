@@ -45,12 +45,22 @@ function setupReviewSlider() {
     let currentReviewIndex = 0;
 
     function showReview(index) {
+        // Slide out current text to the left
         reviewSlide.style.transform = 'translateX(-100%)';
+    
         setTimeout(() => {
+            // Update the text while off-screen
             reviewSlide.innerHTML = `<span>${reviews[index]}</span>`;
-            reviewSlide.style.transform = 'translateX(0)';
-        }, 500); // Half the transition time
-    }
+    
+            // Reset position to the right
+            reviewSlide.style.transform = 'translateX(100%)';
+    
+            // Slide in new text from the right
+            setTimeout(() => {
+                reviewSlide.style.transform = 'translateX(0)';
+            }, 50); // Slight delay before sliding in
+        }, 500); // Match this with your CSS transition time
+    }    
 
     function nextReview() {
         currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
