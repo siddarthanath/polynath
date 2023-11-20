@@ -285,6 +285,17 @@ h2 {
     text-align: center;
 }
 
+/* Caption text */
+.text {
+    color: #000000; /* or any color that stands out against your slide background */
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }  
+
 /* Style for left and right arrows */
 .prev, .next {
     cursor: pointer;
