@@ -46,19 +46,30 @@ function startSlideshow() {
     function showSlides() {
         let i;
         let slides = document.getElementsByClassName("mySlides");
+        let numbertext = document.getElementsByClassName("numbertext");
+        let text = document.getElementsByClassName("text");
         let dots = document.getElementsByClassName("dot");
+    
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
         }
         slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
+        if (slideIndex > slides.length) {slideIndex = 1}
+    
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
+    
+        // Set the numbertext and text for each slide
+        for (i = 0; i < slides.length; i++) {
+            text[i].innerText = (i + 1) + "/" + slides.length;  // Or any other text you want to set
+        }
+    
+        slides[slideIndex - 1].style.display = "block";  
+        dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 2000); // Change slide every 2 seconds
     }
+    
 }
 
 // Sidebar toggle function
