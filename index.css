@@ -246,64 +246,28 @@ body {
 /* First container section */
 
 .mathematics-intro-container {
+    display: flex;
+    justify-content: space-between; /* Aligns children with space between */
     padding: 20px;
     margin: 20px auto;
-    max-width: 1000px; /* Adjust as per your layout */
-    background-color: #ffffff; /* Light background for readability */
+    max-width: 1000px;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.mathematics-intro-container h2 {
-    color: #333; /* Dark color for the heading */
-    margin-bottom: 15px;
-    text-align: center;
+.text-column, .image-column {
+    flex: 1; /* Each column takes equal width */
+    padding: 10px; /* Adds padding inside each column */
 }
 
-.mathematics-intro-container p {
-    color: #000; /* Slightly lighter color for the text */
-    line-height: 1.6; /* For better readability */
+.image-column img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: to match container's border radius */
 }
 
-/* Update section */
-
-.updates-container {
-    background-color: #ffffff; /* Light background color */ /* Light border */
-    padding: 20px;
-    text-align: center;
-}
-
-.updates-container h1 {
-    font-size: 2em; /* Large font size for the heading */
-    color: #000000; /* Dark text color */
-    margin-bottom: 20px;
-}
-
-.scrollable-updates {
-    max-height: 100px; /* Adjust as needed */
-    overflow-y: auto; /* Enables vertical scrolling */
-    text-align: left;
-}
-
-.update {
-    border-bottom: 1px solid #e1e4e8; /* Border between updates */
-    padding: 10px 0;
-}
-
-.update h3 {
-    font-size: 1.2em;
-    color: #0366d6; /* Blue color for version number */
-}
-
-.update-date {
-    font-weight: normal;
-    color: #FF0000; /* Gray color for date */
-}
-
-.update p {
-    font-weight: 400; /* Normal font weight; adjust as needed */
-    color: #000000; /* Dark text color */
-}
+/* Scrolling widget */
 
 /* Footer */
 
