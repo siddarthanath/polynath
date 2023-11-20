@@ -269,6 +269,12 @@ body {
 
 /* Reviews */
 
+h2 {
+    text-align: center;
+    color: #000000; /* Or any color that fits your design */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
 .slideshow-container {
     padding: 20px;
     margin: 20px auto;
