@@ -56,26 +56,34 @@ function startSlideshow() {
         let numbertext = document.getElementsByClassName("numbertext");
         let reviewText = document.getElementsByClassName("review-text");
         let dots = document.getElementsByClassName("dot");
-
+    
+        // Hide all slides
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
         }
+    
+        // Increment slide index
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}
-
+    
+        // Reset all dots
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-
+    
+        // Update numbertext and reviewText for all slides
         for (i = 0; i < slides.length; i++) {
             numbertext[i].innerText = (i + 1) + " / " + slides.length;
-            reviewText[i].innerText = reviews[i]; // Set the review text
+            reviewText[i].innerText = reviews[i];
         }
-
+    
+        // Display the current slide and set the corresponding dot as active
         slides[slideIndex - 1].style.display = "block";  
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 5000); // Change slide every 2 seconds
-    }
+    
+        // Set timeout for next slide
+        setTimeout(showSlides, 5000); // Change slide every 5 seconds
+    }    
 }
 
 // Sidebar toggle function
