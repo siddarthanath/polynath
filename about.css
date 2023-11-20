@@ -176,17 +176,17 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px; /* Adjust the padding value as needed */
+    padding: 40px; /* Adjust the padding value as needed */
 }
 
 .image-column {
     flex: 1;
-    padding: 10px; /* Adjust the padding value as needed */
+    padding: 20px; /* Adjust the padding value as needed */
 }
 
 .text-column {
     flex: 2;
-    padding: 10px; /* Adjust the padding value as needed */
+    padding: 20px; /* Adjust the padding value as needed */
 }
 
 .image-column img {
