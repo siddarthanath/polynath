@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start the header text animation sequence
     animateHeaders();
-    setupReviewSlider();
+    startSlideshow();
     // Scroll to next section when arrow is clicked
     document.querySelector('.scroll-down-arrow a').addEventListener('click', (e) => {
         e.preventDefault();
@@ -39,47 +39,27 @@ function animateHeaders() {
 // Time delay before starting the typewriter effect
 }
 
-function setupReviewSlider() {
-    const reviewSlide = document.getElementById('reviewSlide');
-    const reviews = ["Great work.", "Good job."];
-    let currentReviewIndex = 0;
+function startSlideshow() {
+    let slideIndex = 0;
+    showSlides();
 
-    function showReview(index) {
-        // Slide out current text to the left
-        reviewSlide.style.transform = 'translateX(-100%)';
-    
-        setTimeout(() => {
-            // Update the text while off-screen
-            reviewSlide.innerHTML = `<span>${reviews[index]}</span>`;
-    
-            // Reset position to the right
-            reviewSlide.style.transform = 'translateX(100%)';
-    
-            // Slide in new text from the right
-            setTimeout(() => {
-                reviewSlide.style.transform = 'translateX(0)';
-            }, 50); // Slight delay before sliding in
-        }, 500); // Match this with your CSS transition time
-    }    
-
-    function nextReview() {
-        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-        showReview(currentReviewIndex);
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change slide every 2 seconds
     }
-
-    function previousReview() {
-        currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
-        showReview(currentReviewIndex);
-    }
-
-    document.getElementById('rightArrow').addEventListener('click', nextReview);
-    document.getElementById('leftArrow').addEventListener('click', previousReview);
-
-    setInterval(nextReview, 4000);
-    showReview(currentReviewIndex); // Show the first review
 }
-
-
 
 // Sidebar toggle function
 function toggleSidebar() {

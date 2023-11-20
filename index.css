@@ -269,7 +269,7 @@ body {
 
 /* Reviews */
 
-.reviews-container {
+.slideshow-container {
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
@@ -278,33 +278,6 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
-.review-slide {
-    transition: transform 1s ease-in-out;
-    /* Other styles... */
-}
-
-.arrow {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #333; /* Change the color to make it visible */
-    font-size: 30px; /* Adjust size as needed */
-    background-color: rgba(255, 255, 255, 0.5); /* Optional: Add background */
-    border: none;
-    z-index: 100;
-    padding: 5px; /* Optional: for better click area */
-}
-
-.left-arrow {
-    left: 10px;
-}
-
-.right-arrow {
-    right: 10px;
-}
-
 
 /* Footer */
 
