@@ -41,23 +41,34 @@ function animateHeaders() {
 
 function setupReviewSlider() {
     const reviewSlide = document.getElementById('reviewSlide');
-    const reviews = ["Great work.", "Good job."]; // Add more phrases as needed
+    const reviews = ["Great work.", "Good job."];
     let currentReviewIndex = 0;
 
-    function showNextReview() {
-        reviewSlide.style.opacity = 0; // Hide the current text
-
-        // Change the text after a short delay
+    function showReview(index) {
+        reviewSlide.style.transform = 'translateX(-100%)';
         setTimeout(() => {
-            currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-            reviewSlide.innerHTML = `<span>${reviews[currentReviewIndex]}</span>`;
-            reviewSlide.style.opacity = 1; // Show the new text
-        }, 1000); // Delay of 1 second
+            reviewSlide.innerHTML = `<span>${reviews[index]}</span>`;
+            reviewSlide.style.transform = 'translateX(0)';
+        }, 500); // Half the transition time
     }
 
-    setInterval(showNextReview, 4000); // Change review every 4 seconds
-    showNextReview(); // Show the first review
+    function nextReview() {
+        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+        showReview(currentReviewIndex);
+    }
+
+    function previousReview() {
+        currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+        showReview(currentReviewIndex);
+    }
+
+    document.getElementById('rightArrow').addEventListener('click', nextReview);
+    document.getElementById('leftArrow').addEventListener('click', previousReview);
+
+    setInterval(nextReview, 4000);
+    showReview(currentReviewIndex); // Show the first review
 }
+
 
 
 // Sidebar toggle function
