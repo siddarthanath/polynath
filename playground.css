@@ -185,7 +185,7 @@ body {
 .mathematics-intro-container {
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px; /* Adjust as per your layout */
+    max-width: 1200px; /* Adjust as per your layout */
     background-color: #f5f5f5; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
