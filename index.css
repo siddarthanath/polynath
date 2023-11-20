@@ -267,7 +267,30 @@ body {
     border-radius: 8px; /* Optional: to match container's border radius */
 }
 
-/* Scrolling widget */
+/* Reviews */
+
+.reviews-container {
+    display: flex;
+    justify-content: space-between; /* Aligns children with space between */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.review-item {
+    /* Styles for each review item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* Footer */
 

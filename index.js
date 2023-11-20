@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start the header text animation sequence
     animateHeaders();
+    setupReviewSlider();
     // Scroll to next section when arrow is clicked
     document.querySelector('.scroll-down-arrow a').addEventListener('click', (e) => {
         e.preventDefault();
@@ -59,6 +60,25 @@ function openTab(tabName) {
     document.getElementById(tabName + "-content").style.display = "block";
     document.getElementById(tabName + "-tab").className += " active";
 }
+
+function setupReviewSlider() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.review-item');
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].style.display = 'block';
+    }
+
+    // Initialize first slide
+    slides[currentSlide].style.display = 'block';
+
+    // Change slide every 5 seconds
+    setInterval(nextSlide, 5000);
+}
+
 
 // Sidebar toggle function
 function toggleSidebar() {
