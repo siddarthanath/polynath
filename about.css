@@ -175,15 +175,18 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    flex-wrap: wrap;
+    padding: 20px; /* Adjust the padding value as needed */
 }
 
 .image-column {
-    flex: 1; /* Allows the image column to grow */
+    flex: 1;
+    padding: 10px; /* Adjust the padding value as needed */
 }
 
 .text-column {
-    flex: 2; /* Allows the text column to grow and take up more space */
+    flex: 2;
+    padding: 10px; /* Adjust the padding value as needed */
 }
 
 .image-column img {
@@ -191,7 +194,7 @@ body {
     height: auto;
 }
 
-@media (max-height: 600px) { /* Adjust the value based on your needs */
+@media (max-height: 300px) { /* Adjust the value based on your needs */
     .container {
         flex-direction: column;
     }
