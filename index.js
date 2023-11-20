@@ -40,51 +40,54 @@ function animateHeaders() {
 }
 
 function startSlideshow() {
-    let slideIndex = 0;
-    let reviews = [
-        "Great work.",
-        "Good job.",
-        "Excellent resource."
-        // Add more reviews as needed
-    ];
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-    showSlides();
-
-    function showSlides() {
+    function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
-        let numbertext = document.getElementsByClassName("numbertext");
-        let reviewText = document.getElementsByClassName("review-text");
         let dots = document.getElementsByClassName("dot");
-    
-        // Hide all slides
+
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
         }
-    
-        // Increment slide index
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-    
-        // Reset all dots
+
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-    
-        // Update numbertext and reviewText for all slides
-        for (i = 0; i < slides.length; i++) {
-            numbertext[i].innerText = (i + 1) + " / " + slides.length;
-            reviewText[i].innerText = reviews[i];
-        }
-    
-        // Display the current slide and set the corresponding dot as active
+
         slides[slideIndex - 1].style.display = "block";  
         dots[slideIndex - 1].className += " active";
-    
-        // Set timeout for next slide
-        setTimeout(showSlides, 5000); // Change slide every 5 seconds
-    }    
+    }
+
+    // Change slide every 5 seconds
+    setInterval(function() {
+        showSlides(slideIndex += 1);
+    }, 5000);
+
+    // Manual navigation
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    document.querySelector('.prev').addEventListener('click', function() {
+        plusSlides(-1);
+    });
+
+    document.querySelector('.next').addEventListener('click', function() {
+        plusSlides(1);
+    });
 }
+
+
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
 
 // Sidebar toggle function
 function toggleSidebar() {
