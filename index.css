@@ -299,6 +299,22 @@ h2 {
     width: 100%;
 }
 
+.numbertext {
+    color: #000000; /* This should be a color that stands out against the slide's background */
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.review-text {
+    font-style: italic;
+    font-size: 16px;
+    color: #000000; /* Dark color for contrast against a light background */
+    padding: 20px;
+}
+
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
