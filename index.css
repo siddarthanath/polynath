@@ -277,7 +277,7 @@ h2 {
 
 /* Slideshow container */
 .slideshow-container {
-    display: flex;
+    display: relative;
     flex-direction: column; /* To stack items vertically */
     align-items: center; /* Center items horizontally */
     justify-content: space-between;
