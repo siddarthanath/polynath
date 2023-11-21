@@ -79,36 +79,13 @@
 </div>
 
 <div class="info-container">
-    <<div class="column">
-        <div class="title-box">Pre-University</div>
-        <div class="expandable-box" onclick="toggleContent(this)">
-            AS-Level
-            <div class="content" style="display:none;">
-                <div class="separate-item">Edexcel</div>
-                <div class="separate-item">OCR MEI</div>
-            </div>
-        </div>
-        <div class="expandable-box" onclick="toggleContent(this)">
-            A-Level
-            <div class="content" style="display:none;">
-                <div class="separate-item">Edexcel</div>
-                <div class="separate-item">OCR MEI</div>
-            </div>
-        </div>
-        <!-- More content for Pre-University -->
+    <div class="tab-container">
+        <div class="tab" onclick="showContent('pre-university')">Pre-University</div>
+        <div class="tab" onclick="showContent('university')">University</div>
+        <div class="tab" onclick="showContent('post-university')">Post-University</div>
     </div>
-    
-    <div class="column">
-        <div class="title-box">
-            <h3>University</h3>
-        </div>
-        <!-- Content for University -->
-    </div>
-    <div class="column">
-        <div class="title-box">
-            <h3>Post-University</h3>
-        </div>
-        <!-- Content for Post-University -->
+    <div class="content-container" id="content">
+        <!-- Content will be displayed here -->
     </div>
 </div>
 
