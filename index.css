@@ -290,9 +290,13 @@ h2 {
 }
   
 .mySlides {
-    display: none; /* Hide slides initially */
+    display: none; /* Keep this as is for now */
     text-align: center;
     width: 100%;
+}
+
+.mySlides:first-child {
+    display: block; /* Temporarily display the first slide */
 }
 
 .numbertext {
