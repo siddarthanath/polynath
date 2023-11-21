@@ -224,12 +224,11 @@ body {
 }
 
 .title-box {
-    background-color: #ffffff;
+    background-color: #000000;
+    color: #ffffff;
     border: 1px solid #000000;
     border-radius: 10px; /* Curved corners */
     text-align: center;
-    padding: 10px;
-    margin-bottom: 20px; /* Space below the title box */
 }
 
 /* Expandable container */
@@ -243,13 +242,25 @@ body {
 }
 
 .expandable-box:hover {
-    background-color: #0000FF; /* Highlight color on hover */
+    background-color: #007bff; /* Highlight color on hover */
+    text-align: center;
 }
 
 .content {
-    padding-top: 10px;
+    padding: 10px;
+    text-align: center;
 }
 
+.sub-item {
+    padding: 5px;
+    margin: 2px 0; /* Space between items */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sub-item:hover {
+    background-color: #007bff; /* Different hover color for sub-items */
+}
 
 /* Footer */
 
