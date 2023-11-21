@@ -219,6 +219,7 @@ body {
 
 .tab-container {
     flex-basis: 200px; /* Adjust width of the tab container */
+    margin-right: 20px; /* /* Adjust width of the tab container */
 }
 
 .tab {
@@ -226,8 +227,10 @@ body {
     border: 1px solid #000000;
     border-radius: 5px; /* Slightly rounded corners for tabs */
     margin-bottom: 5px;
-    background-color: #ffffff;
+    background-color: #000000;
     cursor: pointer;
+    text-align: center;
+    color: #ffffff;
     transition: background-color 0.2s;
 }
 

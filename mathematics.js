@@ -3,3 +3,7 @@ function showContent(tabId) {
     var content = document.getElementById('content');
     content.innerHTML = 'Content for ' + tabId;
 }
+
+window.onload = function() {
+    showContent('pre-university');
+};
