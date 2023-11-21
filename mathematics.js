@@ -1,7 +1,15 @@
 function showContent(tabId) {
     // Placeholder function to demonstrate content switching
     var content = document.getElementById('content');
-    content.innerHTML = 'Content for ' + tabId;
+    if (tabId == "pre-university") {
+    content.innerHTML = document.getElementById(tabId);
+    }
+    else if (tabId == "university") { content.innerHTML = 'Content for ' + tabId;
+
+    }
+    else { content.innerHTML = 'Content for ' + tabId;
+
+    };
 }
 
 window.onload = function() {
