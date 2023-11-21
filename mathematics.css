@@ -206,17 +206,18 @@ body {
 /* Main text */
 
 .info-container {
+    background-color: #ffffff;
     display: flex;
-    justify-content: space-around; /* Adjust spacing around columns */
+    justify-content: space-between;
     padding: 20px;
 }
 
 .column {
-    flex: 0 0 30%; /* Set a maximum width for each column */
-    padding: 20px; /* Increase padding around each column */
-    border: 1px solid #000000; /* Border for columns */
+    background-color: #ffffff;
+    flex: 1; /* Each column takes equal width */
+    padding: 30px; /* Padding around each column */
+    border: 1px solid black; /* Border for columns */
     margin: 10px; /* Space between columns */
-    height: 600px; /* Increase the height of the columns */
 }
 
 .title-box {
