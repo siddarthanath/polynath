@@ -279,30 +279,31 @@ h2 {
 .slideshow-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
     background-color: #ffffff;
-    border-radius: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
+
 
 h2 {
     margin-bottom: 20px;
 }
 
 .mySlides {
-    display: none; /* Keep this to hide all slides initially */
+    display: none; /* Hide slides initially */
     text-align: center;
     width: 100%;
 }
 
-.mySlides:first-child {
+.slideshow-container .mySlides:first-child {
     display: block; /* Display the first slide */
 }
+
 
 .prev, .next {
     cursor: pointer;
@@ -311,7 +312,6 @@ h2 {
     transform: translateY(-50%);
     width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -319,6 +319,15 @@ h2 {
     user-select: none;
     background-color: rgba(0,0,0,0.8);
 }
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
 
 .prev {
     left: 10px;
