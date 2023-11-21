@@ -242,24 +242,25 @@ body {
 }
 
 .expandable-box:hover {
-    background-color: #007bff; /* Highlight color on hover */
-    text-align: center;
+    background-color: #e0e0e0; /* Hover color for expandable boxes */
 }
 
-.content {
-    padding: 10px;
-    text-align: center;
-}
-
-.sub-item {
+.separate-item {
     padding: 5px;
     margin: 2px 0; /* Space between items */
     cursor: pointer;
     transition: background-color 0.3s;
+    border: 1px solid #000000; /* Optional: Add border to distinguish items */
 }
 
-.sub-item:hover {
-    background-color: #007bff; /* Different hover color for sub-items */
+.separate-item:hover {
+    background-color: #007bff; /* Different hover color for separate items */
+}
+
+
+.content {
+    padding: 10px;
+    text-align: center;
 }
 
 /* Footer */
