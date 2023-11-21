@@ -206,7 +206,7 @@ body {
 /* Main text */
 
 .info-container {
-    background-color: #ffffff;
+    background-color: #000000;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -217,7 +217,7 @@ body {
     background-color: #ffffff;
     flex: 1; /* Each column takes equal width */
     padding: 30px; /* Padding around each column */
-    border: 1px solid black; /* Border for columns */
+    border: 1px solid #000000; /* Border for columns */
     margin: 10px; /* Space between columns */
 }
 
