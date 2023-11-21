@@ -211,11 +211,11 @@ body {
     justify-content: space-between;
     padding: 20px;
     margin: 20px auto;
-    max-width: 750px;
+    max-width: 1000px;
 }
 
 .column {
-    flex: 0 0 20%; /* Set a maximum width for each column */
+    flex: 0 0 30%; /* Set a maximum width for each column */
     background-color: #ffffff;
     flex: 1; /* Each column takes equal width */
     padding: 15px; /* Padding around each column */
@@ -226,10 +226,28 @@ body {
 .title-box {
     background-color: #ffffff;
     border: 1px solid #000000;
-    border-radius: 15px; /* Curved corners */
+    border-radius: 10px; /* Curved corners */
     text-align: center;
     padding: 10px;
     margin-bottom: 20px; /* Space below the title box */
+}
+
+/* Expandable container */
+.expandable-box {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.expandable-box:hover {
+    background-color: #0000FF; /* Highlight color on hover */
+}
+
+.content {
+    padding-top: 10px;
 }
 
 
