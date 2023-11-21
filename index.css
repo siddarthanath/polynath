@@ -294,11 +294,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-.mySlides { /* Keep this to hide all slides initially */
-    text-align: center;
-    width: 100%;
-}
-
 .numbertext {
     color: #000000; /* This should be a color that stands out against the slide's background */
     font-size: 12px;
