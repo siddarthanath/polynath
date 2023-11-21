@@ -186,14 +186,14 @@ body {
 .mathematics-intro-container {
     padding: 20px;
     margin: 20px auto;
-    max-width: 1000px; /* Adjust as per your layout */
+    max-width: 1250px; /* Adjust as per your layout */
     background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
 }
 
 .mathematics-intro-container h2 {
-    color: #333; /* Dark color for the heading */
+    color: #000000; /* Dark color for the heading */
     margin-bottom: 15px;
     text-align: center;
 }
@@ -207,15 +207,16 @@ body {
 
 .info-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Adjust spacing around columns */
     padding: 20px;
 }
 
 .column {
-    flex: 1; /* Each column takes equal width */
-    padding: 10px; /* Padding around each column */
-    border: 1px solid black; /* Border for columns */
+    flex: 0 0 30%; /* Set a maximum width for each column */
+    padding: 20px; /* Increase padding around each column */
+    border: 1px solid #000000; /* Border for columns */
     margin: 10px; /* Space between columns */
+    height: 600px; /* Increase the height of the columns */
 }
 
 .title-box {
