@@ -295,15 +295,10 @@ h2 {
 }
 
 .mySlides {
-    display: none; /* Hide slides initially */
+    display: none; /* Keep this to hide all slides initially */
     text-align: center;
     width: 100%;
 }
-
-.slideshow-container .mySlides:first-child {
-    display: block; /* Display the first slide */
-}
-
 
 .prev, .next {
     cursor: pointer;
