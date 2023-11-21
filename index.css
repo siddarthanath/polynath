@@ -294,8 +294,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.mySlides {
-    display: none; /* Keep this to hide all slides initially */
+.mySlides { /* Keep this to hide all slides initially */
     text-align: center;
     width: 100%;
 }
