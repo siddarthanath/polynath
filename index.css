@@ -290,7 +290,7 @@ h2 {
 }
   
 .mySlides {
-    display: none; /* Keep this as is for now */
+    display: block; /* Keep this as is for now */
     text-align: center;
     width: 100%;
 }
