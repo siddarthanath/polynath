@@ -213,6 +213,7 @@ body {
 }
 
 .column {
+    flex: 0 0 20%; /* Set a maximum width for each column */
     background-color: #ffffff;
     flex: 1; /* Each column takes equal width */
     padding: 30px; /* Padding around each column */
