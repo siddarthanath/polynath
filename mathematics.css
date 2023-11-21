@@ -204,7 +204,29 @@ body {
 }
 
 /* Main text */
-  
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    flex: 1; /* Each column takes equal width */
+    padding: 10px; /* Padding around each column */
+    border: 1px solid black; /* Border for columns */
+    margin: 10px; /* Space between columns */
+}
+
+.title-box {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 15px; /* Curved corners */
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px; /* Space below the title box */
+}
+
 
 /* Footer */
 
