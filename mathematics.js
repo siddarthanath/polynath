@@ -33,15 +33,15 @@ function showContent(tabId) {
         'university': `
             <div class="info-section">
                 <h2>University</h2>
-                <p>In University, the study of Mathematics evolves significantly across the three years of your degree. Each year not only brings an increase in the complexity and depth of the material but also introduces a wider array of modules, offering opportunities to specialize in areas that particularly interest you.
-                <br>
-                During Year 1, you'll encounter foundational concepts that lay the groundwork for more advanced studies. This year is crucial for building a strong mathematical base, encompassing a broad range of topics that are essential for further exploration in the field. The focus is on ensuring a solid understanding of core principles.
-                <br>
-                As you progress to Year 2, the difficulty level escalates. Here, you'll delve deeper into more complex areas of Mathematics. The syllabus expands to introduce a greater variety of modules, allowing you to begin tailoring your learning journey according to your interests and career aspirations. This year challenges you to apply your foundational knowledge to more intricate and specialized topics.
-                <br>
-                Year 3 represents the pinnacle of your undergraduate Mathematics education. The difficulty continues to climb, but so does the opportunity for specialization. This year, you'll have the chance to choose from an even broader range of modules, each designed to provide in-depth knowledge in specific areas of Mathematics. It's a time for honing your expertise and preparing for the specific career or academic path you wish to pursue after graduation.
-                <br>
-                Throughout your university journey, you'll find a plethora of resources to support your learning. From lectures and tutorials to online resources and study groups, these tools are designed to help you navigate the increasing complexity and specialization of your Mathematics degree. By engaging fully each year, you'll be well-prepared to excel in your field and embrace the challenges and opportunities that lie ahead in your mathematical journey.</p>
+                <p>In University, the study of Mathematics evolves significantly across the 3 years of your degree. Each year not only brings an increase in the complexity and depth of the material but also introduces a wider array of modules, offering opportunities to specialise in areas that particularly interest you.
+                <ul>
+                <li> In Year 1, you'll encounter foundational concepts that lay the groundwork for more advanced studies. This year is crucial for building a strong mathematical base, encompassing a broad range of topics that are essential for further exploration in the field. The focus is on ensuring a solid understanding of core principles. </li>
+                <li> In Year 2, you'll delve deeper into more complex areas of Mathematics. The syllabus expands to introduce a greater variety of modules, allowing you to begin tailoring your learning journey according to your interests and career aspirations. This year challenges you to apply your foundational knowledge to more intricate and specialized topics. </li>
+                <li> In Year 3, you'll have the chance to choose from an even broader range of modules, each designed to provide in-depth knowledge in specific areas of Mathematics. It's a time for honing your expertise and preparing for the specific career or academic path you wish to pursue after graduation. Depending on the modules you take, this may feel easier or more difficult than your previous years. </li>
+                </ul>
+                To help you excel in your University journey, choose your current year and respective module choice below. 
+                There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations. 
+                </p>
                 <div class="three-column-container">
                 <div class="column">
                     <h3>Year 1</h3>
