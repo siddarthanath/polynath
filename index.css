@@ -259,6 +259,7 @@ body {
 .text-column, .image-column {
     flex: 1; /* Each column takes equal width */
     padding: 10px; /* Adds padding inside each column */
+    text-align: center;
 }
 
 .image-column img {
