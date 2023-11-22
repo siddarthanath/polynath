@@ -253,6 +253,42 @@ body {
     text-align: center;
 }
 
+/* Two column container */
+
+.two-column-container {
+    display: flex;
+    border-left: 1px solid #ccc; /* Vertical line between columns */
+    margin-top: 20px; /* Margin from the text above */
+}
+
+.column {
+    flex: 1; /* Equal width for both columns */
+    padding: 10px; /* Padding within each column */
+    border-right: 1px solid #ccc; /* Vertical line for the first column */
+}
+
+/* Remove border-right from the last column (A-Level) */
+.column:last-child {
+    border-right: none;
+}
+
+.clickable-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between boxes */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clickable-box:hover {
+    background-color: #e0e0e0; /* Hover effect */
+}
+
+.subtitle {
+    font-size: 0.8em;
+    color: #000000;
+}
 
 
 /* Footer */
