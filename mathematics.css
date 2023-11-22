@@ -244,8 +244,6 @@ body {
     background-color: #e0e0e0; /* Active tab background color */
 }
 
-
-
 .content-container {
     flex-grow: 1; /* Take up remaining space */
     border: 1px solid #000000;
@@ -260,21 +258,54 @@ body {
     margin-top: 20px; /* Margin from the text above */
 }
 
-.column {
+.two-column-container .column {
     flex: 1; /* Equal width for both columns */
     padding: 10px; /* Padding within each column */
 }
 
 /* Apply the vertical line only to the right side of the first column */
-.column:first-child {
+.two-column-container .column:first-child {
     border-right: 1px solid #ccc;
 }
 
-.inner-column-container {
+.two-column-container .inner-column-container {
     display: flex;
     justify-content: space-between; /* Separate the inner columns */
     margin-top: 10px; /* Space from the subtitle */
 }
+
+.subtitle {
+    font-size: 0.8em;
+    color: #000000;
+    text-align: center; /* Center the subtitle text */
+    margin-top: 2.5px; /* Space between title and subtitle */
+}
+
+
+/* ... (existing styles) ... */
+
+.three-column-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.three-column-container .column {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.three-column-container .column:last-child {
+    border-right: none;
+}
+
+.three-column-container .inner-column-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center boxes within each column */
+}
+
+/* ... (other styles as needed) ... */
 
 .curved-box {
     flex: 1; /* Make the boxes take up equal space */
@@ -293,17 +324,9 @@ body {
     background-color: #d0d0d0; /* Hover effect */
 }
 
-.subtitle {
-    font-size: 0.8em;
-    color: #000000;
-    text-align: center; /* Center the subtitle text */
-    margin-top: 5px; /* Space between title and subtitle */
-}
-
 .clickable-box:hover {
     background-color: #e0e0e0; /* Hover effect */
 }
-
 
 /* Footer */
 
