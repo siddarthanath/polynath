@@ -257,37 +257,51 @@ body {
 
 .two-column-container {
     display: flex;
-    border-left: 1px solid #ccc; /* Vertical line between columns */
     margin-top: 20px; /* Margin from the text above */
 }
 
 .column {
     flex: 1; /* Equal width for both columns */
     padding: 10px; /* Padding within each column */
-    border-right: 1px solid #ccc; /* Vertical line for the first column */
 }
 
-/* Remove border-right from the last column (A-Level) */
-.column:last-child {
-    border-right: none;
+/* Apply the vertical line only to the right side of the first column */
+.column:first-child {
+    border-right: 1px solid #ccc;
 }
 
-.clickable-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+.inner-column-container {
+    display: flex;
+    justify-content: space-between; /* Separate the inner columns */
+    margin-top: 10px; /* Space from the subtitle */
+}
+
+.curved-box {
+    flex: 1; /* Make the boxes take up equal space */
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 15px; /* Curved corners for the boxes */
     padding: 10px;
-    margin-bottom: 10px; /* Space between boxes */
+    margin: 5px; /* Space between curved boxes */
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center; /* Center the text inside the boxes */
+    color: #ffffff;
 }
 
-.clickable-box:hover {
-    background-color: #e0e0e0; /* Hover effect */
+.curved-box:hover {
+    background-color: #d0d0d0; /* Hover effect */
 }
 
 .subtitle {
     font-size: 0.8em;
     color: #000000;
+    text-align: center; /* Center the subtitle text */
+    margin-top: 5px; /* Space between title and subtitle */
+}
+
+.clickable-box:hover {
+    background-color: #e0e0e0; /* Hover effect */
 }
 
 

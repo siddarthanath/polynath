@@ -11,15 +11,21 @@ function showContent(tabId) {
             To help you excel in your A-Level Mathematics journey, choose your current year and respective exam board below. 
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <div class="two-column-container">
-                <div class="column" id="as-level">
-                    <h3>AS-Level <span class="subtitle">(Year 12)</span></h3>
-                    <div class="clickable-box" onclick="alert('Edexcel AS-Level Information')">Edexcel</div>
-                    <div class="clickable-box" onclick="alert('OCR MEI AS-Level Information')">OCR MEI</div>
+                <div class="column">
+                    <h3>AS-Level</h3>
+                    <p class="subtitle">(Year 12)</p>
+                    <div class="inner-column-container">
+                        <div class="curved-box" onclick="alert('Edexcel AS-Level Information')">Edexcel</div>
+                        <div class="curved-box" onclick="alert('OCR MEI AS-Level Information')">OCR MEI</div>
+                    </div>
                 </div>
-                <div class="column" id="a-level">
-                    <h3>A-Level <span class="subtitle">(Year 13)</span></h3>
-                    <div class="clickable-box" onclick="alert('Edexcel A-Level Information')">Edexcel</div>
-                    <div class="clickable-box" onclick="alert('OCR MEI A-Level Information')">OCR MEI</div>
+                <div class="column">
+                    <h3>A-Level</h3>
+                    <p class="subtitle">(Year 13)</p>
+                    <div class="inner-column-container">
+                        <div class="curved-box" onclick="alert('Edexcel A-Level Information')">Edexcel</div>
+                        <div class="curved-box" onclick="alert('OCR MEI A-Level Information')">OCR MEI</div>
+                    </div>
                 </div>
             </div>
         </div>
