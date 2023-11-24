@@ -293,35 +293,6 @@ body {
     background-color: #e0e0e0; /* Hover effect */
 }
 
-.content {
-    display: none;
-    overflow: hidden;
-    background-color: #000000;
-    border: 1px solid #000000;
-    text-align: center;
-    color: #ffffff;
-    padding: 20px;
-}
-
-.content a {
-    display: block;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.expand-btn{
-    flex: 1; /* Make the boxes take up equal space */
-    background-color: #000000;
-    border: 1px solid #000000;
-    border-radius: 15px; /* Curved corners for the boxes */
-    padding: 10px;
-    margin: 5px; /* Space between curved boxes */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center; /* Center the text inside the boxes */
-    color: #ffffff;
-}
 /* Footer */
 
 footer {
