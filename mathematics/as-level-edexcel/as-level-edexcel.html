@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyNath - Education for Everyone</title>
+    <link rel="stylesheet" href="as-level-edexcel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="navbar">
+    <div class="navbar-container" id="myNavbar">
+        <a href="../index.html" class="navbar-logo">
+            <img src="../../images/logo.png" alt="PolyNath Logo" style="width: 50px; height:50px;">
+        </a>        
+        <!-- Right-sided navbar links -->
+        <div class="navbar-right">
+            <div class="navbar-item">
+                <a href="../../about/about.html" class="nav-link">ABOUT</a>
+            </div>
+            <div class="navbar-item">
+                <a href="#subjects" class="nav-link">SUBJECTS</a>
+                <div class="dropdown-content">
+                    <a href="../mathematics.html">MATHEMATICS</a>
+                    <a href="#computerscience">COMPUTER SCIENCE</a>
+                    <a href="#physics">PHYSICS</a>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <a href="../../playground/playground.html" class="nav-link">PLAYGROUND</a>
+            </div>
+            <a href="#tutoring" class="nav-link">TUTORING</a>
+            <a href="#media" class="nav-link">MEDIA</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+        </div>
+        <!-- Menu icon for small screens -->
+        <a href="javascript:void(0)" class="navbar-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+<div class="main-content">
+    <!-- Header with full-height image -->
+    <header class="header-image">
+        <div class="header-text">
+            <h1 id="welcome-text">MATHEMATICS</h1>
+        </div>
+        <div id="particles-js"></div>   
+    </header>
+
+
+    <!-- Intro Content -->
+    <div class="mathematics-intro-container" style="text-align: center;">
+        <h2>Welcome to Our Mathematics Resource Hub</h2>
+        <p>
+            Dive into the world of Mathematics, with our comprehensive resource platform, 
+            tailored to support learners at various stages of their educational journey. 
+            From fundamental concepts to advanced theories, our resources cater to a 
+            wide spectrum of mathematical topics. We offer an extensive collection of 
+            revision papers, detailed notes, and engaging video tutorials to enhance 
+            your learning experience. Whether you're a beginner or advancing in your 
+            studies, our materials are designed to foster a deeper understanding and 
+            appreciation of Mathematics.
+        </p>
+        <p>Click on the tabs below for our resources.</p>
+    </div>
+
+    <div class="info-container">
+        <div class="tab-container">
+            <div class="tab" onclick="showContent('pre-university')" id="pre-university"><h3>Pre-University</h3></div>
+            <div class="tab" onclick="showContent('university')" id="university"><h3>University</h3></div>
+            <div class="tab" onclick="showContent('post-university')" id="post-university"><h3>Post-University</h3></div>
+        </div>
+        <div class="content-container" id="content">
+            <div id="pre-university-content">
+                <!-- Content for Pre-University -->
+            </div>
+            <div id="university-content" style="display:none;">
+                <!-- Content for University -->
+            </div>
+            <div id="post-university-content" style="display:none;">
+                <!-- Content for Post-University -->
+            </div>
+        </div>    
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">  
+    <p>&copy; 2024 &middot; PolyNath &middot; All rights reserved.</p>
+</footer>
+
+<script src="../../particles.js"></script>
+<script src="../../particles.app.js"></script>
+<script src="as-level-edexcel.js"></script>
+</body>
+</html>
