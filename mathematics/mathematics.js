@@ -37,6 +37,14 @@ function showContent(tabId) {
                     <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                     </div>
                 </div>
+                <div class="column">
+                    <h3>A-Level</h3>
+                    <p class="subtitle">(Year 13)</p>
+                    <div class="inner-column-container">
+                        <div class="curved-box" onclick="alert('Edexcel A-Level Information')">Edexcel</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
+                    </div>
+                </div>
             </div>
         </div>
         `,
