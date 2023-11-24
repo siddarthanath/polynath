@@ -8,3 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+function redirectToURL(url) {
+    window.location.href = url;
+}

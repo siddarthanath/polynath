@@ -15,8 +15,8 @@ function showContent(tabId) {
                     <h3>AS-Level</h3>
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-column-container">
-                        <div class="curved-box" onclick="alert('Edexcel AS-Level Information')">Edexcel</div>
-                        <div class="curved-box" onclick="alert('OCR MEI AS-Level Information')">OCR MEI</div>
+                        <div class="curved-box" onclick="redirectToURL('as-level-edexcel/as-level-edexcel.html')">Edexcel</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                     </div>
                 </div>
                 <div class="column">
@@ -24,7 +24,7 @@ function showContent(tabId) {
                     <p class="subtitle">(Year 13)</p>
                     <div class="inner-column-container">
                         <div class="curved-box" onclick="alert('Edexcel A-Level Information')">Edexcel</div>
-                        <div class="curved-box" onclick="alert('OCR MEI A-Level Information')">OCR MEI</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                     </div>
                 </div>
             </div>
@@ -46,25 +46,25 @@ function showContent(tabId) {
                 <div class="column">
                     <h3>Year 1</h3>
                     <div class="inner-column-container">
-                        <div class="curved-box" onclick="alert('Year 1: Pure')">Pure</div>
-                        <div class="curved-box" onclick="alert('Year 1: Statistics')">Statistics</div>
-                        <div class="curved-box" onclick="alert('Year 1: Mechanics')">Mechanics</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Pure</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Statistics</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Mechanics</div>
                     </div>
                 </div>
                 <div class="column">
                     <h3>Year 2</h3>
                     <div class="inner-column-container">
-                        <div class="curved-box" onclick="alert('Year 2: Pure')">Pure</div>
-                        <div class="curved-box" onclick="alert('Year 2: Statistics')">Statistics</div>
-                        <div class="curved-box" onclick="alert('Year 2: Mechanics')">Mechanics</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Pure</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Statistics</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Mechanics</div>
                     </div>
                 </div>
                 <div class="column">
                     <h3>Year 3</h3>
                     <div class="inner-column-container">
-                        <div class="curved-box" onclick="alert('Year 3: Pure')">Pure</div>
-                        <div class="curved-box" onclick="alert('Year 3: Statistics')">Statistics</div>
-                        <div class="curved-box" onclick="alert('Year 3: Mechanics')">Mechanics</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Pure</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Statistics</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">Mechanics</div>
                     </div>
                 </div>
             </div>
@@ -96,3 +96,7 @@ function showContent(tabId) {
 window.onload = function() {
     showContent('pre-university');
 };
+
+function redirectToURL(url) {
+    window.location.href = url;
+}
