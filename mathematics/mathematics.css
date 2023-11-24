@@ -293,6 +293,11 @@ body {
     background-color: #e0e0e0; /* Hover effect */
 }
 
+.content {
+    display: none;
+    /* rest of your styles for content */
+}
+
 /* Footer */
 
 footer {
