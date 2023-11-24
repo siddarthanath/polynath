@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const expandBtn = document.querySelector('.expand-btn');
+    const expandBtn = document.querySelector('.curved-box');
     const content = document.querySelector('.content');
 
     expandBtn.addEventListener('click', () => {
