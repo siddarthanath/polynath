@@ -22,14 +22,22 @@ function showContent(tabId) {
                     <h3>AS-Level</h3>
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-column-container">
-                    <button class="curved-box">Edexcel</button>
+                        <button class="curved-box">
+                            Edexcel
+                        </button>
                         <div class="content">
                             <!-- Add your hyperlinks here -->
-                            <a onclick="redirectToURL('as-level-edexcel/revision/revision.html')"> Revision </a>
-                            <a href="link2.html">Link 2</a>
+                            <a onclick="redirectToURL('as-level-edexcel/revision/revision.html')"> 
+                                Revision 
+                            </a>
+                            <a href="link2.html">
+                                Link 2
+                            </a>
                             <!-- Add more links as needed -->
                         </div>  
-                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">
+                            OCR MEI
+                        </div>
                     </div>
                 </div>
                 <div class="column">
@@ -103,13 +111,30 @@ function showContent(tabId) {
     // Change the content in the content container
     var contentContainer = document.getElementById('content');
     contentContainer.innerHTML = content[tabId];
+
+    // Attach event listeners to the new content
+    attachEventListeners();
 }
 
 // Set default active tab and content on page load
 window.onload = function() {
     showContent('pre-university');
+    attachEventListeners(); // Attach listeners to initial content
 };
+
 
 function redirectToURL(url) {
     window.location.href = url;
+}
+
+function attachEventListeners() {
+    const expandButtons = document.querySelectorAll('.curved-box');
+    expandButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            if(content && content.classList.contains('content')) {
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
 }
