@@ -1,14 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const expandButtons = document.querySelectorAll('.expand-btn');
-
-    expandButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            if (content && content.classList.contains('content')) {
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            }
-        });
-    });
+    // Call showContent to initialize the default content
+    showContent('pre-university');
+    // Attach event listeners to expandable buttons
+    attachExpandButtonListeners();
 });
 
 
@@ -96,24 +90,32 @@ function showContent(tabId) {
         `
     };
 
-    // Get all tabs and remove 'active' class
+    // Update the active tab
     var tabs = document.getElementsByClassName('tab');
     for (var i = 0; i < tabs.length; i++) {
         tabs[i].classList.remove('active');
     }
-
-    // Set the clicked tab as active
     document.getElementById(tabId).classList.add('active');
 
     // Change the content in the content container
     var contentContainer = document.getElementById('content');
     contentContainer.innerHTML = content[tabId];
+
+    // Reattach event listeners to the new buttons
+    attachExpandButtonListeners();
 }
 
-// Set default active tab and content on page load
-window.onload = function() {
-    showContent('pre-university');
-};
+function attachExpandButtonListeners() {
+    const expandButtons = document.querySelectorAll('.expand-btn');
+    expandButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            if (content && content.classList.contains('content')) {
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+}
 
 function redirectToURL(url) {
     window.location.href = url;
