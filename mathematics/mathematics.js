@@ -1,4 +1,16 @@
-// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const expandButtons = document.querySelectorAll('.expand-btn');
+
+    expandButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            if (content && content.classList.contains('content')) {
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+});
+
 
 function showContent(tabId) {
     // Define the HTML content for each tab with inline CSS or classes
@@ -12,19 +24,17 @@ function showContent(tabId) {
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <div class="two-column-container">
                 <div class="column">
-                    <h3>AS-Level</h3>
-                    <p class="subtitle">(Year 12)</p>
-                    <div class="inner-column-container">
-                        <div class="curved-box">Edexcel</div>
-                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
+                <h3>AS-Level</h3>
+                <p class="subtitle">(Year 12)</p>
+                <div class="inner-column-container">
+                    <button class="curved-box expand-btn">Edexcel</button>
+                    <div class="content">
+                        <!-- Add your hyperlinks here -->
+                        <a href="link1.html">Link 1</a>
+                        <a href="link2.html">Link 2</a>
+                        <!-- Add more links as needed -->
                     </div>
-                </div>
-                <div class="column">
-                    <h3>A-Level</h3>
-                    <p class="subtitle">(Year 13)</p>
-                    <div class="inner-column-container">
-                        <div class="curved-box" onclick="alert('Edexcel A-Level Information')">Edexcel</div>
-                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
+                    <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                     </div>
                 </div>
             </div>
