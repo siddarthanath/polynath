@@ -293,7 +293,6 @@ body {
     background-color: #e0e0e0; /* Hover effect */
 }
 
-
 .content {
     display: none;
     overflow: hidden;
@@ -302,6 +301,13 @@ body {
     text-align: center;
     color: #ffffff;
     padding: 20px;
+}
+
+.content a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .expand-btn{
