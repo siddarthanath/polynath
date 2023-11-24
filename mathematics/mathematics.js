@@ -111,7 +111,8 @@ function attachExpandButtonListeners() {
         button.addEventListener('click', () => {
             const content = button.nextElementSibling;
             if (content && content.classList.contains('content')) {
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                // Toggle between 'block' and 'none'
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
             }
         });
     });
