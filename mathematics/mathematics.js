@@ -105,18 +105,17 @@ function showContent(tabId) {
     attachExpandButtonListeners();
 }
 
-function attachExpandButtonListeners() {
+document.addEventListener('DOMContentLoaded', () => {
     const expandButtons = document.querySelectorAll('.expand-btn');
-    expandButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
+    expandButtons.forEach(expandBtn => {
+        expandBtn.addEventListener('click', () => {
+            const content = expandBtn.nextElementSibling;
             if (content && content.classList.contains('content')) {
-                // Toggle between 'block' and 'none'
-                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
             }
         });
     });
-}
+});
 
 function redirectToURL(url) {
     window.location.href = url;
