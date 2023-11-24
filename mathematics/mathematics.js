@@ -22,7 +22,7 @@ function showContent(tabId) {
                     <h3>AS-Level</h3>
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-column-container">
-                        <div class="curved-box">Edexcel</div>
+                    <button class="curved-box">Edexcel</button>
                         <div class="content">
                             <!-- Add your hyperlinks here -->
                             <a onclick="redirectToURL('as-level-edexcel/revision/revision.html')"> Revision </a>
