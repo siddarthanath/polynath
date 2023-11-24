@@ -1,4 +1,11 @@
-// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const expandBtn = document.querySelector('.expand-btn');
+    const content = document.querySelector('.content');
+
+    expandBtn.addEventListener('click', () => {
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
 
 function showContent(tabId) {
     // Define the HTML content for each tab with inline CSS or classes
@@ -15,7 +22,13 @@ function showContent(tabId) {
                     <h3>AS-Level</h3>
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-column-container">
-                        <div class="curved-box" onclick="redirectToURL('as-level-edexcel/as-level-edexcel.html')">Edexcel</div>
+                        <div class="curved-box">Edexcel</div>
+                        <div class="content">
+                            <!-- Add your hyperlinks here -->
+                            <a onclick="redirectToURL('as-level-edexcel/revision/revision.html')"> Revision </a>
+                            <a href="link2.html">Link 2</a>
+                            <!-- Add more links as needed -->
+                        </div>  
                         <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                     </div>
                 </div>

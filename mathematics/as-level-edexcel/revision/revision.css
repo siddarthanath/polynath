@@ -183,6 +183,7 @@ body {
 .three-column-container {
     display: flex;
     margin-top: 20px;
+    align-items: center;
 }
 
 .three-column-container .column {
@@ -193,12 +194,6 @@ body {
 
 .three-column-container .column:last-child {
     border-right: none;
-}
-
-.three-column-container .inner-column-container {
-    display: flex;
-    flex-direction: column; /* Stack boxes vertically */
-    align-items: center; /* Center boxes within each column */
 }
 
 /* ... (other styles as needed) ... */
@@ -214,23 +209,25 @@ body {
     text-align: center;
 }
 
-.expand-btn {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+.expand-btn{
+    flex: 1; /* Make the boxes take up equal space */
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 15px; /* Curved corners for the boxes */
+    padding: 10px;
+    margin: 5px; /* Space between curved boxes */
     cursor: pointer;
-    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text inside the boxes */
+    color: #ffffff;
 }
+
 
 .content {
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #000000;
+    border: 1px solid #000000;
     padding: 20px;
 }
 
