@@ -267,11 +267,13 @@ body {
     border: 1px solid #000000; /* Border for the dropdown */
     border-radius: 5px; /* Slight curve for the dropdown's corners */
     overflow: hidden; /* Ensures the content doesn't spill out */
+    width: 100%;
 }
 
 .inner-pre-uni-column-container {
     display: flex; /* Establishes a flex container */
-    justify-content: space-between; /* Spaces out the child elements evenly */
+    justify-content: space-between; 
+    flex-direction: column; /* Spaces out the child elements evenly */
 }
 
 

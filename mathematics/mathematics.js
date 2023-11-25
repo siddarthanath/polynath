@@ -23,7 +23,7 @@ function showContent(tabId) {
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-pre-uni-column-container">
                         <div class="curved-box" onclick="toggleDropdown(this)">
-                            Edexcel
+                            EDEXCEL
                         </div>
                         <div class="pre-uni-content">
                             <!-- Dropdown content goes here -->
