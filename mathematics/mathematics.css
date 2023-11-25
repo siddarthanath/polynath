@@ -264,14 +264,10 @@ body {
     border-right: none;
 }
 
-.three-column-container {
+.three-column-container .inner-column-container {
     display: flex;
     flex-direction: column; /* Stack boxes vertically */
     align-items: center; /* Center boxes within each column */
-}
-
-.inner-column-container {
-    position: relative; /* Add this if not already present */
 }
 
 /* ... (other styles as needed) ... */
