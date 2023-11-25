@@ -50,15 +50,22 @@ function showContent(tabId) {
                             <div class="curved-box" onclick="toggleDropdown(this)">
                             EDEXCEL
                             </div>
-                        <div class="pre-uni-content">
-                            <!-- Dropdown content for EDEXCEL -->
-                            <div class="curved-box">Past Papers</div>
-                            <div class="curved-box">Worksheets</div>
-                            <div class="curved-box">Notes & Videos</div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="curved-box">Past Papers</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
                         </div>
                         <div class="curved-box-column">
                             <div class="curved-box" onclick="toggleDropdown(this)">
                             OCR MEI
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="curved-box">Past Papers</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
                             </div>
                         </div>
                     </div>
