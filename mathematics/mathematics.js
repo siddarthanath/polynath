@@ -101,9 +101,6 @@ function showContent(tabId) {
     // Change the content in the content container
     var contentContainer = document.getElementById('content');
     contentContainer.innerHTML = content[tabId];
-
-    // Reattach event listeners to the new buttons
-    attachExpandButtonListeners();
 }
 
 document.querySelectorAll('.curved-box').forEach(button => {
@@ -116,6 +113,15 @@ document.querySelectorAll('.curved-box').forEach(button => {
         }
     });
 });
+
+function toggleDropdown(clickedElement) {
+    var dropdown = clickedElement.nextElementSibling;
+    // Check if the next sibling is a dropdown
+    if(dropdown && dropdown.classList.contains('pre-uni-content')) { // Ensure the class name is correct
+        // Toggle dropdown visibility
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+    }
+}
 
 function redirectToURL(url) {
     window.location.href = url;
