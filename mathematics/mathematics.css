@@ -264,10 +264,14 @@ body {
     border-right: none;
 }
 
-.three-column-container .inner-column-container {
+.three-column-container {
     display: flex;
     flex-direction: column; /* Stack boxes vertically */
     align-items: center; /* Center boxes within each column */
+}
+
+.inner-column-container {
+    position: relative; /* Add this if not already present */
 }
 
 /* ... (other styles as needed) ... */
@@ -295,7 +299,7 @@ body {
 
 .content {
     display: none; /* Hide content initially */
-    position: fixed; /* Position it relative to its parent */
+    position: absolute; /* Position it relative to its parent */
     width: 100%; /* Set width to match the parent's width */
     left: 0; /* Align to the left edge of the parent */
     top: 100%; /* Position it right below the expandable button */
