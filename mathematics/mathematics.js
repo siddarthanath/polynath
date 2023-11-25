@@ -18,14 +18,15 @@ function showContent(tabId) {
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <div class="two-column-container">
                 <div class="pre-uni-column">
-                <h3>AS-Level</h3>
-                <p class="subtitle">(Year 12)</p>
-                <div class="inner-pre-uni-column-container">
-                    <div class="curved-box" onclick="alert('Under construction!')">
-                        EDEXCEL
-                    </div>
-                    <div class="curved-box" onclick="alert('Under construction!')">
-                        OCR MEI
+                    <h3>AS-Level</h3>
+                    <p class="subtitle">(Year 12)</p>
+                    <div class="inner-pre-uni-column-container">
+                        <div class="curved-box" onclick="alert('Under construction!')">
+                            EDEXCEL
+                        </div>
+                        <div class="curved-box" onclick="alert('Under construction!')">
+                            OCR MEI
+                        </div>
                     </div>
                 </div>
                 <div class="pre-uni-column">
