@@ -46,23 +46,27 @@ function showContent(tabId) {
                     <h3>A-Level</h3>
                     <p class="subtitle">(Year 13)</p>
                     <div class="inner-pre-uni-column-container">
-                        <div class="curved-box" onclick="toggleDropdown(this)">
-                            EDEXCEL
+                        <div class="curved-box-column">
+                            <div class="curved-box" onclick="toggleDropdown(this)">
+                                EDEXCEL
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content goes here -->
+                                <div class="curved-box">Past Papers</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
                         </div>
-                        <div class="pre-uni-content">
-                            <!-- Dropdown content goes here -->
-                            <div class="curved-box">Past Papers</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
-                        </div>
-                        <div class="curved-box" onclick="toggleDropdown(this)">
-                            OCR MEI
-                        </div>
-                        <div class="pre-uni-content">
-                            <!-- Dropdown content goes here -->
-                            <div class="curved-box">Past Papers</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                        <div class="curved-box-column">
+                            <div class="curved-box" onclick="toggleDropdown(this)">
+                                OCR MEI
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content goes here -->
+                                <div class="curved-box">Past Papers</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,11 +146,10 @@ document.querySelectorAll('.curved-box').forEach(button => {
 
 function toggleDropdown(clickedElement) {
     var dropdown = clickedElement.nextElementSibling;
-    // Check if the next sibling is the dropdown and if it's not already displayed
-    if(dropdown && dropdown.classList.contains('pre-uni-content') && dropdown.style.display !== 'block') {
-        dropdown.style.display = 'block'; // Show the dropdown
-    } else if (dropdown && dropdown.classList.contains('pre-uni-content')) {
-        dropdown.style.display = 'none'; // Hide the dropdown
+    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+        dropdown.style.display = 'block';
+    } else {
+        dropdown.style.display = 'none';
     }
 }
 

@@ -272,8 +272,19 @@ body {
 
 .inner-pre-uni-column-container {
     display: flex; /* Establishes a flex container */
-    justify-content: space-between; 
-    flex-direction: column; /* Spaces out the child elements evenly */
+    justify-content: space-between; /* Spaces out the child elements evenly */
+}
+
+.curved-box-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items on the cross-axis */
+    margin-right: 10px; /* Add some spacing between the columns */
+}
+
+.curved-box-column:last-child {
+    margin-right: 0; /* Remove the margin for the last item to prevent extra spacing */
 }
 
 
