@@ -21,9 +21,9 @@ function showContent(tabId) {
                 <h3>AS-Level</h3>
                 <p class="subtitle">(Year 12)</p>
                 <div class="inner-pre-uni-column-container">
-                    <button class="curved-box expand-btn">
-                        Edexcel
-                    </button>
+                    <div class="curved-box" onclick="alert('Under construction!')">
+                        EDEXCEL
+                    </div>
                     <div class="uni-content">
                         <!-- Add your hyperlinks here -->
                         <div class="curved-box" onclick="">Past Papers</div>
