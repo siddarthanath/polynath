@@ -232,8 +232,6 @@ body {
     padding: 10px; /* Padding inside the content box */
 }
 
-/* Two column container */
-
 .two-column-container {
     display: flex; /* Use flexbox for the layout */
     padding: 10px; /* Adds some space inside the container */
@@ -256,13 +254,19 @@ body {
     background-color: #ccc; /* Color of the line */
 }
 
-
 .subtitle {
     font-size: 0.8em;
     color: #000000;
     text-align: center; /* Center the subtitle text */
     margin-top: 2.5px; /* Space between title and subtitle */
 }
+
+.inner-pre-uni-column-container {
+    display: flex; /* Use flexbox for the layout */
+    flex: 1; /* Each inner column takes up equal space */
+    padding: 10px; /* Adds some space inside each inner column */
+}
+
 
 
 /* ... (existing styles) ... */
