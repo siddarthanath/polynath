@@ -114,7 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
         expandBtn.addEventListener('click', () => {
             const content = expandBtn.nextElementSibling;
             if (content && content.classList.contains('content')) {
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                if (content.style.opacity === "1") {
+                    content.style.opacity = "0";
+                    content.style.visibility = "hidden";
+                } else {
+                    content.style.opacity = "1";
+                    content.style.visibility = "visible";
+                }
             }
         });
     });
