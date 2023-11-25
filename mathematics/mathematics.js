@@ -28,8 +28,8 @@ function showContent(tabId) {
                         <div class="pre-uni-content">
                             <!-- Dropdown content goes here -->
                             <div class="curved-box">Past Papers</div>
-                            <div class="curved-box">Worksheets</div>
-                            <div class="curved-box">Notes & Videos</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
                         </div>
                         <div class="curved-box" onclick="toggleDropdown(this)">
                             OCR MEI
@@ -37,8 +37,8 @@ function showContent(tabId) {
                         <div class="pre-uni-content">
                             <!-- Dropdown content goes here -->
                             <div class="curved-box">Past Papers</div>
-                            <div class="curved-box">Worksheets</div>
-                            <div class="curved-box">Notes & Videos</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
                         </div>
                     </div>
                 </div>
@@ -52,8 +52,8 @@ function showContent(tabId) {
                         <div class="pre-uni-content">
                             <!-- Dropdown content goes here -->
                             <div class="curved-box">Past Papers</div>
-                            <div class="curved-box">Worksheets</div>
-                            <div class="curved-box">Notes & Videos</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
                         </div>
                         <div class="curved-box" onclick="toggleDropdown(this)">
                             OCR MEI
@@ -61,8 +61,8 @@ function showContent(tabId) {
                         <div class="pre-uni-content">
                             <!-- Dropdown content goes here -->
                             <div class="curved-box">Past Papers</div>
-                            <div class="curved-box">Worksheets</div>
-                            <div class="curved-box">Notes & Videos</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
                         </div>
                     </div>
                 </div>
