@@ -21,11 +21,14 @@ function showContent(tabId) {
                     <h3>AS-Level</h3>
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-pre-uni-column-container">
-                        <div class="curved-box" onclick="alert('Under construction!')">
-                            EDEXCEL
+                        <div class="curved-box" onclick="toggleDropdown(this)">
+                            Edexcel
                         </div>
-                        <div class="curved-box" onclick="alert('Under construction!')">
-                            OCR MEI
+                        <div class="pre-uni-content">
+                            <!-- Dropdown content goes here -->
+                            <div class="curved-box">Past Papers</div>
+                            <div class="curved-box">Worksheets</div>
+                            <div class="curved-box">Notes & Videos</div>
                         </div>
                     </div>
                 </div>
@@ -103,21 +106,14 @@ function showContent(tabId) {
     attachExpandButtonListeners();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const expandButtons = document.querySelectorAll('.expand-btn');
-    expandButtons.forEach(expandBtn => {
-        expandBtn.addEventListener('click', () => {
-            const content = expandBtn.nextElementSibling;
-            if (content && content.classList.contains('content')) {
-                if (content.style.opacity === "1") {
-                    content.style.opacity = "0";
-                    content.style.visibility = "hidden";
-                } else {
-                    content.style.opacity = "1";
-                    content.style.visibility = "visible";
-                }
-            }
-        });
+document.querySelectorAll('.curved-box').forEach(button => {
+    button.addEventListener('click', function() {
+        var dropdown = this.nextElementSibling;
+        // Check if the next sibling is a dropdown
+        if(dropdown && dropdown.classList.contains('uni-content')) {
+            // Toggle dropdown visibility
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
     });
 });
 

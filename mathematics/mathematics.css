@@ -218,7 +218,7 @@ body {
     text-align: center;
 }
 
-.pre-uni-content {
+.content {
     display: none; /* Hide content initially */
     position: absolute; /* Position it relative to its parent */
     width: 100%; /* Set width to match the parent's width */
@@ -259,6 +259,14 @@ body {
     color: #000000;
     text-align: center; /* Center the subtitle text */
     margin-top: 2.5px; /* Space between title and subtitle */
+}
+
+.pre-uni-content {
+    display: none; /* Initially hidden */
+    background-color: #000000; /* Light background for the dropdown */
+    border: 1px solid #000000; /* Border for the dropdown */
+    border-radius: 5px; /* Slight curve for the dropdown's corners */
+    overflow: hidden; /* Ensures the content doesn't spill out */
 }
 
 /* Three column container */
