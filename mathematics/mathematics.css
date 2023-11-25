@@ -295,7 +295,7 @@ body {
 
 .content {
     display: none; /* Hide content initially */
-    position: absolute; /* Position it relative to its parent */
+    position: fixed; /* Position it relative to its parent */
     width: 100%; /* Set width to match the parent's width */
     left: 0; /* Align to the left edge of the parent */
     top: 100%; /* Position it right below the expandable button */
@@ -305,9 +305,7 @@ body {
     border-radius: 5px; /* Optionally, add rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
     padding: 10px; /* Padding inside the content box */
-    z-index: 1; /* Ensure it's above other content */
 }
-
 
 /* Footer */
 
