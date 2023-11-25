@@ -235,16 +235,27 @@ body {
 /* Two column container */
 
 .two-column-container {
-    display: flex; /* This will place child elements in a row */
-    border-right: 1px solid #ccc; /* This creates the vertical line between columns */
-    padding: 10px; /* Optional: Adds some space inside the container */
+    display: flex; /* Use flexbox for the layout */
+    padding: 10px; /* Adds some space inside the container */
+    margin: 0 auto; 
 }
 
 .pre-uni-column {
-    flex: 1; /* This ensures that each column takes up equal space */
-    padding: 10px; /* Optional: Adds some space inside each column */
-    border-left: 1px solid #ccc; /* Adds a line to the left of each column except the first one */
+    flex: 1; /* Each column takes up equal space */
+    padding: 10px; /* Adds some space inside each column */
+    position: relative; /* Allows absolute positioning inside the column */
 }
+
+.pre-uni-column:not(:last-child)::after {
+    content: ""; /* Creates a pseudo-element for the line */
+    position: absolute; /* Positions the line */
+    right: 0; /* Aligns the line to the right of the column */
+    top: 0; /* Starts from the top of the column */
+    bottom: 0; /* Extends to the bottom of the column */
+    width: 1px; /* Width of the line */
+    background-color: #ccc; /* Color of the line */
+}
+
 
 .subtitle {
     font-size: 0.8em;

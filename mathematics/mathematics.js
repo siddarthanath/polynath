@@ -17,7 +17,7 @@ function showContent(tabId) {
             To help you excel in your A-Level Mathematics journey, choose your current year and respective exam board below. 
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <div class="two-column-container">
-                <div class="column">
+                <div class="pre-uni-column">
                 <h3>AS-Level</h3>
                 <p class="subtitle">(Year 12)</p>
                 <div class="inner-column-container">
@@ -34,7 +34,7 @@ function showContent(tabId) {
                     <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="pre-uni-column">
                     <h3>A-Level</h3>
                     <p class="subtitle">(Year 13)</p>
                     <div class="inner-column-container">
