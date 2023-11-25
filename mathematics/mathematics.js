@@ -21,7 +21,7 @@ function showContent(tabId) {
                 <h3>AS-Level</h3>
                 <p class="subtitle">(Year 12)</p>
                 <div class="inner-column-container">
-                    <button class="curved-box expand-btn"><
+                    <button class="curved-box expand-btn">
                         Edexcel
                     </button>
                     <div class="content">
