@@ -14,6 +14,7 @@ function showContent(tabId) {
             <h2>Pre-University</h2>
             <p>In the United Kingdom, A-Level Mathematics is typically undertaken during the final two years of Sixth Form. 
             While different exam boards may have slight variations in their syllabi, there is significant content overlap across all of them. 
+            <br>
             To help you excel in your A-Level Mathematics journey, choose your current year and respective exam board below. 
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <div class="two-column-container">
@@ -116,10 +117,11 @@ document.querySelectorAll('.curved-box').forEach(button => {
 
 function toggleDropdown(clickedElement) {
     var dropdown = clickedElement.nextElementSibling;
-    // Check if the next sibling is a dropdown
-    if(dropdown && dropdown.classList.contains('pre-uni-content')) { // Ensure the class name is correct
-        // Toggle dropdown visibility
-        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+    // Check if the next sibling is the dropdown and if it's not already displayed
+    if(dropdown && dropdown.classList.contains('pre-uni-content') && dropdown.style.display !== 'block') {
+        dropdown.style.display = 'block'; // Show the dropdown
+    } else if (dropdown && dropdown.classList.contains('pre-uni-content')) {
+        dropdown.style.display = 'none'; // Hide the dropdown
     }
 }
 
