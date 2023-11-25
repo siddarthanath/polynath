@@ -24,13 +24,6 @@ function showContent(tabId) {
                     <button class="curved-box expand-btn">
                         Edexcel
                     </button>
-                    <div class="uni-content">
-                        <!-- Add your hyperlinks here -->
-                        <div class="curved-box" onclick="">Past Papers</div>
-                        <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
-                        <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
-                        <!-- Add more links as needed -->
-                    </div>
                     <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                     </div>
                 </div>
