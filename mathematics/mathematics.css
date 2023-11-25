@@ -269,6 +269,12 @@ body {
     overflow: hidden; /* Ensures the content doesn't spill out */
 }
 
+.inner-pre-uni-column-container {
+    display: flex; /* Establishes a flex container */
+    justify-content: space-between; /* Spaces out the child elements evenly */
+}
+
+
 /* Three column container */
 
 .three-column-container {

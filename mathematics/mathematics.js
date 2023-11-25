@@ -31,14 +31,39 @@ function showContent(tabId) {
                             <div class="curved-box">Worksheets</div>
                             <div class="curved-box">Notes & Videos</div>
                         </div>
+                        <div class="curved-box" onclick="toggleDropdown(this)">
+                            OCR MEI
+                        </div>
+                        <div class="pre-uni-content">
+                            <!-- Dropdown content goes here -->
+                            <div class="curved-box">Past Papers</div>
+                            <div class="curved-box">Worksheets</div>
+                            <div class="curved-box">Notes & Videos</div>
+                        </div>
                     </div>
                 </div>
                 <div class="pre-uni-column">
                     <h3>A-Level</h3>
                     <p class="subtitle">(Year 13)</p>
                     <div class="inner-pre-uni-column-container">
-                        <div class="curved-box" onclick="alert('Edexcel A-Level Information')">Edexcel</div>
-                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
+                        <div class="curved-box" onclick="toggleDropdown(this)">
+                            EDEXCEL
+                        </div>
+                        <div class="pre-uni-content">
+                            <!-- Dropdown content goes here -->
+                            <div class="curved-box">Past Papers</div>
+                            <div class="curved-box">Worksheets</div>
+                            <div class="curved-box">Notes & Videos</div>
+                        </div>
+                        <div class="curved-box" onclick="toggleDropdown(this)">
+                            OCR MEI
+                        </div>
+                        <div class="pre-uni-content">
+                            <!-- Dropdown content goes here -->
+                            <div class="curved-box">Past Papers</div>
+                            <div class="curved-box">Worksheets</div>
+                            <div class="curved-box">Notes & Videos</div>
+                        </div>
                     </div>
                 </div>
             </div>
