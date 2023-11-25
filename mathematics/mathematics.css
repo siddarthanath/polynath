@@ -265,7 +265,6 @@ body {
 }
 
 .three-column-container .inner-column-container {
-    position: relative;
     display: flex;
     flex-direction: column; /* Stack boxes vertically */
     align-items: center; /* Center boxes within each column */
