@@ -261,15 +261,7 @@ body {
     margin-top: 2.5px; /* Space between title and subtitle */
 }
 
-.inner-pre-uni-column-container {
-    display: flex; /* Use flexbox for the layout */
-    flex: 1; /* Each inner column takes up equal space */
-    padding: 10px; /* Adds some space inside each inner column */
-}
-
-
-
-/* Three column containers */
+/* Three column container */
 
 .three-column-container {
     display: flex;
