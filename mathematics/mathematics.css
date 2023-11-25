@@ -209,6 +209,8 @@ body {
     background-color: #e0e0e0; /* Active tab background color */
 }
 
+/* Content container for pre-university */
+
 .content-container {
     flex-grow: 1; /* Take up remaining space */
     border: 1px solid #000000;
@@ -216,27 +218,32 @@ body {
     text-align: center;
 }
 
+.pre-uni-content {
+    display: none; /* Hide content initially */
+    position: absolute; /* Position it relative to its parent */
+    width: 100%; /* Set width to match the parent's width */
+    left: 0; /* Align to the left edge of the parent */
+    top: 100%; /* Position it right below the expandable button */
+    color: #ffffff;
+    background-color: #000000; /* Background color for the content */
+    border: 1px solid #000000; /* Border to create a rectangle */
+    border-radius: 5px; /* Optionally, add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    padding: 10px; /* Padding inside the content box */
+}
+
 /* Two column container */
 
 .two-column-container {
-    display: flex;
-    margin-top: 20px; /* Margin from the text above */
+    display: flex; /* This will place child elements in a row */
+    border-right: 1px solid #ccc; /* This creates the vertical line between columns */
+    padding: 10px; /* Optional: Adds some space inside the container */
 }
 
-.two-column-container .column {
-    flex: 1; /* Equal width for both columns */
-    padding: 10px; /* Padding within each column */
-}
-
-/* Apply the vertical line only to the right side of the first column */
-.two-column-container .column:first-child {
-    border-right: 1px solid #ccc;
-}
-
-.two-column-container .inner-column-container {
-    display: flex;
-    justify-content: space-between; /* Separate the inner columns */
-    margin-top: 10px; /* Space from the subtitle */
+.pre-uni-column {
+    flex: 1; /* This ensures that each column takes up equal space */
+    padding: 10px; /* Optional: Adds some space inside each column */
+    border-left: 1px solid #ccc; /* Adds a line to the left of each column except the first one */
 }
 
 .subtitle {
@@ -295,20 +302,6 @@ body {
 
 .clickable-box:hover {
     background-color: #e0e0e0; /* Hover effect */
-}
-
-.content {
-    display: none; /* Hide content initially */
-    position: absolute; /* Position it relative to its parent */
-    width: 100%; /* Set width to match the parent's width */
-    left: 0; /* Align to the left edge of the parent */
-    top: 100%; /* Position it right below the expandable button */
-    color: #ffffff;
-    background-color: #000000; /* Background color for the content */
-    border: 1px solid #000000; /* Border to create a rectangle */
-    border-radius: 5px; /* Optionally, add rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-    padding: 10px; /* Padding inside the content box */
 }
 
 /* Footer */
