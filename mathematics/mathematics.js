@@ -24,8 +24,8 @@ function showContent(tabId) {
                     <button class="curved-box expand-btn">Edexcel</button>
                     <div class="content">
                         <!-- Add your hyperlinks here -->
-                        <a href="link1.html">Link 1</a>
-                        <a href="link2.html">Link 2</a>
+                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
+                        <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>
                         <!-- Add more links as needed -->
                     </div>
                     <div class="curved-box" onclick="alert('Under construction!')">OCR MEI</div>

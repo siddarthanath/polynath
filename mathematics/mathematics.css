@@ -265,6 +265,7 @@ body {
 }
 
 .three-column-container .inner-column-container {
+    position: relative;
     display: flex;
     flex-direction: column; /* Stack boxes vertically */
     align-items: center; /* Center boxes within each column */
@@ -273,6 +274,7 @@ body {
 /* ... (other styles as needed) ... */
 
 .curved-box {
+    position: absolute;
     flex: 1; /* Make the boxes take up equal space */
     background-color: #000000;
     border: 1px solid #000000;
