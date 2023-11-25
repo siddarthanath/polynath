@@ -273,7 +273,6 @@ body {
 /* ... (other styles as needed) ... */
 
 .curved-box {
-    position: absolute;
     flex: 1; /* Make the boxes take up equal space */
     background-color: #000000;
     border: 1px solid #000000;
@@ -296,7 +295,7 @@ body {
 
 .content {
     display: none; /* Hide content initially */
-    overflow: hidden;
+    position: absolute; /* Position it relative to its parent */
     width: 100%; /* Set width to match the parent's width */
     left: 0; /* Align to the left edge of the parent */
     top: 100%; /* Position it right below the expandable button */
