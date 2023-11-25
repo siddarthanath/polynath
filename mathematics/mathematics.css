@@ -295,7 +295,7 @@ body {
 
 .content {
     display: none; /* Hide content initially */
-    position: absolute; /* Position it relative to its parent */
+    overflow: hidden;
     width: 100%; /* Set width to match the parent's width */
     left: 0; /* Align to the left edge of the parent */
     top: 100%; /* Position it right below the expandable button */
