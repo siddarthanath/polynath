@@ -145,17 +145,21 @@ document.querySelectorAll('.curved-box').forEach(button => {
 });
 
 function toggleDropdown(clickedElement) {
-    var dropdown = clickedElement.nextElementSibling;
-    // Close any already open dropdowns
+    // First, we hide all dropdowns except the one that is clicked
     document.querySelectorAll('.pre-uni-content').forEach(function(content) {
-        if (content !== dropdown) {
+        if (content !== clickedElement.nextElementSibling) {
             content.style.display = 'none';
         }
     });
-    // Toggle the clicked dropdown
-    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
-}
 
+    // Then, we toggle the display of the clicked dropdown
+    var dropdown = clickedElement.nextElementSibling;
+    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+        dropdown.style.display = 'block';
+    } else {
+        dropdown.style.display = 'none';
+    }
+}
 
 function redirectToURL(url) {
     window.location.href = url;
