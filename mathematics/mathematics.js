@@ -146,12 +146,16 @@ document.querySelectorAll('.curved-box').forEach(button => {
 
 function toggleDropdown(clickedElement) {
     var dropdown = clickedElement.nextElementSibling;
-    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-        dropdown.style.display = 'block';
-    } else {
-        dropdown.style.display = 'none';
-    }
+    // Close any already open dropdowns
+    document.querySelectorAll('.pre-uni-content').forEach(function(content) {
+        if (content !== dropdown) {
+            content.style.display = 'none';
+        }
+    });
+    // Toggle the clicked dropdown
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
 }
+
 
 function redirectToURL(url) {
     window.location.href = url;
