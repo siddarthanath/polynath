@@ -252,8 +252,6 @@ body {
 .three-column-container {
     display: flex;
     margin-top: 20px;
-    flex-direction: column; /* Stack boxes vertically */
-    align-items: center; /* Center boxes within each column */
 }
 
 .three-column-container .column {
@@ -266,13 +264,15 @@ body {
     border-right: none;
 }
 
-.inner-column-container {
+.three-column-container {
     display: flex;
-    max-width: 100%; /* Adjust as needed */
-    overflow: hidden;
-    align-items: center; /* Ensures content does not spill out */
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center boxes within each column */
 }
 
+.inner-column-container {
+    position: relative; /* Add this if not already present */
+}
 
 /* ... (other styles as needed) ... */
 
@@ -297,26 +297,19 @@ body {
     background-color: #e0e0e0; /* Hover effect */
 }
 
-.inner-column-container {
-    position: relative;
-}
-
 .content {
-    display: block; /* Set to block but initially invisible */
-    opacity: 0; /* Initially invisible */
-    visibility: hidden; /* Initially hidden */
+    display: none; /* Hide content initially */
     position: absolute; /* Position it relative to its parent */
     width: 100%; /* Set width to match the parent's width */
     left: 0; /* Align to the left edge of the parent */
     top: 100%; /* Position it right below the expandable button */
+    color: #ffffff;
     background-color: #000000; /* Background color for the content */
-    border: 1px solid #000000; /* Border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border: 1px solid #000000; /* Border to create a rectangle */
+    border-radius: 5px; /* Optionally, add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
     padding: 10px; /* Padding inside the content box */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition for smooth effect */
 }
-
 
 /* Footer */
 
