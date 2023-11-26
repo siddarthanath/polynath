@@ -270,8 +270,6 @@ body {
 }
 
 .curved-box-column {
-    flex: 1; /* Each takes up equal space */
-    flex-direction: column;
     align-items: center; 
     width: auto;
 }

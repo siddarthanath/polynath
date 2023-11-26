@@ -10,7 +10,7 @@ function showContent(tabId) {
         'pre-university': `
         <div class="info-section">
             <h2>Pre-University</h2>
-            <p>In the United Kingdom, A-Level Mathematics is typically undertaken during the final two years of Sixth Form. 
+            <p>In the United Kingdom, A-Level Mathematics is typically undertaken during the final 2 years of Sixth Form. 
             While different exam boards may have slight variations in their syllabi, there is significant content overlap across all of them. 
             <br>
             To help you excel in your A-Level Mathematics journey, choose your current year and respective exam board below. 
@@ -135,20 +135,24 @@ function toggleDropdown(clickedElement) {
     var dropdown = clickedElement.nextElementSibling;
     var shouldScroll = dropdown.style.display === 'none' || dropdown.style.display === '';
 
-    // First, we hide all dropdowns except the one that is clicked
+    // Hide all other dropdowns
     document.querySelectorAll('.pre-uni-content').forEach(function(content) {
         if (content !== dropdown) {
             content.style.display = 'none';
         }
     });
 
-    // Then, we toggle the display of the clicked dropdown
+    // Toggle the current dropdown
     dropdown.style.display = shouldScroll ? 'block' : 'none';
 
-    // If the dropdown is being shown, scroll it into view
+    // If we need to show the dropdown, then scroll to its bottom
     if (shouldScroll) {
-        setTimeout(function() { // Set a timeout to allow for dropdown to render
-            dropdown.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        // Wait for the dropdown to finish rendering
+        setTimeout(function() {
+            // Calculate the position to scroll to: dropdown's top position + its height
+            var dropdownBottomPos = dropdown.offsetTop + dropdown.offsetHeight;
+            // Scroll to the bottom of the dropdown
+            window.scrollTo({ top: dropdownBottomPos, behavior: 'smooth' });
         }, 0);
     }
 }
