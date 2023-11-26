@@ -135,24 +135,20 @@ function toggleDropdown(clickedElement) {
     var dropdown = clickedElement.nextElementSibling;
     var shouldScroll = dropdown.style.display === 'none' || dropdown.style.display === '';
 
-    // Hide all other dropdowns
+    // First, we hide all dropdowns except the one that is clicked
     document.querySelectorAll('.pre-uni-content').forEach(function(content) {
         if (content !== dropdown) {
             content.style.display = 'none';
         }
     });
 
-    // Toggle the current dropdown
+    // Then, we toggle the display of the clicked dropdown
     dropdown.style.display = shouldScroll ? 'block' : 'none';
 
-    // If we need to show the dropdown, then scroll to its bottom
+    // If the dropdown is being shown, scroll it into view
     if (shouldScroll) {
-        // Wait for the dropdown to finish rendering
-        setTimeout(function() {
-            // Calculate the position to scroll to: dropdown's top position + its height
-            var dropdownBottomPos = dropdown.offsetTop + dropdown.offsetHeight;
-            // Scroll to the bottom of the dropdown
-            window.scrollTo({ top: dropdownBottomPos, behavior: 'smooth' });
+        setTimeout(function() { // Set a timeout to allow for dropdown to render
+            dropdown.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }, 0);
     }
 }
