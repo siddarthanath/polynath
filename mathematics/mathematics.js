@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Call showContent to initialize the default content
     showContent('pre-university');
-    // Attach event listeners to expandable buttons
-    attachExpandButtonListeners();
 });
 
 
