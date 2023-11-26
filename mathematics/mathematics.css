@@ -278,7 +278,7 @@ body {
 
 .inner-pre-uni-column-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
 }
 
