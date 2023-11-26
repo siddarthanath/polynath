@@ -266,7 +266,7 @@ body {
     border: 1px solid #000000; /* Border for the dropdown */
     border-radius: 5px; /* Slight curve for the dropdown's corners */
     overflow: hidden; /* Ensures the content doesn't spill out */
-    position: absolute; 
+    position: relative; 
 }
 
 .curved-box-column {
@@ -323,7 +323,6 @@ body {
     transition: background-color 0.3s;
     text-align: center; /* Center the text inside the boxes */
     color: #ffffff;
-    max-width: 100%;
 }
 
 .curved-box:hover {
