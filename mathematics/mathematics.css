@@ -279,7 +279,6 @@ body {
 .inner-pre-uni-column-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
 /* Three column container */
