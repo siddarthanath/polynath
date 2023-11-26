@@ -17,26 +17,30 @@ function showContent(tabId) {
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <div class="two-column-container">
                 <div class="pre-uni-column">
-                    <h3>AS-Level</h3>
+                    <h3>A-Level</h3>
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-pre-uni-column-container">
-                        <div class="curved-box" onclick="toggleDropdown(this)">
+                        <div class="curved-box-column">
+                            <div class="curved-box" onclick="toggleDropdown(this)">
                             EDEXCEL
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="curved-box">Past Papers</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
                         </div>
-                        <div class="pre-uni-content">
-                            <!-- Dropdown content goes here -->
-                            <div class="curved-box">Past Papers</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
-                        </div>
-                        <div class="curved-box" onclick="toggleDropdown(this)">
+                        <div class="curved-box-column">
+                            <div class="curved-box" onclick="toggleDropdown(this)">
                             OCR MEI
-                        </div>
-                        <div class="pre-uni-content">
-                            <!-- Dropdown content goes here -->
-                            <div class="curved-box">Past Papers</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
-                            <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="curved-box">Past Papers</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
                         </div>
                     </div>
                 </div>
