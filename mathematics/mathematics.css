@@ -270,13 +270,15 @@ body {
 }
 
 .curved-box-column {
+    flex: 1; /* Each takes up equal space */
+    display: flex;
+    flex-direction: column;
     align-items: center; 
-    width: auto;
 }
 
 .inner-pre-uni-column-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
