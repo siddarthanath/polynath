@@ -131,17 +131,6 @@ function showContent(tabId) {
     contentContainer.innerHTML = content[tabId];
 }
 
-document.querySelectorAll('.curved-box').forEach(button => {
-    button.addEventListener('click', function() {
-        var dropdown = this.nextElementSibling;
-        // Check if the next sibling is a dropdown
-        if(dropdown && dropdown.classList.contains('uni-content')) {
-            // Toggle dropdown visibility
-            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
-        }
-    });
-});
-
 function toggleDropdown(clickedElement) {
     // First, we hide all dropdowns except the one that is clicked
     document.querySelectorAll('.pre-uni-content').forEach(function(content) {
