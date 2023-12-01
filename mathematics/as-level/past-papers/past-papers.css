@@ -1,0 +1,293 @@
+/* Add this at the top of your style.css file */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+/* General Styles */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    display: flex; /* New: Sets up Flexbox in the body */
+    flex-direction: column; /* New: Arranges flex items into a column */
+    min-height: 100vh; /* New: Makes sure the body is at least the height of the viewport */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-logo img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    position: relative; /* For dropdown positioning */
+}
+
+.navbar-icon {
+    display: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar-item:hover .dropdown-content {
+    display: block;
+}
+
+.nav-link:hover,
+.navbar-item:hover > .nav-link {
+    color: #0056b3;
+    background-color: #f0f0f0;
+}
+
+/* Header with Full-Height Image */
+.header-image {
+    background-image: url('images/background1.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+/* General styles for the header text */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+#welcome-text {
+    font-size: 3em;
+    color: #fff;
+    opacity: 0; /* Start fully transparent */
+    white-space: nowrap; /* Ensure the text stays in a single line */
+    animation: fadeInSlideUp 1s ease forwards;
+    margin: 0; /* Remove any default margins */
+    position: absolute;
+    width: 100%; /* Ensure it spans the width of the container */
+}
+
+
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Set the font family for the header-text and the rest of the text */
+.header-text h1, .column.right {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Button Styling */
+.header-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.header-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Particles.js container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* This ensures that the particles are behind the text */
+}
+
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.scroll-down-arrow a {
+    text-decoration: none;
+    color: #fff; /* Adjust color as needed */
+    animation: bounce 2s infinite; /* Bouncing animation for the arrow */
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.scroll-down-arrow i {
+    font-size: 1em; /* Size of the arrow */
+    color: #fff; /* Arrow color */
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+/* New: Wrapper for the main content to allow for the sticky footer */
+.main-content {
+    flex-grow: 1; /* New: Allows the content to expand to fill available space */
+}
+
+/* First container section */
+
+.mathematics-intro-container {
+    display: flex;
+    justify-content: space-between; /* Aligns children with space between */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1250px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-column, .image-column {
+    flex: 1; /* Each column takes equal width */
+    padding: 10px; /* Adds padding inside each column */
+    text-align: center;
+}
+
+.image-column img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: to match container's border radius */
+}
+
+/* Reviews */
+.rectangle-box {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    border: 1px solid #ddd;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+/* Footer */
+
+footer {
+    background-color: #000000;
+    color: #d1d1d1;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+
+footer p {
+    margin: 0;
+    line-height: 2.5rem;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+    .navbar-icon {
+        display: block;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .sidebar {
+        display: block; /* Show sidebar on small screens */
+    }
+}
