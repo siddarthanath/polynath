@@ -26,7 +26,7 @@ function showContent(tabId) {
                             </div>
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
-                                <div href="as-level/past-papers/past-papers.html" class="curved-box">Past Papers</div>
+                                <a href="as-level/past-papers/past-papers.html" class="curved-box">Past Papers</a>
                                 <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
                                 <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
                             </div>
