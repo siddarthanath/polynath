@@ -21,14 +21,14 @@ function showContent(tabId) {
                     <p class="subtitle">(Year 12)</p>
                     <div class="inner-pre-uni-column-container">
                         <div class="curved-box-column">
-                            <div class="curved-box" onclick="toggleDropdown(this)">
+                            <div class="tab" onclick="toggleDropdown(this)">
                             EDEXCEL
                             </div>
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
-                                <a href="as-level/past-papers/past-papers.html" class="curved-box">Past Papers</a>
-                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <a href="as-level/past-papers/past-papers.html" class="tab">Past Papers</a>
+                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
                             </div>
                         </div>
                         <div class="curved-box-column">
