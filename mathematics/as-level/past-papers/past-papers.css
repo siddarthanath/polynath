@@ -237,6 +237,35 @@ body {
 }
 
 /* Reviews */
+.curved-box-column {
+    flex: 1; /* Each takes up equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.tab {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px; /* Slightly rounded corners for tabs */
+    margin-bottom: 5px;
+    background-color: #000000;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+/* Hover state for non-active tabs */
+.tab:not(.active):hover {
+    background-color: #d0d0d0; /* Hover background for non-active tabs */
+}
+
+/* Active state for the current tab */
+.tab.active {
+    background-color: #e0e0e0; /* Active tab background color */
+}
+
 .rectangle-box {
     border: 2px solid black;
     padding: 10px;
