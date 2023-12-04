@@ -37,9 +37,7 @@ function showContent(tabId) {
                             </div>
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
-                                <div class="curved-box">Past Papers</div>
-                                <div class="curved-box" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="curved-box" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="redirectToPage('as-level/past-papers/past-papers.html')">Past Papers</div>
                             </div>
                         </div>
                     </div>
@@ -152,6 +150,6 @@ function toggleDropdown(clickedElement) {
     }
 }
 
-function redirectToURL(url) {
+function redirectToPage(url) {
     window.location.href = url;
 }
