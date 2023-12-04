@@ -11,14 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start the header text animation sequence
     animateHeaders();
-
-    let boxes = document.querySelectorAll('.rectangle-box');
-    boxes.forEach(box => {
-        box.addEventListener('click', function() {
-            let dropdown = this.querySelector('.dropdown-content');
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-        });
-    });
     
 });
 
@@ -27,4 +19,13 @@ function animateHeaders() {
     // Fade in the welcome text
     welcomeTextElement.style.opacity = 1;
 // Time delay before starting the typewriter effect
+}
+
+function toggleDropdown(element) {
+    var dropdown = element.getElementsByClassName('dropdown-content')[0];
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
 }

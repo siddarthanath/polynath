@@ -78,12 +78,6 @@ body {
     display: block;
 }
 
-.nav-link:hover,
-.navbar-item:hover > .nav-link {
-    color: #0056b3;
-    background-color: #f0f0f0;
-}
-
 /* Header with Full-Height Image */
 .header-image {
     background-image: url('../images/background1.jpg');
@@ -311,26 +305,7 @@ body {
 
 /* ... (other styles as needed) ... */
 
-.curved-box {
-    flex: 1; /* Make the boxes take up equal space */
-    background-color: #000000;
-    border: 1px solid #000000;
-    border-radius: 15px; /* Curved corners for the boxes */
-    padding: 10px;
-    margin: 5px; /* Space between curved boxes */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center; /* Center the text inside the boxes */
-    color: #ffffff;
-}
-
-.curved-box:hover {
-    background-color: #d0d0d0; /* Hover effect */
-}
-
-.clickable-box:hover {
-    background-color: #e0e0e0; /* Hover effect */
-}
+ 
 
 /* Footer */
 
