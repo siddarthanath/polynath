@@ -213,6 +213,7 @@ body {
 
 .mathematics-intro-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between; /* Aligns children with space between */
     padding: 20px;
     margin: 20px auto;
