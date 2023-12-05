@@ -42,46 +42,48 @@
 </div>
 
 <div class="main-content">
-<!-- Header with full-height image -->
-<header class="header-image" id="home">
-    <div class="header-text">
-        <h1 id="welcome-text">PAST PAPERS</h1>
-    <div id="particles-js"></div> 
-</header>
-
-<!-- Main section about the webpage -->
-<div class="mathematics-intro-container" id="next-section">
-    <h1 style="text-decoration: underline;">POST-2018</h1>
-        <div class="pre-uni-column">
-            <div class="curved-box-column">
-                <div class="tab" onclick="toggleDropdown(this)">
-                2022
-                </div>
-                <div class="pre-uni-content">
-                    <!-- Dropdown content for EDEXCEL -->
-                    <div class="tab" onclick="redirectToPage('as-level/past-papers/past-papers.html')">Paper 1 (Pure)</div>
-                    <div class="tab" onclick="redirectToPage('as-level/past-papers/past-papers.html')">Paper 2A (Statistics)</div>
-                    <div class="tab" onclick="redirectToPage('as-level/past-papers/past-papers.html')">Paper 2B (Mechanics)</div>
-                </div>
-            </div>
-            <div class="curved-box-column">
-                <div class="tab" onclick="toggleDropdown(this)">
-                2021
-                </div>
-                <div class="pre-uni-content">
-                    <!-- Dropdown content for EDEXCEL -->
-                    <div class="tab" onclick="redirectToPage('as-level/past-papers/past-papers.html')">Paper 1 (Pure)</div>
-                    <div class="tab" onclick="redirectToPage('as-level/past-papers/past-papers.html')">Paper 2A (Statistics)</div>
-                    <div class="tab" onclick="redirectToPage('as-level/past-papers/past-papers.html')">Paper 2B (Mechanics)</div>
-                </div>
-            </div>
+    <!-- Header with full-height image -->
+    <header class="header-image">
+        <div class="header-text">
+            <h1 id="welcome-text">PAST PAPERS</h1>
         </div>
+        <div id="particles-js"></div>   
+    </header>
 
-    <hr>
 
-    <h1 style="text-decoration: underline;">PRE-2018</h1>
-    <div class="tab" onclick="toggleDropdown(this)">
-        2017
+    <!-- Intro Content -->
+    <div class="mathematics-intro-container" style="text-align: center;">
+        <h2>Welcome to Our Mathematics Resource Hub</h2>
+        <p>
+            Dive into the world of Mathematics, with our comprehensive resource platform, 
+            tailored to support learners at various stages of their educational journey. 
+            From fundamental concepts to advanced theories, our resources cater to a 
+            wide spectrum of mathematical topics. We offer an extensive collection of 
+            revision papers, detailed notes, and engaging video tutorials to enhance 
+            your learning experience. Whether you're a beginner or advancing in your 
+            studies, our materials are designed to foster a deeper understanding and 
+            appreciation of Mathematics.
+        </p>
+        <p>Click on the tabs below for our resources.</p>
+    </div>
+
+    <div class="info-container">
+        <div class="tab-container">
+            <div class="tab" onclick="showContent('pre-university')" id="pre-university"><h3>Pre-University</h3></div>
+            <div class="tab" onclick="showContent('university')" id="university"><h3>University</h3></div>
+            <div class="tab" onclick="showContent('post-university')" id="post-university"><h3>Post-University</h3></div>
+        </div>
+        <div class="content-container" id="content">
+            <div id="pre-university-content">
+                <!-- Content for Pre-University -->
+            </div>
+            <div id="university-content" style="display:none;">
+                <!-- Content for University -->
+            </div>
+            <div id="post-university-content" style="display:none;">
+                <!-- Content for Post-University -->
+            </div>
+        </div>    
     </div>
 </div>
 
@@ -89,10 +91,9 @@
 <footer class="footer">  
     <p>&copy; 2024 &middot; PolyNath &middot; All rights reserved.</p>
 </footer>
-</div>
 
 <script src="../../../particles.js"></script>
 <script src="../../../particles.app.js"></script>
-<script src="index.js"></script>
+<script src="past-papers.js"></script>
 </body>
 </html>

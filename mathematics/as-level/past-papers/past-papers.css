@@ -78,15 +78,9 @@ body {
     display: block;
 }
 
-.nav-link:hover,
-.navbar-item:hover > .nav-link {
-    color: #0056b3;
-    background-color: #f0f0f0;
-}
-
 /* Header with Full-Height Image */
 .header-image {
-    background-image: url('../../../images/background1.jpg');
+    background-image: url('../images/background1.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,7 +92,7 @@ body {
     text-align: center;
     overflow: hidden;
 }
-/* General styles for the header text */
+
 .header-text {
     display: flex;
     flex-direction: column;
@@ -123,7 +117,6 @@ body {
     width: 100%; /* Ensure it spans the width of the container */
 }
 
-
 /* Keyframes for fadeInSlideUp animation */
 @keyframes fadeInSlideUp {
     from {
@@ -137,29 +130,6 @@ body {
 }
 
 
-/* Set the font family for the header-text and the rest of the text */
-.header-text h1, .column.right {
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-/* Button Styling */
-.header-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.header-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Particles.js container */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -169,99 +139,46 @@ body {
     z-index: 0; /* This ensures that the particles are behind the text */
 }
 
-.scroll-down-arrow {
-    position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2em; /* Adjust as needed */
-    cursor: pointer;
-}
 
-.scroll-down-arrow a {
-    text-decoration: none;
-    color: #fff; /* Adjust color as needed */
-    animation: bounce 2s infinite; /* Bouncing animation for the arrow */
-}
-
-/* Bounce animation keyframes */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-.scroll-down-arrow i {
-    font-size: 1em; /* Size of the arrow */
-    color: #fff; /* Arrow color */
-    animation: bounce 2s infinite;
-    cursor: pointer;
-}
-
-/* New: Wrapper for the main content to allow for the sticky footer */
-.main-content {
-    flex-grow: 1; /* New: Allows the content to expand to fill available space */
-}
-
-/* First container section */
+/* Intro Content */
 
 .mathematics-intro-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Aligns children with space between */
     padding: 20px;
     margin: 20px auto;
-    max-width: 1250px;
-    background-color: #ffffff;
+    max-width: 1250px; /* Adjust as per your layout */
+    background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+}
+
+.mathematics-intro-container h2 {
+    color: #000000; /* Dark color for the heading */
+    margin-bottom: 15px;
     text-align: center;
 }
 
-.pre-uni-content {
-    display: none; /* Initially hidden */
-    background-color: #000000; /* Light background for the dropdown */
-    border: 1px solid #000000; /* Border for the dropdown */
-    border-radius: 5px; /* Slight curve for the dropdown's corners */
-    overflow: hidden; /* Ensures the content doesn't spill out */
-    top: 100%
+.mathematics-intro-container p {
+    color: #000; /* Slightly lighter color for the text */
+    line-height: 1.6; /* For better readability */
 }
 
-.rows-container {
+/* Main text */
+
+.info-container {
+    background-color: #ffffff;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
 }
 
-.row {
-    /* Style for each row */
-    margin-bottom: 10px; /* Adds space between rows */
-    /* Add other styles like padding, background, etc., as needed */
-}
+/* styles.css */
 
-.text-column, .image-column {
-    flex: 1; /* Each column takes equal width */
-    padding: 10px; /* Adds padding inside each column */
-    text-align: center;
-}
-
-.image-column img {
-    width: 100%; /* Makes the image responsive */
-    height: auto;
-    border-radius: 8px; /* Optional: to match container's border radius */
-}
-
-/* Reviews */
-.curved-box-column {
-    flex: 1; /* Each takes up equal space */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+.tab-container {
+    flex-basis: 200px; /* Adjust width of the tab container */
+    margin-right: 20px; /* /* Adjust width of the tab container */
 }
 
 .tab {
@@ -286,32 +203,110 @@ body {
     background-color: #e0e0e0; /* Active tab background color */
 }
 
-.rectangle-box {
-    border: 2px solid black;
+/* Content container for pre-university */
+
+.content-container {
+    flex-grow: 1; /* Take up remaining space */
+    border: 1px solid #000000;
     padding: 10px;
-    margin: 10px;
-    width: 200px;
-    cursor: pointer;
+    text-align: center;
 }
 
-.dropdown-content {
-    display: none;
-    border: 1px solid #ddd;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+.content {
+    display: none; /* Hide content initially */
+    position: absolute; /* Position it relative to its parent */
+    width: 100%; /* Set width to match the parent's width */
+    left: 0; /* Align to the left edge of the parent */
+    top: 100%; /* Position it right below the expandable button */
+    color: #ffffff;
+    background-color: #000000; /* Background color for the content */
+    border: 1px solid #000000; /* Border to create a rectangle */
+    border-radius: 5px; /* Optionally, add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    padding: 10px; /* Padding inside the content box */
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.two-column-container {
+    display: flex; /* Use flexbox for the layout */
+    padding: 10px; /* Adds some space inside the container */
+    margin: 0 auto; 
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.pre-uni-column {
+    flex: 1; /* Each column takes up equal space */
+    padding: 10px; /* Adds some space inside each column */
+    position: relative; /* Allows absolute positioning inside the column */
+}
+
+.pre-uni-column:not(:last-child)::after {
+    content: ""; /* Creates a pseudo-element for the line */
+    position: absolute; /* Positions the line */
+    right: 0; /* Aligns the line to the right of the column */
+    top: 0; /* Starts from the top of the column */
+    bottom: 0; /* Extends to the bottom of the column */
+    width: 1px; /* Width of the line */
+    background-color: #ccc; /* Color of the line */
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #000000;
+    text-align: center; /* Center the subtitle text */
+}
+
+.pre-uni-content {
+    display: none; /* Initially hidden */
+    background-color: #000000; /* Light background for the dropdown */
+    border: 1px solid #000000; /* Border for the dropdown */
+    border-radius: 5px; /* Slight curve for the dropdown's corners */
+    overflow: hidden; /* Ensures the content doesn't spill out */
+    top: 100%
+}
+
+.curved-box-column {
+    flex: 1; /* Each takes up equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.inner-pre-uni-column-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Three column container */
+
+.three-column-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.three-column-container .column {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.three-column-container .column:last-child {
+    border-right: none;
+}
+
+.three-column-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center boxes within each column */
+}
+
+.inner-column-container {
+    position: relative; /* Add this if not already present */
+}
+
+/* ... (other styles as needed) ... */
+
+ 
+
 /* Footer */
 
 footer {
