@@ -80,7 +80,7 @@ body {
 
 /* Header with Full-Height Image */
 .header-image {
-    background-image: url('../images/background1.jpg');
+    background-image: url('../../../images/background1.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
