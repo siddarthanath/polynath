@@ -263,18 +263,19 @@ body {
     top: 100%
 }
 
+.curved-box-column {
+    flex: 1; /* Each takes up equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
 .inner-pre-uni-column-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* This sets the space between the boxes */
     justify-content: flex-start; /* This aligns items to the start of the container */
     align-items: stretch; /* This makes the items of the same height */
-}
-
-.curved-box-column {
-    flex: 1; /* This allows the boxes to grow and occupy the available space */
-    /* Set a max-width if you want to limit how wide the boxes can grow */
-    margin-bottom: 20px; /* This adds space between the rows */
 }
 
 /* Three column container */
