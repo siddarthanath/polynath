@@ -170,6 +170,7 @@ body {
 /* Main text */
   
 .tab {
+    width: 250px;
     padding: 10px;
     border: 1px solid #000000;
     border-radius: 5px; /* Slightly rounded corners for tabs */
