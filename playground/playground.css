@@ -154,6 +154,7 @@ body {
     background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+    align-items: center;
 }
 
 .mathematics-intro-container h2 {
@@ -170,7 +171,7 @@ body {
 /* Main text */
   
 .tab {
-    width: 250px;
+    width: 150px;
     padding: 10px;
     border: 1px solid #000000;
     border-radius: 5px; /* Slightly rounded corners for tabs */
