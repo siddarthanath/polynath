@@ -143,6 +143,7 @@ body {
 /* Intro Content */
 
 .mathematics-intro-container {
+    text-align: center;
     padding: 20px;
     margin: 20px auto;
     width: 1250px; /* Adjust as per your layout */
@@ -307,7 +308,32 @@ body {
 
 /* ... (other styles as needed) ... */
 
- 
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #resultsTable thead {
+    background-color: #f2f2f2;
+  }
+  
+  #resultsTable th, #resultsTable td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  #resultsTable th {
+    font-weight: bold;
+  }
+  
+  #resultsTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  #resultsTable tbody tr:hover {
+    background-color: #e8e8e8;
+  }
 
 /* Footer */
 
