@@ -312,7 +312,8 @@ body {
 #resultsTable {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px; /* Adjust as necessary to match your layout */
+    margin-top: 20px;
+    border-top: 2px solid black; /* Adjust as necessary to match your layout */
   }
   
   #resultsTable thead {
@@ -341,6 +342,12 @@ body {
   /* Remove the border from the last td elements in the table */
   #resultsTable td:last-child {
     border-right: none;
+  }
+
+  .bookmark {
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
   }
   
   /* Add additional styles for the links and buttons if needed */
