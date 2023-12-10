@@ -16,7 +16,7 @@ function showContent(tabId) {
             To help you excel in your A-Level Single/Further Mathematics journey, choose your current year and respective exam board below. 
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <hr>
-            <h2 style="text-decoration: underline;">SINGLE</h2>
+            <h2">SINGLE</h2>
             <div class="two-column-container">
                 <div class="pre-uni-column">
                     <h3>AS-Level</h3>
@@ -31,6 +31,66 @@ function showContent(tabId) {
                                 <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers-copy.html')">Past Papers</div>
                                 <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Worksheets</div>
                                 <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Notes & Videos</div>
+                            </div>
+                        </div>
+                        <div class="curved-box-column">
+                            <div class="tab" onclick="toggleDropdown(this)">
+                            OCR MEI
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
+                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pre-uni-column">
+                    <h3>A-Level</h3>
+                    <p class="subtitle">(Year 13)</p>
+                    <div class="inner-pre-uni-column-container">
+                        <div class="curved-box-column">
+                            <div class="tab" onclick="toggleDropdown(this)">
+                            EDEXCEL
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
+                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
+                        </div>
+                        <div class="curved-box-column">
+                            <div class="tab" onclick="toggleDropdown(this)">
+                            OCR MEI
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
+                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2">FURTHER</h2>
+            <div class="two-column-container">
+                <div class="pre-uni-column">
+                    <h3>AS-Level</h3>
+                    <p class="subtitle">(Year 12)</p>
+                    <div class="inner-pre-uni-column-container">
+                        <div class="curved-box-column">
+                            <div class="tab" onclick="toggleDropdown(this)">
+                            EDEXCEL
+                            </div>
+                            <div class="pre-uni-content">
+                                <!-- Dropdown content for EDEXCEL -->
+                                <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
+                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
+                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
                             </div>
                         </div>
                         <div class="curved-box-column">
