@@ -16,7 +16,6 @@ function showContent(tabId) {
             To help you excel in your A-Level Single/Further Mathematics journey, choose your current year and respective exam board below. 
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <div class="two-column-container">
-                <h2 style="text-decoration: underline;>Single</h2>
                 <div class="pre-uni-column">
                     <h3>AS-Level</h3>
                     <p class="subtitle">(Year 12)</p>
