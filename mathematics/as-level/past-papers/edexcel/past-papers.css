@@ -309,37 +309,38 @@ body {
 /* ... (other styles as needed) ... */
 
   
-  #resultsTable {
+#resultsTable {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px; /* Adjust as necessary to match your layout */
   }
   
   #resultsTable thead {
     background-color: #f2f2f2;
-    border-bottom: 2px solid #000; /* Solid line below the table header */
   }
   
   #resultsTable th, #resultsTable td {
     text-align: left;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-top: none; /* Remove the top border from table data cells */
+    padding: 12px 15px; /* Adjust padding to match the spacing in the screenshot */
+    border-bottom: 1px solid #ddd; /* Single line for each row */
   }
   
   #resultsTable th {
     font-weight: bold;
+    border-bottom: 2px solid black; /* Thicker bottom border for header */
   }
   
-  #resultsTable tbody tr:first-child td {
-    border-top: 1px solid #ddd; /* Add top border to the first row in the tbody to maintain the grid */
-  }
-  
-  #resultsTable tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+  #resultsTable tbody tr:last-child td {
+    border-bottom: 2px solid black; /* Thicker bottom border for last row */
   }
   
   #resultsTable tbody tr:hover {
     background-color: #e8e8e8;
+  }
+  
+  /* Remove the border from the last td elements in the table */
+  #resultsTable td:last-child {
+    border-right: none;
   }
   
   /* Add additional styles for the links and buttons if needed */
