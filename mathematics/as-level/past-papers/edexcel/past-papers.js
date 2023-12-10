@@ -16,6 +16,6 @@ function toggleDropdown(clickedElement) {
     }
 }
 
-function redirectToPage(url) {
-    window.location.href = url;
+function openWebPage(url) {
+    window.open(url, '_blank');
 }
