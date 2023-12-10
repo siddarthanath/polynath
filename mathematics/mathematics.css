@@ -78,6 +78,11 @@ body {
     display: block;
 }
 
+.navbar-item:hover > .nav-link {
+    color: #0056b3;
+    background-color: #f0f0f0;
+}
+
 /* Header with Full-Height Image */
 .header-image {
     background-image: url('../images/background1.jpg');
