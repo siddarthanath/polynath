@@ -352,6 +352,7 @@ body {
 
   .bookmark {
     width: 20px;
+    border-radius: 75%;
     margin-right: 8px;
   }
 
