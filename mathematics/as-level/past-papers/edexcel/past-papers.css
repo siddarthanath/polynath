@@ -308,23 +308,30 @@ body {
 
 /* ... (other styles as needed) ... */
 
-#resultsTable {
+  
+  #resultsTable {
     width: 100%;
     border-collapse: collapse;
   }
   
   #resultsTable thead {
     background-color: #f2f2f2;
+    border-bottom: 2px solid #000; /* Solid line below the table header */
   }
   
   #resultsTable th, #resultsTable td {
     text-align: left;
     padding: 8px;
     border: 1px solid #ddd;
+    border-top: none; /* Remove the top border from table data cells */
   }
   
   #resultsTable th {
     font-weight: bold;
+  }
+  
+  #resultsTable tbody tr:first-child td {
+    border-top: 1px solid #ddd; /* Add top border to the first row in the tbody to maintain the grid */
   }
   
   #resultsTable tbody tr:nth-child(even) {
@@ -334,6 +341,9 @@ body {
   #resultsTable tbody tr:hover {
     background-color: #e8e8e8;
   }
+  
+  /* Add additional styles for the links and buttons if needed */
+  
 
 /* Footer */
 
