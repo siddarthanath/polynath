@@ -156,6 +156,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
     justify-content: center; /* Centers horizontally */
     align-items: center; 
+    position: relative;
 }
 
 .mathematics-intro-container h2 {
