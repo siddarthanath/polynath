@@ -24,6 +24,8 @@
       setTimeout(function() {
         testimonialTextElement.innerText = testimonials[index].text;
         testimonialAuthorElement.innerText = testimonials[index].author;
+  
+        // Fade in the updated testimonial
         testimonialTextElement.style.opacity = '1';
         testimonialAuthorElement.style.opacity = '1';
       }, 1000); // This timeout should match the CSS transition time

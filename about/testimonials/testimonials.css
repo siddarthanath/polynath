@@ -262,25 +262,15 @@ body {
     display: inline-block;
     font-weight: bold;
   }
-
-  .testimonial-content-wrapper {
-    position: relative; /* This will contain the absolute elements */
-    height: 100px; /* Adjust to fit the content */
-  }
   
   .testimonial-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0; /* Start invisible */
-    transform: translateX(-100%); /* Start off to the left */
-    transition: all 0.5s ease; /* Smooth transition for sliding and fading */
+    opacity: 0; /* Start with the testimonial hidden */
+    transition: opacity 0.5s ease; /* Smooth transition for the fade effect */
+    display: inline-block;
   }
   
   .active-testimonial {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0%); /* Slide into place */
+    opacity: 1; /* Fully visible when active */
   }
   
 /* Footer */
