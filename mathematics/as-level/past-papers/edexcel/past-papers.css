@@ -366,17 +366,6 @@ a:hover {
     background-color: #f0f0f0; /* Optional: Adds underline on hover */
 }
 
-.centered-link {
-    text-align: center; /* Center align text */
-    display: block; /* Block display allows the text to naturally move below the image */
-}
-
-.centered-link img {
-    display: block;
-    margin: 0 auto; /* Auto margins on left and right center the image */
-}
-
-
   /* Add additional styles for the links and buttons if needed */
   
 
