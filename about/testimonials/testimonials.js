@@ -1,5 +1,3 @@
-
-  
   document.addEventListener('DOMContentLoaded', function() {
     const testimonials = [
         {
@@ -12,43 +10,38 @@
         },
         // ... Add more testimonials as needed
       ];
-  
     let currentTestimonialIndex = 0;
-    const testimonialElements = document.querySelectorAll('.testimonial-content');
   
     function updateTestimonial(index) {
-      const testimonialText = testimonialElements[index].querySelector('.testimonial-text');
-      const testimonialAuthor = testimonialElements[index].querySelector('.testimonial-author');
+      const testimonialText = document.querySelector('.testimonial-text');
+      const testimonialAuthor = document.querySelector('.testimonial-author');
       testimonialText.innerText = testimonials[index].text;
       testimonialAuthor.innerText = testimonials[index].author;
-      
-      testimonialElements.forEach(el => el.classList.remove('active-testimonial', 'off-screen-left', 'off-screen-right'));
-      testimonialElements[index].classList.add('active-testimonial');
     }
   
-    function slideTestimonials(nextIndex) {
-      const currentElement = testimonialElements[currentTestimonialIndex];
-      const nextElement = testimonialElements[nextIndex];
-  
-      currentElement.classList.add(nextIndex > currentTestimonialIndex ? 'off-screen-left' : 'off-screen-right');
-      nextElement.classList.add('active-testimonial');
-  
-      currentTestimonialIndex = nextIndex;
+    function showNextTestimonial() {
+      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+      updateTestimonial(currentTestimonialIndex);
     }
-  
-    document.getElementById('prev').addEventListener('click', function() {
-      const nextIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
-      slideTestimonials(nextIndex);
-    });
-  
-    document.getElementById('next').addEventListener('click', function() {
-      const nextIndex = (currentTestimonialIndex + 1) % testimonials.length;
-      slideTestimonials(nextIndex);
-    });
   
     // Initialize with the first testimonial
     updateTestimonial(currentTestimonialIndex);
-  });
   
-
+    // Set up the automatic testimonial switch every 2 seconds
+    let testimonialInterval = setInterval(showNextTestimonial, 2000);
+  
+    // Event listeners for prev and next buttons
+    document.getElementById('prev').addEventListener('click', function() {
+      clearInterval(testimonialInterval); // Stop auto-switching when user interacts
+      currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+      updateTestimonial(currentTestimonialIndex);
+      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart auto-switching
+    });
+  
+    document.getElementById('next').addEventListener('click', function() {
+      clearInterval(testimonialInterval); // Stop auto-switching when user interacts
+      showNextTestimonial();
+      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart auto-switching
+    });
+  });
   

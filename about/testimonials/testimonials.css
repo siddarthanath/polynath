@@ -271,6 +271,7 @@ body {
     position: relative;
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
+    right: 20px;
     width: 50px; /* Adjust based on the size of your SVG */
     height: 50px; /* Adjust based on the size of your SVG */
   }
