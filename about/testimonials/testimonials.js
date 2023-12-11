@@ -35,7 +35,7 @@
       clearInterval(testimonialInterval); // Stop auto-switching when user interacts
       currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
       updateTestimonial(currentTestimonialIndex);
-      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart auto-switching
+      testimonialInterval = setInterval(showNextTestimonial, 7500); // Restart auto-switching
     });
   
     document.getElementById('next').addEventListener('click', function() {
