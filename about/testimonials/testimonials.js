@@ -12,37 +12,34 @@
       ];
   
     let currentTestimonialIndex = 0;
+    const testimonialTextElement = document.querySelector('.testimonial-text');
+    const testimonialAuthorElement = document.querySelector('.testimonial-author');
   
     function updateTestimonial(index) {
-      const testimonialText = document.querySelector('.testimonial-text');
-      const testimonialAuthor = document.querySelector('.testimonial-author');
-      testimonialText.innerText = testimonials[index].text;
-      testimonialAuthor.innerText = testimonials[index].author;
+      // Fade out the current testimonial
+      testimonialTextElement.style.opacity = '0';
+      testimonialAuthorElement.style.opacity = '0';
+  
+      // After fade out, update text and fade in the new testimonial
+      setTimeout(function() {
+        testimonialTextElement.innerText = testimonials[index].text;
+        testimonialAuthorElement.innerText = testimonials[index].author;
+        testimonialTextElement.style.opacity = '1';
+        testimonialAuthorElement.style.opacity = '1';
+      }, 1000); // This timeout should match the CSS transition time
     }
   
-    function showNextTestimonial() {
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-      updateTestimonial(currentTestimonialIndex);
-    }
-  
-    // Initialize with the first testimonial
-    updateTestimonial(currentTestimonialIndex);
-  
-    // Set up the automatic testimonial switch every 2 seconds
-    let testimonialInterval = setInterval(showNextTestimonial, 2000);
-  
-    // Event listeners for prev and next buttons
     document.getElementById('prev').addEventListener('click', function() {
-      clearInterval(testimonialInterval); // Stop auto-switching when user interacts
       currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
       updateTestimonial(currentTestimonialIndex);
-      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart auto-switching
     });
   
     document.getElementById('next').addEventListener('click', function() {
-      clearInterval(testimonialInterval); // Stop auto-switching when user interacts
-      showNextTestimonial();
-      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart auto-switching
+      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+      updateTestimonial(currentTestimonialIndex);
     });
+  
+    // Initialize with the first testimonial
+    updateTestimonial(currentTestimonialIndex);
   });
   
