@@ -84,42 +84,7 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Sidebar for Small Screens */
-.sidebar {
-    display: none; /* Hidden by default */
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #fff;
-    overflow-x: hidden;
-    padding-top: 60px;
-    z-index: 1000;
-}
-
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #0056b3;
-}
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-/* Make sure the navbar height is accounted for */
+/* Header with Full-Height Image */
 .header-image {
     background-image: url('../images/background1.jpg');
     height: 100vh;
@@ -170,41 +135,66 @@ body {
     }
 }
 
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* This ensures that the particles are behind the text */
+}
 
-/* Main section */
 
-.container {
+/* Intro Content */
+
+.mathematics-intro-container {
     padding: 20px;
     margin: 20px auto;
-    max-width: 1000px; /* Adjust as per your layout */
+    max-width: 1250px; /* Adjust as per your layout */
     background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
 }
 
-.image-column {
-    flex: 1;
-    padding: 50px; /* Adjust the padding value as needed */
-}
-
-.text-column {
-    flex: 2;
-    padding: 50px; /* Adjust the padding value as needed */
-}
-
-.text-column h2 {
+.mathematics-intro-container h2 {
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 15px;
     text-align: center;
 }
 
-.image-column img {
-    max-width: 100%;
-    height: auto;
+.mathematics-intro-container p {
+    color: #000; /* Slightly lighter color for the text */
+    line-height: 1.6; /* For better readability */
 }
 
-@media (max-height: 300px) { /* Adjust the value based on your needs */
-    .container {
-        flex-direction: column;
-    }
+/* Main text */
+  
+.tab {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px; /* Slightly rounded corners for tabs */
+    margin-bottom: 5px;
+    background-color: #000000;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+/* Hover state for non-active tabs */
+.tab:not(.active):hover {
+    background-color: #d0d0d0; /* Hover background for non-active tabs */
+}
+
+/* Active state for the current tab */
+.tab.active {
+    background-color: #e0e0e0; /* Active tab background color */
 }
 
 /* Footer */
