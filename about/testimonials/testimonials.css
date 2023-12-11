@@ -233,6 +233,10 @@ body {
     padding: 0 20px; /* Adjust padding to ensure buttons don't overlap the text */
   }
   
+  .testimonial-content {
+    text-align: center;
+  }
+  
   .testimonial-text {
     font-style: italic;
     color: #333;
@@ -262,25 +266,15 @@ body {
     display: inline-block;
     font-weight: bold;
   }
-  
-  .testimonial-content {
-    opacity: 0; /* Start with the testimonial hidden */
-    transition: opacity 0.5s ease; /* Smooth transition for the fade effect */
-    display: inline-block;
-  }
-  
-  .active-testimonial {
-    opacity: 1; /* Fully visible when active */
-  }
 
   .svg-container {
-    position: absolute;
+    position: relative;
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
     width: 50px; /* Adjust based on the size of your SVG */
     height: 50px; /* Adjust based on the size of your SVG */
   }
-  
+
 /* Footer */
 
 footer {

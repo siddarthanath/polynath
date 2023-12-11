@@ -1,3 +1,5 @@
+
+  
   document.addEventListener('DOMContentLoaded', function() {
     const testimonials = [
         {
@@ -12,36 +14,41 @@
       ];
   
     let currentTestimonialIndex = 0;
-    const testimonialTextElement = document.querySelector('.testimonial-text');
-    const testimonialAuthorElement = document.querySelector('.testimonial-author');
+    const testimonialElements = document.querySelectorAll('.testimonial-content');
   
     function updateTestimonial(index) {
-      // Fade out the current testimonial
-      testimonialTextElement.style.opacity = '0';
-      testimonialAuthorElement.style.opacity = '0';
+      const testimonialText = testimonialElements[index].querySelector('.testimonial-text');
+      const testimonialAuthor = testimonialElements[index].querySelector('.testimonial-author');
+      testimonialText.innerText = testimonials[index].text;
+      testimonialAuthor.innerText = testimonials[index].author;
+      
+      testimonialElements.forEach(el => el.classList.remove('active-testimonial', 'off-screen-left', 'off-screen-right'));
+      testimonialElements[index].classList.add('active-testimonial');
+    }
   
-      // After fade out, update text and fade in the new testimonial
-      setTimeout(function() {
-        testimonialTextElement.innerText = testimonials[index].text;
-        testimonialAuthorElement.innerText = testimonials[index].author;
+    function slideTestimonials(nextIndex) {
+      const currentElement = testimonialElements[currentTestimonialIndex];
+      const nextElement = testimonialElements[nextIndex];
   
-        // Fade in the updated testimonial
-        testimonialTextElement.style.opacity = '1';
-        testimonialAuthorElement.style.opacity = '1';
-      }, 1000); // This timeout should match the CSS transition time
+      currentElement.classList.add(nextIndex > currentTestimonialIndex ? 'off-screen-left' : 'off-screen-right');
+      nextElement.classList.add('active-testimonial');
+  
+      currentTestimonialIndex = nextIndex;
     }
   
     document.getElementById('prev').addEventListener('click', function() {
-      currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
-      updateTestimonial(currentTestimonialIndex);
+      const nextIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+      slideTestimonials(nextIndex);
     });
   
     document.getElementById('next').addEventListener('click', function() {
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-      updateTestimonial(currentTestimonialIndex);
+      const nextIndex = (currentTestimonialIndex + 1) % testimonials.length;
+      slideTestimonials(nextIndex);
     });
   
     // Initialize with the first testimonial
     updateTestimonial(currentTestimonialIndex);
   });
+  
+
   
