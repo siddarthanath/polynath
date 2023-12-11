@@ -199,20 +199,38 @@ body {
 }
 
 /* Slider */
-.testimonial-navigation {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
-  
-  #prev, #next {
+
+#prev, #next {
     background: none;
-    border: none;
+    border: 2px solid #000; /* Adjust the color as needed */
+    border-radius: 50%; /* This makes it a circle */
+    width: 40px; /* Circle size */
+    height: 40px; /* Circle size */
     font-size: 24px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px; /* Spacing around the buttons */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  #prev:hover, #next:hover {
+    background-color: #000; /* Color when hovered */
+    color: #fff; /* Text color when hovered */
+    border-color: #000; /* Border color when hovered */
+  }
+  
+  /* Ensure the navigation buttons are positioned within the testimonial container */
+  .testimonial-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px; /* Adjust padding to ensure buttons don't overlap the text */
   }
   
   .testimonial-content {
