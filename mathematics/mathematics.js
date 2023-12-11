@@ -16,7 +16,7 @@ function showContent(tabId) {
             To help you excel in your A-Level Single/Further Mathematics journey, choose your current year and respective exam board below. 
             There, you will find a wealth of revision notes, educational videos, and past papers to sharpen your skills and prepare confidently for your examinations.</p>
             <hr>
-            <h2">SINGLE</h2>
+            <h2>SINGLE</h2>
             <div class="two-column-container">
                 <div class="pre-uni-column">
                     <h3>AS-Level</h3>
@@ -75,8 +75,8 @@ function showContent(tabId) {
                     </div>
                 </div>
             </div>
-
-            <h2">FURTHER</h2>
+            <hr>
+            <h2>FURTHER</h2>
             <div class="two-column-container">
                 <div class="pre-uni-column">
                     <h3>AS-Level</h3>
