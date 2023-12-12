@@ -41,7 +41,7 @@
     document.getElementById('next').addEventListener('click', function() {
       clearInterval(testimonialInterval); // Stop auto-switching when user interacts
       showNextTestimonial();
-      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart auto-switching
+      testimonialInterval = setInterval(showNextTestimonial, 7500); // Restart auto-switching
     });
   });
   
