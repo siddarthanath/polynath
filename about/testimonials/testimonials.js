@@ -28,7 +28,7 @@
     updateTestimonial(currentTestimonialIndex);
   
     // Set up the automatic testimonial switch every 2 seconds
-    let testimonialInterval = setInterval(showNextTestimonial, 2000);
+    let testimonialInterval = setInterval(showNextTestimonial, 7500);
   
     // Event listeners for prev and next buttons
     document.getElementById('prev').addEventListener('click', function() {
