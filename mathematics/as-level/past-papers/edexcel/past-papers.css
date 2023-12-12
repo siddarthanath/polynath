@@ -366,9 +366,13 @@ a:hover {
     background-color: #f0f0f0; /* Optional: Adds underline on hover */
 }
 
-  /* Add additional styles for the links and buttons if needed */
+.table-icon {
+    height: 20px; /* Adjust the size as needed */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns image vertically with the text */
+    margin-right: 5px; /* Add some space between the image and text */
+  }
   
-
 /* Footer */
 
 footer {

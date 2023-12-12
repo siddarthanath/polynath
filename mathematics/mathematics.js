@@ -28,7 +28,7 @@ function showContent(tabId) {
                             </div>
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
-                                <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers-copy.html')">Past Papers</div>
+                                <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Past Papers</div>
                                 <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Worksheets</div>
                                 <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Notes & Videos</div>
                             </div>
