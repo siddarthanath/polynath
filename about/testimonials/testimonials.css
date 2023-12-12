@@ -248,23 +248,42 @@ body {
     color: #666;
     margin-top: 15px;
   }
-  
+
   .testimonial-footer {
-    text-align: right;
-    margin-top: 15px;
-    padding-right: 20px;
+    display: flex;
+    justify-content: space-between; /* This spreads out the children elements */
+    align-items: center; /* This vertically centers the children in the footer */
+    padding: 0 20px; /* Add padding on both sides of the footer */
+    /* ... other styles ... */
+  }
+  
+  .testimonial-counter {
+    /* Your styles for the counter */
+    /* Example: */
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
   }
   
   .see-more {
+    /* Your existing styles for the SEE MORE button */
+    /* Example: */
     background-color: #007bff;
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 12px;
-    display: inline-block;
     font-weight: bold;
+  }
+  
+  .testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin-top: 15px;
+    padding-right: 20px;
   }
 
   .svg-container {

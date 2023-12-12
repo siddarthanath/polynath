@@ -154,8 +154,9 @@ body {
     background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
-    justify-content: center; /* Centers horizontally */
+    justify-content: space-between; /* Centers horizontally */
     align-items: center; 
+    text-align: center;
 }
 
 .mathematics-intro-container h2 {
