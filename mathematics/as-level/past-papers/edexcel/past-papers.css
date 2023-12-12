@@ -373,6 +373,19 @@ a:hover {
     margin-right: 5px; /* Add some space between the image and text */
   }
   
+  .column-container {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1; /* Each column takes up equal width */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .column:not(:last-child) {
+    border-right: 1px solid #000000; /* Vertical line on the right of the first column */
+  }
+  
 /* Footer */
 
 footer {

@@ -250,7 +250,7 @@ body {
     top: 0; /* Starts from the top of the column */
     bottom: 0; /* Extends to the bottom of the column */
     width: 1px; /* Width of the line */
-    background-color: #ccc; /* Color of the line */
+    background-color: #000000; /* Color of the line */
 }
 
 .subtitle {
