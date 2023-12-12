@@ -224,7 +224,7 @@ body {
   /* Ensure the navigation buttons are positioned within the testimonial container */
   .testimonial-navigation {
     position: absolute;
-    top: 50%;
+    top: 75px;
     left: 0;
     right: 0;
     transform: translateY(-50%);
