@@ -30,20 +30,20 @@
     }
   
     // Automatic change every 2 seconds
-    let testimonialInterval = setInterval(showNextTestimonial, 2000);
+    let testimonialInterval = setInterval(showNextTestimonial, 5000);
   
     document.getElementById('prev').addEventListener('click', function() {
       clearInterval(testimonialInterval); // Stop automatic switching
       currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
       updateTestimonial(currentTestimonialIndex);
-      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart automatic switching
+      testimonialInterval = setInterval(showNextTestimonial, 5000); // Restart automatic switching
     });
   
     document.getElementById('next').addEventListener('click', function() {
       clearInterval(testimonialInterval); // Stop automatic switching
       currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
       updateTestimonial(currentTestimonialIndex);
-      testimonialInterval = setInterval(showNextTestimonial, 2000); // Restart automatic switching
+      testimonialInterval = setInterval(showNextTestimonial, 5000); // Restart automatic switching
     });
   
     // Initialize with the first testimonial
