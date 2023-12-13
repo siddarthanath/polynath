@@ -157,6 +157,7 @@ body {
     justify-content: center; /* Centers horizontally */
     align-items: center; 
     position: relative;
+    text-align: center;
 }
 
 .mathematics-intro-container h2 {
