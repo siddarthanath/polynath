@@ -83,9 +83,10 @@ body {
     background-color: #f0f0f0;
 }
 
+
 /* Header with Full-Height Image */
 .header-image {
-    background-image: url('../images/background1.jpg');
+    background-image: url('../../../../images/background1.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,6 +123,18 @@ body {
     width: 100%; /* Ensure it spans the width of the container */
 }
 
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 #particles-js {
     position: absolute;
@@ -136,15 +149,13 @@ body {
 /* Intro Content */
 
 .mathematics-intro-container {
+    text-align: center;
     padding: 20px;
     margin: 20px auto;
-    max-width: 1250px; /* Adjust as per your layout */
+    width: 1250px; /* Adjust as per your layout */
     background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
-    text-align: center;
-    opacity: 0;
-    animation: fadeInSlideUp 1s ease forwards;
 }
 
 .mathematics-intro-container h2 {
@@ -162,33 +173,19 @@ body {
 
 .info-container {
     background-color: #ffffff;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-    animation: fadeInSlideUp 1s ease forwards;
 }
 
-/* Keyframes for fadeInSlideUp animation */
-@keyframes fadeInSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 /* styles.css */
 
 .tab-container {
     flex-basis: 200px; /* Adjust width of the tab container */
     margin-right: 20px; /* /* Adjust width of the tab container */
-    animation: fadeInSlideUp 1s ease forwards;
 }
 
 .tab {
@@ -255,7 +252,7 @@ body {
     top: 0; /* Starts from the top of the column */
     bottom: 0; /* Extends to the bottom of the column */
     width: 1px; /* Width of the line */
-    background-color: #000000; /* Color of the line */
+    background-color: #ccc; /* Color of the line */
 }
 
 .subtitle {
@@ -282,8 +279,10 @@ body {
 
 .inner-pre-uni-column-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px; /* This sets the space between the boxes */
+    justify-content: flex-start; /* This aligns items to the start of the container */
+    align-items: stretch; /* This makes the items of the same height */
 }
 
 /* Three column container */
@@ -315,7 +314,78 @@ body {
 
 /* ... (other styles as needed) ... */
 
- 
+  
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-top: 2px solid black; /* Adjust as necessary to match your layout */
+  }
+  
+  #resultsTable thead {
+    background-color: #f2f2f2;
+  }
+  
+  #resultsTable th, #resultsTable td {
+    text-align: left;
+    padding: 12px 15px; /* Adjust padding to match the spacing in the screenshot */
+    border-bottom: 1px solid #ddd; /* Single line for each row */
+  }
+  
+  #resultsTable th {
+    font-weight: bold;
+    border-bottom: 2px solid black; /* Thicker bottom border for header */
+  }
+  
+  #resultsTable tbody tr:last-child td {
+    border-bottom: 2px solid black; /* Thicker bottom border for last row */
+  }
+  
+  #resultsTable tbody tr:hover {
+    background-color: #e8e8e8;
+  }
+  
+  /* Remove the border from the last td elements in the table */
+  #resultsTable td:last-child {
+    border-right: none;
+  }
+
+  .bookmark {
+    width: 20px;
+    border-radius: 25%;
+    margin-right: 8px;
+  }
+
+  a {
+    color: #000000; /* Change to your desired color */
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    color: #0056b3;
+    background-color: #f0f0f0; /* Optional: Adds underline on hover */
+}
+
+.table-icon {
+    height: 20px; /* Adjust the size as needed */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns image vertically with the text */
+    margin-right: 5px; /* Add some space between the image and text */
+  }
+  
+  .column-container {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1; /* Each column takes up equal width */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .column:not(:last-child) {
+    border-right: 1px solid #000000; /* Vertical line on the right of the first column */
+  }
+  
 /* Footer */
 
 footer {
