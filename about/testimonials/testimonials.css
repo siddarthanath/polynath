@@ -171,6 +171,15 @@ body {
     line-height: 1.6; /* For better readability */
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.mathematics-intro-container:nth-of-type(2) {
+    animation: fadeIn 1s ease-in-out;
+}
+
 /* Main text */
   
 .tab {
