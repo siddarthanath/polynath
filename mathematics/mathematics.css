@@ -122,18 +122,6 @@ body {
     width: 100%; /* Ensure it spans the width of the container */
 }
 
-/* Keyframes for fadeInSlideUp animation */
-@keyframes fadeInSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 #particles-js {
     position: absolute;
@@ -179,6 +167,18 @@ body {
     max-width: 1000px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
     animation: fadeInSlideUp 1s ease forwards;
+}
+
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* styles.css */
 
