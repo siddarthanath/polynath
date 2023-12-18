@@ -142,6 +142,8 @@ body {
     background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+    text-align: center;
+    animation: fadeInSlideUp 1s ease forwards;
 }
 
 .mathematics-intro-container h2 {
