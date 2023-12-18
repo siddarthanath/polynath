@@ -187,6 +187,7 @@ body {
 .tab-container {
     flex-basis: 200px; /* Adjust width of the tab container */
     margin-right: 20px; /* /* Adjust width of the tab container */
+    animation: fadeInSlideUp 1s ease forwards;
 }
 
 .tab {
