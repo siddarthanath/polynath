@@ -171,14 +171,20 @@ body {
 
 .info-container {
     background-color: #ffffff;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    animation: fadeInAnimation 1s ease-out forwards;
 }
 
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 /* styles.css */
 
 .tab-container {
