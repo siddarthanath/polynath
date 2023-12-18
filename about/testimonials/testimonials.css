@@ -160,16 +160,6 @@ body {
     text-align: center;
 }
 
-#fade-in-container {
-    opacity: 0;
-    animation: fadeInAnimation 1s ease-out forwards;
-}
-
-@keyframes fadeInAnimation {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .mathematics-intro-container h2 {
     color: #333; /* Dark color for the heading */
     margin-bottom: 15px;
@@ -179,6 +169,15 @@ body {
 .mathematics-intro-container p {
     color: #000; /* Slightly lighter color for the text */
     line-height: 1.6; /* For better readability */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
 }
 
 /* Main text */
