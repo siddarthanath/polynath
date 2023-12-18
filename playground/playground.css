@@ -135,6 +135,16 @@ body {
     }
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+
 #particles-js {
     position: absolute;
     width: 100%;
