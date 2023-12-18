@@ -117,7 +117,7 @@ body {
     color: #fff;
     opacity: 0; /* Start fully transparent */
     white-space: nowrap; /* Ensure the text stays in a single line */
-    animation: fadeInSlideUp 3s ease forwards;
+    animation: fadeInSlideUp 2s ease forwards;
     margin: 0; /* Remove any default margins */
     position: absolute;
     width: 100%; /* Ensure it spans the width of the container */

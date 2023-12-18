@@ -144,7 +144,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
     text-align: center;
     opacity: 0;
-    animation: fadeInSlideUp 1s ease forwards;
+    animation: fadeInSlideUp 2s ease forwards;
 }
 
 .mathematics-intro-container h2 {
