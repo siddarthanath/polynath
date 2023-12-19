@@ -285,6 +285,14 @@ body {
     align-items: stretch; /* This makes the items of the same height */
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
 /* Three column container */
 
 .three-column-container {
