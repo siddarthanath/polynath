@@ -1,4 +1,18 @@
   document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+    
     const testimonials = [
       {
         text: "Rowan from Vantage is the real deal: a rare blend of being a sufficiently brilliant mathematician to have a complete, deep and intuitive grasp on the difficult problems set in admissions tests, but also a great teacher who is able to explain the thought process in a way students can understand.",
@@ -48,5 +62,6 @@
   
     // Initialize with the first testimonial
     updateTestimonial(currentTestimonialIndex);
+  
   });
   
