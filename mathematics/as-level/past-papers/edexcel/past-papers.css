@@ -336,12 +336,13 @@ body {
   }
   
   #resultsTable th, #resultsTable td {
-    text-align: left;
+    text-align: center;
     padding: 12px 15px; /* Adjust padding to match the spacing in the screenshot */
     border-bottom: 1px solid #ddd; /* Single line for each row */
   }
   
   #resultsTable th {
+    width: 16.6666666666666%;
     font-weight: bold;
     border-bottom: 2px solid black; /* Thicker bottom border for header */
   }
