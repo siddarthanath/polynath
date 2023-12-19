@@ -78,13 +78,14 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
+                                <div class="tab" onclick="redirectToPage('a-level/revision-materials/ocr-mei/revision-materials.html')">Revision Materials</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
+
             <h2>FURTHER</h2>
             <div class="two-column-container">
                 <div class="pre-uni-column">
