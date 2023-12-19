@@ -158,6 +158,14 @@ body {
     line-height: 1.6; /* For better readability */
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
 /* Main text */
 
 .info-container {
