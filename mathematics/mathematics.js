@@ -42,8 +42,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Past Papers</div>
-                                <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Worksheets</div>
-                                <div class="tab" onclick="redirectToPage('as-level/past-papers/edexcel/past-papers.html')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                         <div class="curved-box-column">
@@ -53,8 +52,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                     </div>
@@ -70,8 +68,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                         <div class="curved-box-column">
@@ -81,8 +78,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                     </div>
@@ -102,8 +98,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                         <div class="curved-box-column">
@@ -113,8 +108,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                     </div>
@@ -130,8 +124,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                         <div class="curved-box-column">
@@ -141,8 +134,7 @@ function showContent(tabId) {
                             <div class="pre-uni-content">
                                 <!-- Dropdown content for EDEXCEL -->
                                 <div class="tab" onclick="alert('Under construction!')">Past Papers</div>
-                                <div class="tab" onclick="alert('Under construction!')">Worksheets</div>
-                                <div class="tab" onclick="alert('Under construction!')">Notes & Videos</div>
+                                <div class="tab" onclick="alert('Under construction!')">Revision Materials</div>
                             </div>
                         </div>
                     </div>
