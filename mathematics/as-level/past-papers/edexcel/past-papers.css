@@ -336,7 +336,7 @@ body {
   }
   
   #resultsTable th, #resultsTable td {
-    text-align: center;
+    text-align: left;
     padding: 12px 15px; /* Adjust padding to match the spacing in the screenshot */
     border-bottom: 1px solid #ddd; /* Single line for each row */
   }
