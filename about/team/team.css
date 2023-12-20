@@ -170,6 +170,43 @@ body {
     line-height: 1.6; /* For better readability */
 }
 
+.two-column-container {
+    display: flex;
+    align-items: stretch; /* This ensures that both columns are of equal height */
+}
+
+.column {
+    flex: 1; /* This ensures that both columns take up equal space */
+}
+
+.image-column {
+    /* Add styles specific to the image column if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-column {
+    /* Add styles specific to the text column if needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    overflow: auto; /* Allows for scrolling if the text is too long */
+}
+
+/* Ensures the text column does not exceed the height of the image */
+.text-column p {
+    margin: 0;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
 /* Main text */
   
 .tab {
