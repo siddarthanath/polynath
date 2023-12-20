@@ -342,7 +342,6 @@ body {
   }
   
   #resultsTable th {
-    width: 16.6666666666666%;
     font-weight: bold;
     border-bottom: 2px solid black; /* Thicker bottom border for header */
   }
