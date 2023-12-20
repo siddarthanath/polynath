@@ -154,9 +154,11 @@ body {
     background-color: #ffffff; /* Light background for readability */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
 }
 
 .mathematics-intro-container h2 {
@@ -205,34 +207,6 @@ body {
     margin: 0;
     max-height: 100%;
     overflow-y: auto;
-}
-
-/* Main text */
-  
-.tab {
-    width: 150px;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 5px; /* Slightly rounded corners for tabs */
-    margin-bottom: 5px;
-    background-color: #000000;
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    transition: background-color 0.2s;
-}
-
-/* Hover state for non-active tabs */
-.tab:not(.active):hover {
-    background-color: #d0d0d0; /* Hover background for non-active tabs */
-}
-
-/* Active state for the current tab */
-.tab.active {
-    background-color: #e0e0e0; /* Active tab background color */
 }
 
 .fade-in {
