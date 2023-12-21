@@ -29,6 +29,61 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutText.style.opacity = '1';
         }
     });
+
+    const testimonials = [
+        {
+          videoSrc: "https://www.youtube.com/watch?v=g7ih6rHdw3M&lc=Ugx7z1FC8joL0CE8QV94AaABAg",
+          author: "Quanta Magazine"
+        },
+        {
+          videoSrc: "https://www.youtube.com/watch?v=-KFO0pES-zQ",
+          author: "DeepMind"
+        },
+        // ... Add more video testimonials as needed
+      ];
+    let currentTestimonialIndex = 0;
+    const testimonialIframeElement = document.querySelector('.testimonial-iframe');
+    const testimonialAuthorElement = document.querySelector('.testimonial-author');
+    const testimonialCounterElement = document.querySelector('.testimonial-counter');
+    
+    function updateTestimonial(index) {
+    // Update the iframe source
+    testimonialIframeElement.src = testimonials[index].videoSrc;
+    
+    // Update the author
+    testimonialAuthorElement.innerText = testimonials[index].author;
+    
+    // Update the counter
+    testimonialCounterElement.innerText = (index + 1) + ' / ' + testimonials.length;
+    }
+      
+    function showNextTestimonial() {
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        updateTestimonial(currentTestimonialIndex);
+      }
+    
+      // Automatic change every 2 seconds
+      let testimonialInterval = setInterval(showNextTestimonial, 7500);
+    
+      document.getElementById('prev').addEventListener('click', function() {
+        clearInterval(testimonialInterval); // Stop automatic switching
+        currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+        updateTestimonial(currentTestimonialIndex);
+        testimonialInterval = setInterval(showNextTestimonial, 7500); // Restart automatic switching
+      });
+    
+      document.getElementById('next').addEventListener('click', function() {
+        clearInterval(testimonialInterval); // Stop automatic switching
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        updateTestimonial(currentTestimonialIndex);
+        testimonialInterval = setInterval(showNextTestimonial, 7500); // Restart automatic switching
+      });
+    
+      // Initialize with the first testimonial
+      updateTestimonial(currentTestimonialIndex);
+      // Rest of the slider functionality code...
+      
+      
 });
 
 function animateHeaders() {
