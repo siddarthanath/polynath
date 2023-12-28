@@ -1,0 +1,427 @@
+/* Add this at the top of your style.css file */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+/* General Styles */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    display: flex; /* New: Sets up Flexbox in the body */
+    flex-direction: column; /* New: Arranges flex items into a column */
+    min-height: 100vh; /* New: Makes sure the body is at least the height of the viewport */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-logo img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    position: relative; /* For dropdown positioning */
+}
+
+.navbar-icon {
+    display: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar-item:hover .dropdown-content {
+    display: block;
+}
+
+.navbar-item:hover > .nav-link {
+    color: #0056b3;
+    background-color: #f0f0f0;
+}
+
+
+/* Header with Full-Height Image */
+.header-image {
+    background-image: url('../../../../images/background1.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+#welcome-text {
+    font-size: 3em;
+    color: #fff;
+    opacity: 0; /* Start fully transparent */
+    white-space: nowrap; /* Ensure the text stays in a single line */
+    animation: fadeInSlideUp 1s ease forwards;
+    margin: 0; /* Remove any default margins */
+    position: absolute;
+    width: 100%; /* Ensure it spans the width of the container */
+}
+
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* This ensures that the particles are behind the text */
+}
+
+
+/* Intro Content */
+
+.mathematics-intro-container {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 1250px; /* Adjust as per your layout */
+    background-color: #ffffff; /* Light background for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+}
+
+.mathematics-intro-container h2 {
+    color: #000000; /* Dark color for the heading */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mathematics-intro-container p {
+    color: #000; /* Slightly lighter color for the text */
+    line-height: 1.6; /* For better readability */
+}
+
+/* Main text */
+
+.info-container {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+
+/* styles.css */
+
+.tab-container {
+    flex-basis: 200px; /* Adjust width of the tab container */
+    margin-right: 20px; /* /* Adjust width of the tab container */
+}
+
+.tab {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px; /* Slightly rounded corners for tabs */
+    margin-bottom: 5px;
+    background-color: #000000;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+/* Hover state for non-active tabs */
+.tab:not(.active):hover {
+    background-color: #d0d0d0; /* Hover background for non-active tabs */
+}
+
+/* Active state for the current tab */
+.tab.active {
+    background-color: #e0e0e0; /* Active tab background color */
+}
+
+/* Content container for pre-university */
+
+.content-container {
+    flex-grow: 1; /* Take up remaining space */
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    display: none; /* Hide content initially */
+    position: absolute; /* Position it relative to its parent */
+    width: 100%; /* Set width to match the parent's width */
+    left: 0; /* Align to the left edge of the parent */
+    top: 100%; /* Position it right below the expandable button */
+    color: #ffffff;
+    background-color: #000000; /* Background color for the content */
+    border: 1px solid #000000; /* Border to create a rectangle */
+    border-radius: 5px; /* Optionally, add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    padding: 10px; /* Padding inside the content box */
+}
+
+.two-column-container {
+    display: flex; /* Use flexbox for the layout */
+    padding: 10px; /* Adds some space inside the container */
+    margin: 0 auto; 
+}
+
+.pre-uni-column {
+    flex: 1; /* Each column takes up equal space */
+    padding: 10px; /* Adds some space inside each column */
+    position: relative; /* Allows absolute positioning inside the column */
+}
+
+.pre-uni-column:not(:last-child)::after {
+    content: ""; /* Creates a pseudo-element for the line */
+    position: absolute; /* Positions the line */
+    right: 0; /* Aligns the line to the right of the column */
+    top: 0; /* Starts from the top of the column */
+    bottom: 0; /* Extends to the bottom of the column */
+    width: 1px; /* Width of the line */
+    background-color: #ccc; /* Color of the line */
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #000000;
+    text-align: center; /* Center the subtitle text */
+}
+
+.pre-uni-content {
+    display: none; /* Initially hidden */
+    background-color: #000000; /* Light background for the dropdown */
+    border: 1px solid #000000; /* Border for the dropdown */
+    border-radius: 5px; /* Slight curve for the dropdown's corners */
+    overflow: hidden; /* Ensures the content doesn't spill out */
+    top: 100%
+}
+
+.curved-box-column {
+    flex: 1; /* Each takes up equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.inner-pre-uni-column-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* This sets the space between the boxes */
+    justify-content: flex-start; /* This aligns items to the start of the container */
+    align-items: stretch; /* This makes the items of the same height */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+/* Three column container */
+
+.three-column-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.three-column-container .column {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.three-column-container .column:last-child {
+    border-right: none;
+}
+
+.three-column-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center boxes within each column */
+}
+
+.inner-column-container {
+    position: relative; /* Add this if not already present */
+}
+
+/* ... (other styles as needed) ... */
+
+  
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-top: 2px solid black; /* Adjust as necessary to match your layout */
+  }
+  
+  #resultsTable thead {
+    background-color: #f2f2f2;
+  }
+  
+  #resultsTable th, #resultsTable td {
+    text-align: left;
+    padding: 12px 15px; /* Adjust padding to match the spacing in the screenshot */
+    border-bottom: 1px solid #ddd; /* Single line for each row */
+  }
+  
+  #resultsTable th {
+    width: 33.33333333%; 
+    font-weight: bold;
+    border-bottom: 2px solid black; /* Thicker bottom border for header */
+  }
+  
+  #resultsTable tbody tr:last-child td {
+    border-bottom: 2px solid black; /* Thicker bottom border for last row */
+  }
+  
+  #resultsTable tbody tr:hover {
+    background-color: #e8e8e8;
+  }
+  
+  /* Remove the border from the last td elements in the table */
+  #resultsTable td:last-child {
+    border-right: none;
+  }
+
+  .bookmark {
+    width: 20px;
+    border-radius: 25%;
+    margin-right: 8px;
+  }
+
+  a {
+    color: #000000; /* Change to your desired color */
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    color: #0056b3;
+    background-color: #f0f0f0; /* Optional: Adds underline on hover */
+}
+
+.table-icon {
+    height: 20px; /* Adjust the size as needed */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns image vertically with the text */
+    margin-right: 5px; /* Add some space between the image and text */
+  }
+  
+  .column-container {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1; /* Each column takes up equal width */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .column:not(:last-child) {
+    border-right: 1px solid #000000; /* Vertical line on the right of the first column */
+  }
+  
+/* Footer */
+
+footer {
+    background-color: #000000;
+    color: #d1d1d1;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+
+footer p {
+    margin: 0;
+    line-height: 2.5rem;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+    .navbar-icon {
+        display: block;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .sidebar {
+        display: block; /* Show sidebar on small screens */
+    }
+}
